@@ -479,10 +479,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9Q8KVW72F5;
+				DEVELOPMENT_TEAM = 3ZW42268XU;
 				INFOPLIST_FILE = USTrustEquipmentSeller/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ChristianMcMullin.USTrustEquipmentSeller;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ustrustconstruction.USTrustEquipmentSeller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -494,10 +494,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9Q8KVW72F5;
+				DEVELOPMENT_TEAM = 3ZW42268XU;
 				INFOPLIST_FILE = USTrustEquipmentSeller/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ChristianMcMullin.USTrustEquipmentSeller;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ustrustconstruction.USTrustEquipmentSeller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
