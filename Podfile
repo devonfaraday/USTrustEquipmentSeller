@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+# platform :ios, '11.1'
 
 target 'USTrustEquipmentSeller' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -7,6 +7,9 @@ target 'USTrustEquipmentSeller' do
 
   # Pods for USTrustEquipmentSeller
 	pod 'Firebase/Core'
+	pod 'Firebase/Auth'
+	pod 'Firebase/Database'
+	pod 'Firebase/Storage'
 
   target 'USTrustEquipmentSellerTests' do
     inherit! :search_paths
