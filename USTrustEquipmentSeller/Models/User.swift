@@ -21,9 +21,10 @@ class User: FirebaseType {
     var emailAddress: String
     var profileImage: UIImage
     var isBanned: Bool
-    let uuid: String
-    
-    var dictionaryCopy: [String:Any] {
+    var endpoint: String
+    var identifier: String?
+
+    var dictionaryCopy: [String : Any] {
         return [.firstNameKey: firstName,
             .lastNameKey: lastName,
             .streetAddressKey: streetAddress,
@@ -32,11 +33,11 @@ class User: FirebaseType {
             .zipCodeKey: zipCode,
             .emailAddressKey: emailAddress,
             .profileImageKey: profileImage,
-            .isBannedKey: isBanned,
-            .uuidKey: uuid]
+            .isBannedKey: isBanned
+        ]
     }
     
-    init(firstName: String, lastName: String, streetAddress: String, city: String, state: String, zipCode: String, emailAddress: String, profileImage: UIImage, isBanned: Bool = false, uuid: String) {
+    init(firstName: String, lastName: String, streetAddress: String, city: String, state: String, zipCode: String, emailAddress: String, profileImage: UIImage, isBanned: Bool = false, identifier: String) {
         
         self.firstName = firstName
         self.lastName = lastName
@@ -47,11 +48,11 @@ class User: FirebaseType {
         self.emailAddress = emailAddress
         self.profileImage = profileImage
         self.isBanned = isBanned
-        self.uuid = uuid
+        self.identifier = identifier
         
     }
     
-    init?(dictionary: JSONDictionary, identifier: String) {
+   init?(dictionary: JSONDictionary, identifier: String) {
         guard let firstName = dictionary[.firstNameKey] as? String,
             let lastName = dictionary[.lastNameKey] as? String,
             let streetAddress = dictionary[.streetAddressKey] as? String,
@@ -60,10 +61,10 @@ class User: FirebaseType {
             let zipCode = dictionary[.zipCodeKey] as? String,
             let emailAddress = dictionary[.emailAddressKey] as? String,
             let profileImage = dictionary[.profileImageKey] as? UIImage,
-            let isBanned = dictionary[.isBannedKey] as? Bool,
-            let uuid = dictionary[.uuidKey] as? String
+            let isBanned = dictionary[.isBannedKey] as? Bool
         else { return nil }
         
+        self.identifier = identifier
         self.firstName = firstName
         self.lastName = lastName
         self.streetAddress = streetAddress
@@ -73,8 +74,7 @@ class User: FirebaseType {
         self.emailAddress = emailAddress
         self.profileImage = profileImage
         self.isBanned = isBanned
-        self.uuid = uuid
-        
+       
     }
     
 }
