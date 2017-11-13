@@ -17,6 +17,7 @@
 		FD3133F11FB504E7002BCA23 /* USTrustEquipmentSellerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3133F01FB504E7002BCA23 /* USTrustEquipmentSellerTests.swift */; };
 		FD3133FC1FB504E7002BCA23 /* USTrustEquipmentSellerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3133FB1FB504E7002BCA23 /* USTrustEquipmentSellerUITests.swift */; };
 		FD3134111FB51644002BCA23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD3134101FB51644002BCA23 /* GoogleService-Info.plist */; };
+		FD557F1A1FB8B8F600A52EA1 /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F191FB8B8F600A52EA1 /* FirebaseController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		FD3133FB1FB504E7002BCA23 /* USTrustEquipmentSellerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USTrustEquipmentSellerUITests.swift; sourceTree = "<group>"; };
 		FD3133FD1FB504E7002BCA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD3134101FB51644002BCA23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FD557F191FB8B8F600A52EA1 /* FirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				FD31340E1FB50D5F002BCA23 /* Extensions */,
+				FD557F191FB8B8F600A52EA1 /* FirebaseController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD557F1A1FB8B8F600A52EA1 /* FirebaseController.swift in Sources */,
 				FD3133DC1FB504E7002BCA23 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
