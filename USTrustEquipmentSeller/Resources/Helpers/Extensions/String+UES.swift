@@ -10,8 +10,17 @@ import Foundation
 
 extension String {
     
-    /* User Keys */
+    /* User Model Keys */
+    static var firstNameKey: String { get { return "firstName" } }
+    static var lastNameKey: String { get { return "lastName" } }
+    static var streetAddressKey: String { get { return "streetAddress" } }
+    static var cityKey: String { get { return "city" } }
+    static var stateKey: String { get { return "state" } }
+    static var zipCodeKey: String { get { return "zipCode" } }
+    static var phoneKey: String { get { return "phone" } }
+    static var emailAddressKey: String { get { return "emailAddress" } }
+    static var profileImageKey: String { get { return "profileImage" } }
+    static var isBannedKey: String { get { return "isBanned" } }
+    static var uuidKey: String { get { return "uuid" } }
     
-    static var firstName: String { get { return "firstName" } }
-    static var 
 }

@@ -26,6 +26,11 @@ class CompanyProfile {
     var isBanned: Bool
     var isVerified: Bool
     let uuid: String
+    var dictionaryCopy: [String:Any] {
+        
+        
+    }
+    
     
     init(companyName: String, streetAddress: String, city: String, state: String, zipCode: String, phone: String, companyRating: Int?, logo: UIImage, einNumber: String, administratorAccount: User, authorizedSellers: [User], authorizedBuyers: [User], isBanned: Bool = false, isVerified: Bool = false, uuid: String) {
         
@@ -46,5 +51,7 @@ class CompanyProfile {
         self.uuid = uuid
         
     }
+    
+    
     
 }
