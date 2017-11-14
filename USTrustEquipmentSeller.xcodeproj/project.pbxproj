@@ -23,6 +23,17 @@
 		FD3133FC1FB504E7002BCA23 /* USTrustEquipmentSellerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3133FB1FB504E7002BCA23 /* USTrustEquipmentSellerUITests.swift */; };
 		FD3134111FB51644002BCA23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD3134101FB51644002BCA23 /* GoogleService-Info.plist */; };
 		FD557F1A1FB8B8F600A52EA1 /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F191FB8B8F600A52EA1 /* FirebaseController.swift */; };
+		FD557F201FBAB51600A52EA1 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F1F1FBAB51600A52EA1 /* InitialViewController.swift */; };
+		FD557F221FBAB52B00A52EA1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F211FBAB52B00A52EA1 /* LoginViewController.swift */; };
+		FD557F241FBAB54C00A52EA1 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F231FBAB54C00A52EA1 /* UserProfileViewController.swift */; };
+		FD557F261FBAB55500A52EA1 /* CompanyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F251FBAB55500A52EA1 /* CompanyProfileViewController.swift */; };
+		FD557F281FBAB55D00A52EA1 /* StoreProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F271FBAB55D00A52EA1 /* StoreProfileViewController.swift */; };
+		FD557F2A1FBAB56B00A52EA1 /* CreateListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F291FBAB56B00A52EA1 /* CreateListingViewController.swift */; };
+		FD557F2C1FBAB5B500A52EA1 /* BrowseListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F2B1FBAB5B500A52EA1 /* BrowseListingsViewController.swift */; };
+		FD557F2E1FBAB5BC00A52EA1 /* ListingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F2D1FBAB5BC00A52EA1 /* ListingDetailViewController.swift */; };
+		FD557F301FBAB66700A52EA1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD557F2F1FBAB66600A52EA1 /* Login.storyboard */; };
+		FD557F331FBAB6B000A52EA1 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD557F321FBAB6B000A52EA1 /* UserProfile.storyboard */; };
+		FD557F381FBAB6EC00A52EA1 /* CompanyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD557F371FBAB6EC00A52EA1 /* CompanyProfile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +82,21 @@
 		FD3133FD1FB504E7002BCA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD3134101FB51644002BCA23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FD557F191FB8B8F600A52EA1 /* FirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
+		FD557F1F1FBAB51600A52EA1 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		FD557F211FBAB52B00A52EA1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FD557F231FBAB54C00A52EA1 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		FD557F251FBAB55500A52EA1 /* CompanyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyProfileViewController.swift; sourceTree = "<group>"; };
+		FD557F271FBAB55D00A52EA1 /* StoreProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProfileViewController.swift; sourceTree = "<group>"; };
+		FD557F291FBAB56B00A52EA1 /* CreateListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListingViewController.swift; sourceTree = "<group>"; };
+		FD557F2B1FBAB5B500A52EA1 /* BrowseListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseListingsViewController.swift; sourceTree = "<group>"; };
+		FD557F2D1FBAB5BC00A52EA1 /* ListingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailViewController.swift; sourceTree = "<group>"; };
+		FD557F2F1FBAB66600A52EA1 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		FD557F321FBAB6B000A52EA1 /* UserProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
+		FD557F371FBAB6EC00A52EA1 /* CompanyProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CompanyProfile.storyboard; sourceTree = "<group>"; };
+		FD557F391FBAB70800A52EA1 /* StoreProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = StoreProfile.storyboard; path = /Users/christianmcmullin/Desktop/Swift/USTrust/USTrustEquipmentSeller/USTrustEquipmentSeller/Views/StoreProfile.storyboard; sourceTree = "<absolute>"; };
+		FD557F3A1FBAB7B000A52EA1 /* BrowseListings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = BrowseListings.storyboard; path = /Users/christianmcmullin/Desktop/Swift/USTrust/USTrustEquipmentSeller/USTrustEquipmentSeller/Views/BrowseListings.storyboard; sourceTree = "<absolute>"; };
+		FD557F3B1FBAB7B300A52EA1 /* ListingDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ListingDetail.storyboard; path = /Users/christianmcmullin/Desktop/Swift/USTrust/USTrustEquipmentSeller/USTrustEquipmentSeller/Views/ListingDetail.storyboard; sourceTree = "<absolute>"; };
+		FD557F3C1FBAB7B500A52EA1 /* CreateListing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = CreateListing.storyboard; path = /Users/christianmcmullin/Desktop/Swift/USTrust/USTrustEquipmentSeller/USTrustEquipmentSeller/Views/CreateListing.storyboard; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +218,13 @@
 		FD31340A1FB50805002BCA23 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FD557F3A1FBAB7B000A52EA1 /* BrowseListings.storyboard */,
+				FD557F3C1FBAB7B500A52EA1 /* CreateListing.storyboard */,
+				FD557F3B1FBAB7B300A52EA1 /* ListingDetail.storyboard */,
+				FD557F391FBAB70800A52EA1 /* StoreProfile.storyboard */,
+				FD557F371FBAB6EC00A52EA1 /* CompanyProfile.storyboard */,
+				FD557F321FBAB6B000A52EA1 /* UserProfile.storyboard */,
+				FD557F2F1FBAB66600A52EA1 /* Login.storyboard */,
 				FD3133DF1FB504E7002BCA23 /* Main.storyboard */,
 				FD3133E41FB504E7002BCA23 /* LaunchScreen.storyboard */,
 			);
@@ -201,6 +234,14 @@
 		FD31340B1FB50806002BCA23 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FD557F1F1FBAB51600A52EA1 /* InitialViewController.swift */,
+				FD557F211FBAB52B00A52EA1 /* LoginViewController.swift */,
+				FD557F231FBAB54C00A52EA1 /* UserProfileViewController.swift */,
+				FD557F251FBAB55500A52EA1 /* CompanyProfileViewController.swift */,
+				FD557F271FBAB55D00A52EA1 /* StoreProfileViewController.swift */,
+				FD557F291FBAB56B00A52EA1 /* CreateListingViewController.swift */,
+				FD557F2B1FBAB5B500A52EA1 /* BrowseListingsViewController.swift */,
+				FD557F2D1FBAB5BC00A52EA1 /* ListingDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -356,8 +397,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD3133E61FB504E7002BCA23 /* LaunchScreen.storyboard in Resources */,
+				FD557F381FBAB6EC00A52EA1 /* CompanyProfile.storyboard in Resources */,
 				FD3134111FB51644002BCA23 /* GoogleService-Info.plist in Resources */,
 				FD3133E31FB504E7002BCA23 /* Assets.xcassets in Resources */,
+				FD557F331FBAB6B000A52EA1 /* UserProfile.storyboard in Resources */,
+				FD557F301FBAB66700A52EA1 /* Login.storyboard in Resources */,
 				FD3133E11FB504E7002BCA23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,13 +581,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD557F281FBAB55D00A52EA1 /* StoreProfileViewController.swift in Sources */,
+				FD557F221FBAB52B00A52EA1 /* LoginViewController.swift in Sources */,
+				FD557F241FBAB54C00A52EA1 /* UserProfileViewController.swift in Sources */,
+				FD557F261FBAB55500A52EA1 /* CompanyProfileViewController.swift in Sources */,
+				FD557F2A1FBAB56B00A52EA1 /* CreateListingViewController.swift in Sources */,
 				FD557F1A1FB8B8F600A52EA1 /* FirebaseController.swift in Sources */,
 				FD3133DC1FB504E7002BCA23 /* AppDelegate.swift in Sources */,
 				5D7D81F01FBA4FC900998B67 /* Listing.swift in Sources */,
 				5D917ECB1FBA4AA0004BD9AC /* User.swift in Sources */,
+				FD557F2E1FBAB5BC00A52EA1 /* ListingDetailViewController.swift in Sources */,
+				FD557F2C1FBAB5B500A52EA1 /* BrowseListingsViewController.swift in Sources */,
 				5D7D81F61FBA5C6500998B67 /* Constants.swift in Sources */,
 				5D7D81F41FBA522E00998B67 /* String+UES.swift in Sources */,
 				5D7D81EE1FBA4F3900998B67 /* CompanyProfile.swift in Sources */,
+				FD557F201FBAB51600A52EA1 /* InitialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
