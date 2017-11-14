@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D7D81EE1FBA4F3900998B67 /* CompanyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7D81ED1FBA4F3900998B67 /* CompanyProfile.swift */; };
+		5D7D81F01FBA4FC900998B67 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7D81EF1FBA4FC900998B67 /* Listing.swift */; };
+		5D7D81F41FBA522E00998B67 /* String+UES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7D81F31FBA522E00998B67 /* String+UES.swift */; };
+		5D7D81F61FBA5C6500998B67 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7D81F51FBA5C6500998B67 /* Constants.swift */; };
+		5D917ECB1FBA4AA0004BD9AC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D917ECA1FBA4AA0004BD9AC /* User.swift */; };
 		B63DCF96554579D6ED9AAD76 /* Pods_USTrustEquipmentSellerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE00F46DBF7E7FD4CB0B83A8 /* Pods_USTrustEquipmentSellerUITests.framework */; };
 		D4B8E9CF236B932ACAA4F8AF /* Pods_USTrustEquipmentSellerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFD8B9A30AC24FA8C74C66B /* Pods_USTrustEquipmentSellerTests.framework */; };
 		D65346530E477CC9C59B622A /* Pods_USTrustEquipmentSeller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DC235CFFC26022142FB369D /* Pods_USTrustEquipmentSeller.framework */; };
@@ -41,6 +46,11 @@
 		45D672E1F278B0E64DDD84B0 /* Pods-USTrustEquipmentSellerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USTrustEquipmentSellerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-USTrustEquipmentSellerUITests/Pods-USTrustEquipmentSellerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		48B66815514C5D2869A28116 /* Pods-USTrustEquipmentSeller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USTrustEquipmentSeller.release.xcconfig"; path = "Pods/Target Support Files/Pods-USTrustEquipmentSeller/Pods-USTrustEquipmentSeller.release.xcconfig"; sourceTree = "<group>"; };
 		5C275AE25E2F63BB3CF30F5A /* Pods-USTrustEquipmentSellerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USTrustEquipmentSellerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-USTrustEquipmentSellerTests/Pods-USTrustEquipmentSellerTests.release.xcconfig"; sourceTree = "<group>"; };
+		5D7D81ED1FBA4F3900998B67 /* CompanyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyProfile.swift; sourceTree = "<group>"; };
+		5D7D81EF1FBA4FC900998B67 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		5D7D81F31FBA522E00998B67 /* String+UES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+UES.swift"; sourceTree = "<group>"; };
+		5D7D81F51FBA5C6500998B67 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5D917ECA1FBA4AA0004BD9AC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7DC235CFFC26022142FB369D /* Pods_USTrustEquipmentSeller.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_USTrustEquipmentSeller.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDB12539C19074B5AC36091 /* Pods-USTrustEquipmentSeller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USTrustEquipmentSeller.debug.xcconfig"; path = "Pods/Target Support Files/Pods-USTrustEquipmentSeller/Pods-USTrustEquipmentSeller.debug.xcconfig"; sourceTree = "<group>"; };
 		A767C92D9303633DF0E291AC /* Pods-USTrustEquipmentSellerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USTrustEquipmentSellerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-USTrustEquipmentSellerTests/Pods-USTrustEquipmentSellerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +184,7 @@
 			children = (
 				FD31340E1FB50D5F002BCA23 /* Extensions */,
 				FD557F191FB8B8F600A52EA1 /* FirebaseController.swift */,
+				5D7D81F51FBA5C6500998B67 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -204,6 +215,9 @@
 		FD31340D1FB50808002BCA23 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5D917ECA1FBA4AA0004BD9AC /* User.swift */,
+				5D7D81EF1FBA4FC900998B67 /* Listing.swift */,
+				5D7D81ED1FBA4F3900998B67 /* CompanyProfile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,6 +225,7 @@
 		FD31340E1FB50D5F002BCA23 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5D7D81F31FBA522E00998B67 /* String+UES.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -524,6 +539,11 @@
 			files = (
 				FD557F1A1FB8B8F600A52EA1 /* FirebaseController.swift in Sources */,
 				FD3133DC1FB504E7002BCA23 /* AppDelegate.swift in Sources */,
+				5D7D81F01FBA4FC900998B67 /* Listing.swift in Sources */,
+				5D917ECB1FBA4AA0004BD9AC /* User.swift in Sources */,
+				5D7D81F61FBA5C6500998B67 /* Constants.swift in Sources */,
+				5D7D81F41FBA522E00998B67 /* String+UES.swift in Sources */,
+				5D7D81EE1FBA4F3900998B67 /* CompanyProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

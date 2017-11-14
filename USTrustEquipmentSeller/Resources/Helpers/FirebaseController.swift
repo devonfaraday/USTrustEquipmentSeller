@@ -20,7 +20,7 @@ protocol FirebaseType {
     
     var endpoint: String { get }
     var identifier: String? { get set }
-    var dictionaryCopy: [String: Any] { get }
+    var dictionaryCopy: [String : Any] { get }
     
     init?(dictionary: JSONDictionary, identifier: String)
     
@@ -39,6 +39,11 @@ extension FirebaseType {
             self.identifier = newEndpoint.key
         }
         newEndpoint.updateChildValues(dictionaryCopy)
+    }
+    
+    func delete() {
+        guard let identifier = identifier else { return }
+        FirebaseController.databaseRef.child(endpoint).child(identifier).removeValue()
     }
     
 }
