@@ -27,8 +27,8 @@ class Store: FirebaseType {
     
     
     enum storeType {
-        case sales
-        case rentals
+        case retail
+        case rental
     }
     
 }
