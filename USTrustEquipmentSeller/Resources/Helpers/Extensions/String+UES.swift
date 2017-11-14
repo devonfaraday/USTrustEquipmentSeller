@@ -11,8 +11,10 @@ import Foundation
 extension String {
     
     /* Firebase Endpoints*/
-    static var userEndpoint: String { get { return "user" } }
-    static var companyEndpoint: String { get { return "companyProfile" } }
+    static var usersEndpoint: String { get { return "users" } }
+    static var companiesEndpoint: String { get { return "companies" } }
+    static var storesEndpoint: String { get { return "stores" } }
+    static var listingsEndpoint: String { get { return "listings" } }
     
     /*  Model Keys */
     static var firstNameKey: String { get { return "firstName" } }

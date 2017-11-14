@@ -21,7 +21,7 @@ struct User: FirebaseType {
     var emailAddress: String
     var profileImage: UIImage
     var isBanned: Bool
-    var endpoint: String = .userEndpoint
+    var endpoint: String = .usersEndpoint
     var identifier: String?
 
     var dictionaryCopy: [String : Any] {

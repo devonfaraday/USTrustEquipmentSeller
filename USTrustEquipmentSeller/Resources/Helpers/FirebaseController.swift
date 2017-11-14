@@ -30,8 +30,33 @@ protocol FirebaseType {
 
 extension FirebaseType {
     
+    // To save a user, company or a store use save()
     mutating func save() {
         var newEndpoint = FirebaseController.databaseRef.child(endpoint)
+        if let identifier = identifier {
+            newEndpoint = newEndpoint.child(identifier)
+        } else {
+            newEndpoint = newEndpoint.childByAutoId()
+            self.identifier = newEndpoint.key
+        }
+        newEndpoint.updateChildValues(dictionaryCopy)
+    }
+    
+    // posting a listing for a company use this save
+    mutating func saveListing(toCompany company: CompanyProfile) {
+        var newEndpoint = FirebaseController.databaseRef.child("\(company.endpoint)/\(String.listingsEndpoint)")
+        if let identifier = identifier {
+            newEndpoint = newEndpoint.child(identifier)
+        } else {
+            newEndpoint = newEndpoint.childByAutoId()
+            self.identifier = newEndpoint.key
+        }
+        newEndpoint.updateChildValues(dictionaryCopy)
+    }
+    
+    // posting a listing for a store use this save
+    mutating func saveListing(toStore store: Any) {
+        var newEndpoint = FirebaseController.databaseRef.child("stores/\(String.listingsEndpoint)")
         if let identifier = identifier {
             newEndpoint = newEndpoint.child(identifier)
         } else {

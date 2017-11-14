@@ -25,7 +25,7 @@ struct CompanyProfile: FirebaseType {
     var authorizedBuyers: [User]
     var isBanned: Bool
     var isVerified: Bool
-    var endpoint: String = .companyEndpoint
+    var endpoint: String = .companiesEndpoint
     var identifier: String?
     var dictionaryCopy: [String : Any] {
         return [.companyNameKey: companyName,
