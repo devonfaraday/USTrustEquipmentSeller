@@ -41,4 +41,9 @@ extension FirebaseType {
         newEndpoint.updateChildValues(dictionaryCopy)
     }
     
+    func delete() {
+        guard let identifier = identifier else { return }
+        FirebaseController.databaseRef.child(endpoint).child(identifier).removeValue()
+    }
+    
 }

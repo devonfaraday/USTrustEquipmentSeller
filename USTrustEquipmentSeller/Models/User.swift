@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Firebase
 
-class User: FirebaseType {
+struct User: FirebaseType {
     
     let firstName: String
     let lastName: String
@@ -21,7 +21,7 @@ class User: FirebaseType {
     var emailAddress: String
     var profileImage: UIImage
     var isBanned: Bool
-    var endpoint: String
+    var endpoint: String = .userEndpoint
     var identifier: String?
 
     var dictionaryCopy: [String : Any] {
@@ -52,7 +52,7 @@ class User: FirebaseType {
         
     }
     
-   init?(dictionary: JSONDictionary, identifier: String) {
+ init?(dictionary: JSONDictionary, identifier: String) {
         guard let firstName = dictionary[.firstNameKey] as? String,
             let lastName = dictionary[.lastNameKey] as? String,
             let streetAddress = dictionary[.streetAddressKey] as? String,
