@@ -46,7 +46,7 @@ struct CompanyProfile: FirebaseType {
     }
     
     
-    init(companyName: String, streetAddress: String, city: String, state: String, zipCode: String, phone: String, rating: Int, logo: UIImage, einNumber: String, administratorAccount: User, authorizedSellers: [User], authorizedBuyers: [User], isBanned: Bool = false, isVerified: Bool = false, identifier: String) {
+    init(companyName: String, streetAddress: String, city: String, state: String, zipCode: String, phone: String, rating: Int, logo: UIImage, einNumber: String, administratorAccount: [User], authorizedSellers: [User], authorizedBuyers: [User], isBanned: Bool = false, isVerified: Bool = false, identifier: String) {
         
         self.companyName = companyName
         self.streetAddress = streetAddress
@@ -76,7 +76,7 @@ struct CompanyProfile: FirebaseType {
             let rating = dictionary[.ratingKey] as? Int,
             let logo = dictionary[.logoKey] as? UIImage,
             let einNumber = dictionary[.einNumberKey] as? String,
-            let administratorAccount = dictionary[.administratorAccountKey] as? User,
+            let administratorAccount = dictionary[.administratorAccountKey] as? [User],
             let authorizedSellers = dictionary[.authorizedSellersKey] as? [User],
             let authorizedBuyers = dictionary[.authorizedBuyersKey] as? [User],
             let isBanned = dictionary[.isBannedKey] as? Bool,
