@@ -12,6 +12,7 @@ class Store: FirebaseType {
     var storyName: String
     let storeType: storeType
     var listings: [Listing]
+    
     var identifier: String?
     var endpoint: String
     

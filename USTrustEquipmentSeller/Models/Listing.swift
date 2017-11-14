@@ -16,7 +16,7 @@ class Listing: FirebaseType {
     let description: String
     let price: Double
     let location: String
-    let image: UIImage
+    let image: [UIImage]
     let listingAccount: CompanyProfile
     var endpoint: String = .listingsEndpoint
     var identifier: String?
@@ -34,7 +34,7 @@ class Listing: FirebaseType {
         ]
     }
     
-    init(item: String, catagory: catagoryType, description: String, price: Double, location: String, image: UIImage, listingAccount: CompanyProfile, identifier: String, listingDate: Date = Date()) {
+    init(item: String, catagory: catagoryType, description: String, price: Double, location: String, image: [UIImage], listingAccount: CompanyProfile, identifier: String, listingDate: Date = Date()) {
         
         self.item = item
         self.catagory = catagory
@@ -54,7 +54,7 @@ class Listing: FirebaseType {
               let description = dictionary[.descriptionKey] as? String,
               let price = dictionary[.priceKey] as? Double,
               let location = dictionary[.locationKey] as? String,
-              let image = dictionary[.imageKey] as? UIImage,
+              let image = dictionary[.imageKey] as? [UIImage],
               let listingAccount = dictionary[.listingAccountKey] as? CompanyProfile,
               let listingDate = dictionary[.listingDateKey] as? Date
             else { return nil }
