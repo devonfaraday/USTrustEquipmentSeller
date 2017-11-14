@@ -37,4 +37,14 @@ extension String {
     static var authorizedSellersKey: String { get { return "authorizedSellers" } }
     static var authorizedBuyersKey: String { get { return "authorizedBuyers" } }
     static var isVerifiedKey: String { get { return "isVerified" } }
+    
+    static var itemKey: String { get { return "item" } }
+    static var catagoryKey: String { get { return "catagory" } }
+    static var descriptionKey: String { get { return "description" } }
+    static var priceKey: String { get { return "price" } }
+    static var locationKey: String { get { return "location" } }
+    static var imageKey: String { get { return "image" } }
+    static var listingAccountKey: String { get { return "listingAccount" } }
+    static var listingDateKey: String { get { return "listingDate" } }
+    
 }
