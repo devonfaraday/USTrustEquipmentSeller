@@ -45,7 +45,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Sign Up"/>
                                                 <connections>
-                                                    <segue destination="d6i-dI-hQZ" kind="show" id="98X-k2-vcb"/>
+                                                    <segue destination="MWy-oY-2rn" kind="show" id="98X-k2-vcb"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -79,11 +79,18 @@
             </objects>
             <point key="canvasLocation" x="896.79999999999995" y="177.66116941529236"/>
         </scene>
-        <!--SignUpViewController-->
-        <scene sceneID="tcX-4y-NCP">
+        <!--Sign Up View Controller-->
+        <scene sceneID="sKj-Ff-W8i">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SignUpViewController" storyboardName="SignUp" referencedIdentifier="SignUpViewController" id="d6i-dI-hQZ" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t0K-4F-NuD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="SignUpViewController" id="MWy-oY-2rn" customClass="SignUpViewController" customModule="USTrustEquipmentSeller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MAn-j9-MUR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="4dN-VH-yhe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xg5-lG-Ync" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1635" y="196"/>
         </scene>
