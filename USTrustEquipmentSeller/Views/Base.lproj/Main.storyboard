@@ -31,15 +31,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="LoginViewController" storyboardName="Login" referencedIdentifier="LoginViewController" id="aw3-YT-nLE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17S-5g-aLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="897" y="178"/>
-        </scene>
-        <!--BrowseListingsViewController-->
-        <scene sceneID="iYi-s4-uXe">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="BrowseListingsViewController" storyboardName="BrowserListings" referencedIdentifier="BrowseListingsViewController" id="NdT-cy-kbl" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DhB-Ju-JS9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="62" y="911"/>
+            <point key="canvasLocation" x="871" y="46"/>
         </scene>
     </scenes>
 </document>
