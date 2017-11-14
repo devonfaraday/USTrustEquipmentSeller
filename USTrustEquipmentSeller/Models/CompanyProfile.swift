@@ -20,7 +20,7 @@ struct CompanyProfile: FirebaseType {
     var rating: Int
     var logo: UIImage
     var einNumber: String
-    var administratorAccount: User
+    var administratorAccount: [User]
     var authorizedSellers: [User]
     var authorizedBuyers: [User]
     var isBanned: Bool
