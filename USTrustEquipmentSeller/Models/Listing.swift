@@ -12,6 +12,7 @@ import UIKit
 class Listing: FirebaseType {
 
     let item: String
+    let quantity: Int
     let catagory: catagoryType
     let description: String
     let price: Double
@@ -24,6 +25,7 @@ class Listing: FirebaseType {
     
     var dictionaryCopy: [String : Any] {
         return [.itemKey: item,
+                .quantityKey: quantity,
                 .catagoryKey: catagory,
                 .descriptionKey: description,
                 .priceKey: price,
@@ -34,9 +36,10 @@ class Listing: FirebaseType {
         ]
     }
     
-    init(item: String, catagory: catagoryType, description: String, price: Double, location: String, image: [UIImage], listingAccount: CompanyProfile, identifier: String, listingDate: Date = Date()) {
+    init(item: String, quantity: Int, catagory: catagoryType, description: String, price: Double, location: String, image: [UIImage], listingAccount: CompanyProfile, identifier: String, listingDate: Date = Date()) {
         
         self.item = item
+        self.quantity = quantity
         self.catagory = catagory
         self.description = description
         self.price = price
@@ -50,6 +53,7 @@ class Listing: FirebaseType {
     
     required init?(dictionary: JSONDictionary, identifier: String) {
         guard let item = dictionary[.itemKey] as? String,
+              let quantity = dictionary[.quantityKey] as? Int,
               let catagory = dictionary[.catagoryKey] as? catagoryType,
               let description = dictionary[.descriptionKey] as? String,
               let price = dictionary[.priceKey] as? Double,
@@ -61,6 +65,7 @@ class Listing: FirebaseType {
         
         self.identifier = identifier
         self.item = item
+        self.quantity = quantity
         self.catagory = catagory
         self.description = description
         self.price = price
