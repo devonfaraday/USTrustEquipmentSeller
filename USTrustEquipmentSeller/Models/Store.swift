@@ -2,11 +2,13 @@
 //  Store.swift
 //  USTrustEquipmentSeller
 //
-//  Created by Demick McMullin on 11/14/17.
+//  Created by Demick McMullin on 11/15/17.
 //  Copyright © 2017 Christian McMullin. All rights reserved.
 //
 
 import Foundation
+import Firebase
+
 class Store: FirebaseType {
     
     var storeName: String
@@ -21,7 +23,7 @@ class Store: FirebaseType {
                 .storeTypeKey: storeType,
                 .listingsKey: listings,
                 .storeOwnerKey: storeOwner
-                ]
+        ]
     }
     
     init(storeName: String, storeType: storeType, listings: [Listing], storeOwner: CompanyProfile, identifier: String) {
@@ -33,21 +35,25 @@ class Store: FirebaseType {
         self.identifier = identifier
         
     }
-
+    
     required init?(dictionary: JSONDictionary, identifier: String) {
         guard let storeName = dictionary[.storeNameKey] as? String,
-              let storeTyper = dictionary[.storeTypeKey] as? storeType,
-              let listings = dictionary[.listingsKey] as? [Listing],
-              let storeOwner = dictionary[.storeOwnerKey] as? CompanyProfile
-        else { return nil }
+            let storeTyper = dictionary[.storeTypeKey] as? storeType,
+            let listings = dictionary[.listingsKey] as? [Listing],
+            let storeOwner = dictionary[.storeOwnerKey] as? CompanyProfile
+            else { return nil }
         
         self.storeName = storeName
+        switch storeType {
+            case storeType.retail.rawValue: self.storeType = storeType.retail
+            case storeType.rental.rawValue: self.storeType = storeType.rental
+        }
         self.storeType = storeType
         self.listings = listings
         self.storeOwner = storeOwner
         self.identifier = identifier
     }
-
+    
     enum storeType {
         case retail
         case rental

@@ -75,7 +75,7 @@ class Listing: FirebaseType {
         self.listingDate = listingDate
         
     }
-    
+  
     enum catagoryType {
         case heavyEquipment
         case powerTools
