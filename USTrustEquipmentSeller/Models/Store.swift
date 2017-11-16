@@ -12,45 +12,41 @@ import Firebase
 class Store: FirebaseType {
     
     var storeName: String
-    let storeType: storeType
-    var listings: [Listing]
-    var storeOwner: CompanyProfile
+    let storeType: String
+    var listingsIdentifier: [String]
+    var storeOwnerIdentifier: String
     var identifier: String?
     var endpoint: String = .storesEndpoint
     
     var dictionaryCopy: [String : Any] {
         return [.storeNameKey: storeName,
                 .storeTypeKey: storeType,
-                .listingsKey: listings,
-                .storeOwnerKey: storeOwner
+                .listingsIdentifierKey: listingsIdentifier,
+                .storeOwnerIdentifierKey: storeOwnerIdentifier
         ]
     }
     
-    init(storeName: String, storeType: storeType, listings: [Listing], storeOwner: CompanyProfile, identifier: String) {
+    init(storeName: String, storeType: String, listingsIdentifier: [String], storeOwnerIdentifier: String, identifier: String) {
         
         self.storeName = storeName
         self.storeType = storeType
-        self.listings = listings
-        self.storeOwner = storeOwner
+        self.listingsIdentifier = listingsIdentifier
+        self.storeOwnerIdentifier = storeOwnerIdentifier
         self.identifier = identifier
         
     }
     
     required init?(dictionary: JSONDictionary, identifier: String) {
         guard let storeName = dictionary[.storeNameKey] as? String,
-            let storeTyper = dictionary[.storeTypeKey] as? storeType,
-            let listings = dictionary[.listingsKey] as? [Listing],
-            let storeOwner = dictionary[.storeOwnerKey] as? CompanyProfile
+            let storeType = dictionary[.storeTypeKey] as? String,
+            let listingsIdentifier = dictionary[.listingsIdentifierKey] as? [String],
+            let storeOwnerIdentifier = dictionary[.storeOwnerIdentifierKey] as? String
             else { return nil }
         
         self.storeName = storeName
-        switch storeType {
-            case storeType.retail.rawValue: self.storeType = storeType.retail
-            case storeType.rental.rawValue: self.storeType = storeType.rental
-        }
         self.storeType = storeType
-        self.listings = listings
-        self.storeOwner = storeOwner
+        self.listingsIdentifier = listingsIdentifier
+        self.storeOwnerIdentifier = storeOwnerIdentifier
         self.identifier = identifier
     }
     

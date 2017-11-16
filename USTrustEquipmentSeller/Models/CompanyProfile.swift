@@ -20,9 +20,9 @@ struct CompanyProfile: FirebaseType {
     var rating: Int
     var logo: UIImage
     var einNumber: String
-    var administratorAccount: [User]
-    var authorizedSellers: [User]
-    var authorizedBuyers: [User]
+    var administratorAccountIdentifier: [String]
+    var authorizedSellersIdentifier: [String]
+    var authorizedBuyersIdentifier: [String]
     var isBanned: Bool
     var isVerified: Bool
     var endpoint: String = .companiesEndpoint
@@ -37,16 +37,16 @@ struct CompanyProfile: FirebaseType {
             .ratingKey: rating,
             .logoKey: logo,
             .einNumberKey: einNumber,
-            .administratorAccountKey: administratorAccount,
-            .authorizedSellersKey: authorizedSellers,
-            .authorizedBuyersKey: authorizedBuyers,
+            .administratorAccountIdentifierKey: administratorAccountIdentifier,
+            .authorizedSellersIdentifierKey: authorizedSellersIdentifier,
+            .authorizedBuyersIdentifierKey: authorizedBuyersIdentifier,
             .isBannedKey:isBanned,
             .isVerifiedKey: isVerified
             ]
     }
     
     
-    init(companyName: String, streetAddress: String, city: String, state: String, zipCode: String, phone: String, rating: Int, logo: UIImage, einNumber: String, administratorAccount: [User], authorizedSellers: [User], authorizedBuyers: [User], isBanned: Bool = false, isVerified: Bool = false, identifier: String) {
+    init(companyName: String, streetAddress: String, city: String, state: String, zipCode: String, phone: String, rating: Int, logo: UIImage, einNumber: String, administratorAccountIdentifier: [String], authorizedSellersIdentifier: [String], authorizedBuyersIdentifier: [String], isBanned: Bool = false, isVerified: Bool = false, identifier: String) {
         
         self.companyName = companyName
         self.streetAddress = streetAddress
@@ -57,9 +57,9 @@ struct CompanyProfile: FirebaseType {
         self.rating = rating
         self.logo = logo
         self.einNumber = einNumber
-        self.administratorAccount = administratorAccount
-        self.authorizedSellers = authorizedSellers
-        self.authorizedBuyers = authorizedBuyers
+        self.administratorAccountIdentifier = administratorAccountIdentifier
+        self.authorizedSellersIdentifier = authorizedSellersIdentifier
+        self.authorizedBuyersIdentifier = authorizedBuyersIdentifier
         self.isBanned = isBanned
         self.isVerified = isVerified
         self.identifier = identifier
@@ -76,9 +76,9 @@ struct CompanyProfile: FirebaseType {
             let rating = dictionary[.ratingKey] as? Int,
             let logo = dictionary[.logoKey] as? UIImage,
             let einNumber = dictionary[.einNumberKey] as? String,
-            let administratorAccount = dictionary[.administratorAccountKey] as? [User],
-            let authorizedSellers = dictionary[.authorizedSellersKey] as? [User],
-            let authorizedBuyers = dictionary[.authorizedBuyersKey] as? [User],
+            let administratorAccountIdentifier = dictionary[.administratorAccountIdentifierKey] as? [String],
+            let authorizedSellersIdentifier = dictionary[.authorizedSellersIdentifierKey] as? [String],
+            let authorizedBuyersIdentifier = dictionary[.authorizedBuyersIdentifierKey] as? [String],
             let isBanned = dictionary[.isBannedKey] as? Bool,
             let isVerified = dictionary[.isVerifiedKey] as? Bool
             else { return nil }
@@ -93,9 +93,9 @@ struct CompanyProfile: FirebaseType {
         self.rating = rating
         self.logo = logo
         self.einNumber = einNumber
-        self.administratorAccount = administratorAccount
-        self.authorizedSellers = authorizedSellers
-        self.authorizedBuyers = authorizedBuyers
+        self.administratorAccountIdentifier = administratorAccountIdentifier
+        self.authorizedSellersIdentifier = authorizedSellersIdentifier
+        self.authorizedBuyersIdentifier = authorizedBuyersIdentifier
         self.isBanned = isBanned
         self.isVerified = isVerified
    

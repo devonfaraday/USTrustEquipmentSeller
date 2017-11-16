@@ -13,12 +13,12 @@ class Listing: FirebaseType {
 
     let item: String
     let quantity: Int
-    let catagory: catagoryType
+    let catagoryIdentifier: String
     let description: String
     let price: Double
     let location: String
     let image: [UIImage]
-    let listingAccount: CompanyProfile
+    let listingAccountIdentifier: String
     var endpoint: String = .listingsEndpoint
     var identifier: String?
     let listingDate: Date
@@ -26,26 +26,26 @@ class Listing: FirebaseType {
     var dictionaryCopy: [String : Any] {
         return [.itemKey: item,
                 .quantityKey: quantity,
-                .catagoryKey: catagory,
+                .catagoryIdentifierKey: catagoryIdentifier,
                 .descriptionKey: description,
                 .priceKey: price,
                 .locationKey: location,
                 .imageKey: image,
-                .listingAccountKey: listingAccount,
+                .listingAccountIdentifierKey: listingAccountIdentifier,
                 .listingDateKey: listingDate
         ]
     }
     
-    init(item: String, quantity: Int, catagory: catagoryType, description: String, price: Double, location: String, image: [UIImage], listingAccount: CompanyProfile, identifier: String, listingDate: Date = Date()) {
+    init(item: String, quantity: Int, catagoryIdentifer: String, description: String, price: Double, location: String, image: [UIImage], listingAccountIdentifer: String, identifier: String, listingDate: Date = Date()) {
         
         self.item = item
         self.quantity = quantity
-        self.catagory = catagory
+        self.catagoryIdentifier = catagoryIdentifer
         self.description = description
         self.price = price
         self.location = location
         self.image = image
-        self.listingAccount = listingAccount
+        self.listingAccountIdentifier = listingAccountIdentifer
         self.identifier = identifier
         self.listingDate = listingDate
         
@@ -54,24 +54,24 @@ class Listing: FirebaseType {
     required init?(dictionary: JSONDictionary, identifier: String) {
         guard let item = dictionary[.itemKey] as? String,
               let quantity = dictionary[.quantityKey] as? Int,
-              let catagory = dictionary[.catagoryKey] as? catagoryType,
+              let catagoryIdentifier = dictionary[.catagoryIdentifierKey] as? String,
               let description = dictionary[.descriptionKey] as? String,
               let price = dictionary[.priceKey] as? Double,
               let location = dictionary[.locationKey] as? String,
               let image = dictionary[.imageKey] as? [UIImage],
-              let listingAccount = dictionary[.listingAccountKey] as? CompanyProfile,
+              let listingAccountIdentifer = dictionary[.listingAccountIdentifierKey] as? String,
               let listingDate = dictionary[.listingDateKey] as? Date
             else { return nil }
         
         self.identifier = identifier
         self.item = item
         self.quantity = quantity
-        self.catagory = catagory
+        self.catagoryIdentifier = catagoryIdentifier
         self.description = description
         self.price = price
         self.location = location
         self.image = image
-        self.listingAccount = listingAccount
+        self.listingAccountIdentifier = listingAccountIdentifer
         self.listingDate = listingDate
         
     }

@@ -33,24 +33,24 @@ extension String {
     static var ratingKey: String { get { return "rating" } }
     static var logoKey: String { get { return "logo" } }
     static var einNumberKey: String { get { return "einNumber" } }
-    static var administratorAccountKey: String { get { return "administratorAccount" } }
-    static var authorizedSellersKey: String { get { return "authorizedSellers" } }
-    static var authorizedBuyersKey: String { get { return "authorizedBuyers" } }
+    static var administratorAccountIdentifierKey: String { get { return "administratorAccount" } }
+    static var authorizedSellersIdentifierKey: String { get { return "authorizedSellers" } }
+    static var authorizedBuyersIdentifierKey: String { get { return "authorizedBuyers" } }
     static var isVerifiedKey: String { get { return "isVerified" } }
     
     static var itemKey: String { get { return "item" } }
     static var quantityKey: String { get { return "quantity" } }
-    static var catagoryKey: String { get { return "catagory" } }
+    static var catagoryIdentifierKey: String { get { return "catagoryIdentifier" } }
     static var descriptionKey: String { get { return "description" } }
     static var priceKey: String { get { return "price" } }
     static var locationKey: String { get { return "location" } }
     static var imageKey: String { get { return "image" } }
-    static var listingAccountKey: String { get { return "listingAccount" } }
+    static var listingAccountIdentifierKey: String { get { return "listingAccountIdentifier" } }
     static var listingDateKey: String { get { return "listingDate" } }
     
     static var storeNameKey: String { get { return "storeName" } }
     static var storeTypeKey: String { get { return "storeType" } }
-    static var listingsKey: String { get { return "listings" } }
-    static var storeOwnerKey: String { get { return "storeOwner" } }
+    static var listingsIdentifierKey: String { get { return "listingsIdentifier" } }
+    static var storeOwnerIdentifierKey: String { get { return "storeOwnerIdentifier" } }
     
 }
