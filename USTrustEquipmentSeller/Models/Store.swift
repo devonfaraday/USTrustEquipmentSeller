@@ -13,7 +13,7 @@ class Store: FirebaseType {
     
     var storeName: String
     let storeType: String
-    var listingsIdentifier: [String]
+    var listingsIdentifiers: [String]
     var storeOwnerIdentifier: String
     var identifier: String?
     var endpoint: String = .storesEndpoint
@@ -21,16 +21,16 @@ class Store: FirebaseType {
     var dictionaryCopy: [String : Any] {
         return [.storeNameKey: storeName,
                 .storeTypeKey: storeType,
-                .listingsIdentifierKey: listingsIdentifier,
+                .listingsIdentifiersKey: listingsIdentifiers,
                 .storeOwnerIdentifierKey: storeOwnerIdentifier
         ]
     }
     
-    init(storeName: String, storeType: String, listingsIdentifier: [String], storeOwnerIdentifier: String, identifier: String) {
+    init(storeName: String, storeType: String, listingsIdentifiers: [String], storeOwnerIdentifier: String, identifier: String) {
         
         self.storeName = storeName
         self.storeType = storeType
-        self.listingsIdentifier = listingsIdentifier
+        self.listingsIdentifiers = listingsIdentifiers
         self.storeOwnerIdentifier = storeOwnerIdentifier
         self.identifier = identifier
         
@@ -39,18 +39,18 @@ class Store: FirebaseType {
     required init?(dictionary: JSONDictionary, identifier: String) {
         guard let storeName = dictionary[.storeNameKey] as? String,
             let storeType = dictionary[.storeTypeKey] as? String,
-            let listingsIdentifier = dictionary[.listingsIdentifierKey] as? [String],
+            let listingsIdentifiers = dictionary[.listingsIdentifiersKey] as? [String],
             let storeOwnerIdentifier = dictionary[.storeOwnerIdentifierKey] as? String
             else { return nil }
         
         self.storeName = storeName
         self.storeType = storeType
-        self.listingsIdentifier = listingsIdentifier
+        self.listingsIdentifiers = listingsIdentifiers
         self.storeOwnerIdentifier = storeOwnerIdentifier
         self.identifier = identifier
     }
     
-    enum storeType {
+    enum StoreType {
         case retail
         case rental
     }

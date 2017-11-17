@@ -20,9 +20,9 @@ struct CompanyProfile: FirebaseType {
     var rating: Int
     var logo: UIImage
     var einNumber: String
-    var administratorAccountIdentifier: [String]
-    var authorizedSellersIdentifier: [String]
-    var authorizedBuyersIdentifier: [String]
+    var administratorAccountsIdentifiers: [String]
+    var authorizedSellersIdentifiers: [String]
+    var authorizedBuyersIdentifiers: [String]
     var isBanned: Bool
     var isVerified: Bool
     var endpoint: String = .companiesEndpoint
@@ -37,16 +37,16 @@ struct CompanyProfile: FirebaseType {
             .ratingKey: rating,
             .logoKey: logo,
             .einNumberKey: einNumber,
-            .administratorAccountIdentifierKey: administratorAccountIdentifier,
-            .authorizedSellersIdentifierKey: authorizedSellersIdentifier,
-            .authorizedBuyersIdentifierKey: authorizedBuyersIdentifier,
+            .administratorAccountsIdentifierKey: administratorAccountsIdentifiers,
+            .authorizedSellersIdentifierKey: authorizedSellersIdentifiers,
+            .authorizedBuyersIdentifierKey: authorizedBuyersIdentifiers,
             .isBannedKey:isBanned,
             .isVerifiedKey: isVerified
             ]
     }
     
     
-    init(companyName: String, streetAddress: String, city: String, state: String, zipCode: String, phone: String, rating: Int, logo: UIImage, einNumber: String, administratorAccountIdentifier: [String], authorizedSellersIdentifier: [String], authorizedBuyersIdentifier: [String], isBanned: Bool = false, isVerified: Bool = false, identifier: String) {
+    init(companyName: String, streetAddress: String, city: String, state: String, zipCode: String, phone: String, rating: Int, logo: UIImage, einNumber: String, administratorAccountsIdentifiers: [String], authorizedSellersIdentifiers: [String], authorizedBuyersIdentifiers: [String], isBanned: Bool = false, isVerified: Bool = false, identifier: String) {
         
         self.companyName = companyName
         self.streetAddress = streetAddress
@@ -57,9 +57,9 @@ struct CompanyProfile: FirebaseType {
         self.rating = rating
         self.logo = logo
         self.einNumber = einNumber
-        self.administratorAccountIdentifier = administratorAccountIdentifier
-        self.authorizedSellersIdentifier = authorizedSellersIdentifier
-        self.authorizedBuyersIdentifier = authorizedBuyersIdentifier
+        self.administratorAccountsIdentifiers = administratorAccountsIdentifiers
+        self.authorizedSellersIdentifiers = authorizedSellersIdentifiers
+        self.authorizedBuyersIdentifiers = authorizedBuyersIdentifiers
         self.isBanned = isBanned
         self.isVerified = isVerified
         self.identifier = identifier
@@ -76,9 +76,9 @@ struct CompanyProfile: FirebaseType {
             let rating = dictionary[.ratingKey] as? Int,
             let logo = dictionary[.logoKey] as? UIImage,
             let einNumber = dictionary[.einNumberKey] as? String,
-            let administratorAccountIdentifier = dictionary[.administratorAccountIdentifierKey] as? [String],
-            let authorizedSellersIdentifier = dictionary[.authorizedSellersIdentifierKey] as? [String],
-            let authorizedBuyersIdentifier = dictionary[.authorizedBuyersIdentifierKey] as? [String],
+            let administratorAccountsIdentifiers = dictionary[.administratorAccountsIdentifierKey] as? [String],
+            let authorizedSellersIdentifiers = dictionary[.authorizedSellersIdentifierKey] as? [String],
+            let authorizedBuyersIdentifiers = dictionary[.authorizedBuyersIdentifierKey] as? [String],
             let isBanned = dictionary[.isBannedKey] as? Bool,
             let isVerified = dictionary[.isVerifiedKey] as? Bool
             else { return nil }
@@ -93,9 +93,9 @@ struct CompanyProfile: FirebaseType {
         self.rating = rating
         self.logo = logo
         self.einNumber = einNumber
-        self.administratorAccountIdentifier = administratorAccountIdentifier
-        self.authorizedSellersIdentifier = authorizedSellersIdentifier
-        self.authorizedBuyersIdentifier = authorizedBuyersIdentifier
+        self.administratorAccountsIdentifiers = administratorAccountsIdentifiers
+        self.authorizedSellersIdentifiers = authorizedSellersIdentifiers
+        self.authorizedBuyersIdentifiers = authorizedBuyersIdentifiers
         self.isBanned = isBanned
         self.isVerified = isVerified
    

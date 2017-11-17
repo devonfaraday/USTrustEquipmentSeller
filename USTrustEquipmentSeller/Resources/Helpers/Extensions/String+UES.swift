@@ -33,9 +33,9 @@ extension String {
     static var ratingKey: String { get { return "rating" } }
     static var logoKey: String { get { return "logo" } }
     static var einNumberKey: String { get { return "einNumber" } }
-    static var administratorAccountIdentifierKey: String { get { return "administratorAccount" } }
-    static var authorizedSellersIdentifierKey: String { get { return "authorizedSellers" } }
-    static var authorizedBuyersIdentifierKey: String { get { return "authorizedBuyers" } }
+    static var administratorAccountsIdentifierKey: String { get { return "administratorAccountsIdentifiers" } }
+    static var authorizedSellersIdentifierKey: String { get { return "authorizedSellersIdentifiers" } }
+    static var authorizedBuyersIdentifierKey: String { get { return "authorizedBuyersIdentifiers" } }
     static var isVerifiedKey: String { get { return "isVerified" } }
     
     static var itemKey: String { get { return "item" } }
@@ -50,7 +50,7 @@ extension String {
     
     static var storeNameKey: String { get { return "storeName" } }
     static var storeTypeKey: String { get { return "storeType" } }
-    static var listingsIdentifierKey: String { get { return "listingsIdentifier" } }
+    static var listingsIdentifiersKey: String { get { return "listingsIdentifiers" } }
     static var storeOwnerIdentifierKey: String { get { return "storeOwnerIdentifier" } }
     
 }

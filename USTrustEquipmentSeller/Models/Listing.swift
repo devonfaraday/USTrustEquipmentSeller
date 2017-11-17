@@ -17,7 +17,7 @@ class Listing: FirebaseType {
     let description: String
     let price: Double
     let location: String
-    let image: [UIImage]
+    let images: [UIImage]
     let listingAccountIdentifier: String
     var endpoint: String = .listingsEndpoint
     var identifier: String?
@@ -30,13 +30,13 @@ class Listing: FirebaseType {
                 .descriptionKey: description,
                 .priceKey: price,
                 .locationKey: location,
-                .imageKey: image,
+                .imageKey: images,
                 .listingAccountIdentifierKey: listingAccountIdentifier,
                 .listingDateKey: listingDate
         ]
     }
     
-    init(item: String, quantity: Int, catagoryIdentifer: String, description: String, price: Double, location: String, image: [UIImage], listingAccountIdentifer: String, identifier: String, listingDate: Date = Date()) {
+    init(item: String, quantity: Int, catagoryIdentifer: String, description: String, price: Double, location: String, images: [UIImage], listingAccountIdentifer: String, identifier: String, listingDate: Date = Date()) {
         
         self.item = item
         self.quantity = quantity
@@ -44,7 +44,7 @@ class Listing: FirebaseType {
         self.description = description
         self.price = price
         self.location = location
-        self.image = image
+        self.images = images
         self.listingAccountIdentifier = listingAccountIdentifer
         self.identifier = identifier
         self.listingDate = listingDate
@@ -58,7 +58,7 @@ class Listing: FirebaseType {
               let description = dictionary[.descriptionKey] as? String,
               let price = dictionary[.priceKey] as? Double,
               let location = dictionary[.locationKey] as? String,
-              let image = dictionary[.imageKey] as? [UIImage],
+              let images = dictionary[.imageKey] as? [UIImage],
               let listingAccountIdentifer = dictionary[.listingAccountIdentifierKey] as? String,
               let listingDate = dictionary[.listingDateKey] as? Date
             else { return nil }
@@ -70,13 +70,13 @@ class Listing: FirebaseType {
         self.description = description
         self.price = price
         self.location = location
-        self.image = image
+        self.images = images
         self.listingAccountIdentifier = listingAccountIdentifer
         self.listingDate = listingDate
         
     }
   
-    enum catagoryType {
+    enum CatagoryType {
         case heavyEquipment
         case powerTools
     }
