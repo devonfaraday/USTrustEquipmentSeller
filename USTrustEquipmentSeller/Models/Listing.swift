@@ -12,37 +12,40 @@ import UIKit
 class Listing: FirebaseType {
 
     let item: String
-    let catagory: catagoryType
+    let quantity: Int
+    let catagoryIdentifier: String
     let description: String
     let price: Double
     let location: String
-    let image: [UIImage]
-    let listingAccount: CompanyProfile
+    let images: [UIImage]
+    let listingAccountIdentifier: String
     var endpoint: String = .listingsEndpoint
     var identifier: String?
     let listingDate: Date
     
     var dictionaryCopy: [String : Any] {
         return [.itemKey: item,
-                .catagoryKey: catagory,
+                .quantityKey: quantity,
+                .catagoryIdentifierKey: catagoryIdentifier,
                 .descriptionKey: description,
                 .priceKey: price,
                 .locationKey: location,
-                .imageKey: image,
-                .listingAccountKey: listingAccount,
+                .imageKey: images,
+                .listingAccountIdentifierKey: listingAccountIdentifier,
                 .listingDateKey: listingDate
         ]
     }
     
-    init(item: String, catagory: catagoryType, description: String, price: Double, location: String, image: [UIImage], listingAccount: CompanyProfile, identifier: String, listingDate: Date = Date()) {
+    init(item: String, quantity: Int, catagoryIdentifer: String, description: String, price: Double, location: String, images: [UIImage], listingAccountIdentifer: String, identifier: String, listingDate: Date = Date()) {
         
         self.item = item
-        self.catagory = catagory
+        self.quantity = quantity
+        self.catagoryIdentifier = catagoryIdentifer
         self.description = description
         self.price = price
         self.location = location
-        self.image = image
-        self.listingAccount = listingAccount
+        self.images = images
+        self.listingAccountIdentifier = listingAccountIdentifer
         self.identifier = identifier
         self.listingDate = listingDate
         
@@ -50,28 +53,30 @@ class Listing: FirebaseType {
     
     required init?(dictionary: JSONDictionary, identifier: String) {
         guard let item = dictionary[.itemKey] as? String,
-              let catagory = dictionary[.catagoryKey] as? catagoryType,
+              let quantity = dictionary[.quantityKey] as? Int,
+              let catagoryIdentifier = dictionary[.catagoryIdentifierKey] as? String,
               let description = dictionary[.descriptionKey] as? String,
               let price = dictionary[.priceKey] as? Double,
               let location = dictionary[.locationKey] as? String,
-              let image = dictionary[.imageKey] as? [UIImage],
-              let listingAccount = dictionary[.listingAccountKey] as? CompanyProfile,
+              let images = dictionary[.imageKey] as? [UIImage],
+              let listingAccountIdentifer = dictionary[.listingAccountIdentifierKey] as? String,
               let listingDate = dictionary[.listingDateKey] as? Date
             else { return nil }
         
         self.identifier = identifier
         self.item = item
-        self.catagory = catagory
+        self.quantity = quantity
+        self.catagoryIdentifier = catagoryIdentifier
         self.description = description
         self.price = price
         self.location = location
-        self.image = image
-        self.listingAccount = listingAccount
+        self.images = images
+        self.listingAccountIdentifier = listingAccountIdentifer
         self.listingDate = listingDate
         
     }
-    
-    enum catagoryType {
+  
+    enum CatagoryType {
         case heavyEquipment
         case powerTools
     }

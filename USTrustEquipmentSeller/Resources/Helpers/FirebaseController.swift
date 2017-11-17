@@ -55,7 +55,7 @@ extension FirebaseType {
     }
     
     // posting a listing for a store use this save
-    mutating func saveListing(toStore store: Any) {
+    mutating func saveListing(toStore store: Store) {
         var newEndpoint = FirebaseController.databaseRef.child("stores/\(String.listingsEndpoint)")
         if let identifier = identifier {
             newEndpoint = newEndpoint.child(identifier)
