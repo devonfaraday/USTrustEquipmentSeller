@@ -40,7 +40,7 @@ struct CompanyProfile: FirebaseType {
             .administratorAccountsIdentifierKey: administratorAccountsIdentifiers,
             .authorizedSellersIdentifierKey: authorizedSellersIdentifiers,
             .authorizedBuyersIdentifierKey: authorizedBuyersIdentifiers,
-            .isBannedKey:isBanned,
+            .isBannedKey: isBanned,
             .isVerifiedKey: isVerified
             ]
     }
