@@ -10,6 +10,23 @@ import UIKit
 
 class CompanyProfileViewController: UIViewController {
 
+    /* Outlets */
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var companyName: UITextField!
+    @IBOutlet weak var streetAddress: UITextField!
+    @IBOutlet weak var city: UITextField!
+    @IBOutlet weak var state: UITextField!
+    @IBOutlet weak var zipCode: UITextField!
+    @IBOutlet weak var phoneNumber: UITextField!
+    @IBOutlet weak var einNumber: UITextField!
+    
+    /* Button Outlets */
+    @IBOutlet weak var saveEditButton: UIButton!
+    @IBOutlet weak var administratorSettingsButton: UIButton!
+    @IBOutlet weak var companyListingsButton: UIButton!
+    @IBOutlet weak var addImageButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,5 +48,14 @@ class CompanyProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    @IBAction func addImageButtonTapped(_ sender: Any) {
+    }
+    
+    
+    @IBAction func saveEditButtonTapped(_ sender: Any) {
+    }
+    
+    
+    
 }
