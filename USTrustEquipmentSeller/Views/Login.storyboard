@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ipo-QB-TLm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -53,7 +53,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Sign Up"/>
                                                 <connections>
-                                                    <segue destination="d6i-dI-hQZ" kind="show" id="98X-k2-vcb"/>
+                                                    <segue destination="d6i-dI-hQZ" kind="show" identifier="toSignUp" id="98X-k2-vcb"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -75,10 +75,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cA3-06-hZm"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bwI-Vq-RgS"/>
+                    <connections>
+                        <segue destination="n4T-MJ-Qrb" kind="show" identifier="toUserProfile" id="DMn-FU-Oel"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQ7-J0-ICP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896.79999999999995" y="177.66116941529236"/>
+            <point key="canvasLocation" x="1236" y="177.66116941529236"/>
+        </scene>
+        <!--UserProfileViewController-->
+        <scene sceneID="lqK-Eu-yPu">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="UserProfileViewController" storyboardName="UserProfile" referencedIdentifier="UserProfileViewController" id="n4T-MJ-Qrb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MO8-9G-YGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1965" y="23"/>
         </scene>
         <!--SignUpViewController-->
         <scene sceneID="tcX-4y-NCP">
@@ -86,7 +98,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="SignUpViewController" storyboardName="SignUp" referencedIdentifier="SignUpViewController" id="d6i-dI-hQZ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0K-4F-NuD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1634" y="177"/>
+            <point key="canvasLocation" x="1972.8" y="176.31184407796104"/>
         </scene>
     </scenes>
 </document>

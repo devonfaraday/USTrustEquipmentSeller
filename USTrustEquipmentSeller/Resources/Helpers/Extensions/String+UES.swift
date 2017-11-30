@@ -62,6 +62,9 @@ extension String {
     static var listingsIdentifiersKey: String { get { return "listingsIdentifiers" } }
     static var storeOwnerIdentifierKey: String { get { return "storeOwnerIdentifier" } }
     
+    /* Segues */
+    static var toUserProfileSegueKey: String { get { return "toUserProfile" } }
+    
     /* Storyboard Identifiers */
     static var browseListingsStoryboardIdentifier: String { get { return "BrowseListingsViewController" } }
     static var companyProfileStoryboardIdentifier: String { get { return "CompanyProfileViewController" } }

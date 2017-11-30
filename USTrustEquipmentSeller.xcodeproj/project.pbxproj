@@ -37,6 +37,7 @@
 		FD557F381FBAB6EC00A52EA1 /* CompanyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD557F371FBAB6EC00A52EA1 /* CompanyProfile.storyboard */; };
 		FD557F3E1FBABB9B00A52EA1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F3D1FBABB9B00A52EA1 /* SignUpViewController.swift */; };
 		FD557F401FBABBB800A52EA1 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD557F3F1FBABBB800A52EA1 /* SignUp.storyboard */; };
+		FDC207DD1FD0C29400860A0B /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC207DC1FD0C29400860A0B /* UsernameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		FD557F3C1FBAB7B500A52EA1 /* CreateListing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = CreateListing.storyboard; path = /Users/christianmcmullin/Desktop/Swift/USTrust/USTrustEquipmentSeller/USTrustEquipmentSeller/Views/CreateListing.storyboard; sourceTree = "<absolute>"; };
 		FD557F3D1FBABB9B00A52EA1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FD557F3F1FBABBB800A52EA1 /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		FDC207DC1FD0C29400860A0B /* UsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 		FD31340B1FB50806002BCA23 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FDC207DB1FD0C26300860A0B /* Sign Up */,
 				FD557F1F1FBAB51600A52EA1 /* InitialViewController.swift */,
 				FD557F211FBAB52B00A52EA1 /* LoginViewController.swift */,
 				FD557F231FBAB54C00A52EA1 /* UserProfileViewController.swift */,
@@ -249,7 +252,6 @@
 				FD557F291FBAB56B00A52EA1 /* CreateListingViewController.swift */,
 				FD557F2B1FBAB5B500A52EA1 /* BrowseListingsViewController.swift */,
 				FD557F2D1FBAB5BC00A52EA1 /* ListingDetailViewController.swift */,
-				FD557F3D1FBABB9B00A52EA1 /* SignUpViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -287,6 +289,15 @@
 				FD3133E21FB504E7002BCA23 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		FDC207DB1FD0C26300860A0B /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				FD557F3D1FBABB9B00A52EA1 /* SignUpViewController.swift */,
+				FDC207DC1FD0C29400860A0B /* UsernameViewController.swift */,
+			);
+			path = "Sign Up";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -601,6 +612,7 @@
 				FD3133DC1FB504E7002BCA23 /* AppDelegate.swift in Sources */,
 				5D7D81F01FBA4FC900998B67 /* Listing.swift in Sources */,
 				5D917ECB1FBA4AA0004BD9AC /* User.swift in Sources */,
+				FDC207DD1FD0C29400860A0B /* UsernameViewController.swift in Sources */,
 				FD557F2E1FBAB5BC00A52EA1 /* ListingDetailViewController.swift in Sources */,
 				FD557F3E1FBABB9B00A52EA1 /* SignUpViewController.swift in Sources */,
 				FD557F2C1FBAB5B500A52EA1 /* BrowseListingsViewController.swift in Sources */,
