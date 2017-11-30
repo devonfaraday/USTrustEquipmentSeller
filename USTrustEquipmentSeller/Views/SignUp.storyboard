@@ -56,11 +56,11 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miT-46-1KV">
                                                 <rect key="frame" x="0.0" y="0.0" width="147.5" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Cancel"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VA2-5C-Od8">
                                                 <rect key="frame" x="147.5" y="0.0" width="147.5" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Sign Up"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -75,6 +75,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4dN-VH-yhe"/>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="miT-46-1KV" id="N9Z-9U-wgy"/>
+                        <outlet property="signUpButton" destination="VA2-5C-Od8" id="6dO-GO-t6p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xg5-lG-Ync" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
