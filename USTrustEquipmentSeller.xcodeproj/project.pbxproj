@@ -38,6 +38,7 @@
 		FD557F3E1FBABB9B00A52EA1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F3D1FBABB9B00A52EA1 /* SignUpViewController.swift */; };
 		FD557F401FBABBB800A52EA1 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD557F3F1FBABBB800A52EA1 /* SignUp.storyboard */; };
 		FDC207DD1FD0C29400860A0B /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC207DC1FD0C29400860A0B /* UsernameViewController.swift */; };
+		FDC207DF1FD0D3E000860A0B /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC207DE1FD0D3E000860A0B /* UserController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		FD557F3D1FBABB9B00A52EA1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FD557F3F1FBABBB800A52EA1 /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		FDC207DC1FD0C29400860A0B /* UsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameViewController.swift; sourceTree = "<group>"; };
+		FDC207DE1FD0D3E000860A0B /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 		FD31340C1FB50807002BCA23 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FDC207DE1FD0D3E000860A0B /* UserController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC207DF1FD0D3E000860A0B /* UserController.swift in Sources */,
 				FD557F281FBAB55D00A52EA1 /* StoreProfileViewController.swift in Sources */,
 				FD557F221FBAB52B00A52EA1 /* LoginViewController.swift in Sources */,
 				FD557F241FBAB54C00A52EA1 /* UserProfileViewController.swift in Sources */,

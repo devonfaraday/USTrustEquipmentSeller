@@ -20,24 +20,26 @@ struct User: FirebaseType {
     var zipCode: String
     var emailAddress: String
     var profileImage: UIImage
-    var isBanned: Bool
+    var phoneNumber: Int?
+    var isBanned: Bool = false
     var endpoint: String = .usersEndpoint
     var identifier: String?
-
+    
     var dictionaryCopy: [String : Any] {
         return [.firstNameKey: firstName,
-            .lastNameKey: lastName,
-            .streetAddressKey: streetAddress,
-            .cityKey: city,
-            .stateKey: state,
-            .zipCodeKey: zipCode,
-            .emailAddressKey: emailAddress,
-            .profileImageKey: profileImage,
-            .isBannedKey: isBanned
+                .lastNameKey: lastName,
+                .streetAddressKey: streetAddress,
+                .cityKey: city,
+                .stateKey: state,
+                .zipCodeKey: zipCode,
+                .emailAddressKey: emailAddress,
+                .profileImageKey: profileImage,
+                .phoneKey: phoneNumber,
+                .isBannedKey: isBanned
         ]
     }
     
-    init(firstName: String, lastName: String, streetAddress: String, city: String, state: String, zipCode: String, emailAddress: String, profileImage: UIImage, isBanned: Bool = false, identifier: String) {
+    init(firstName: String, lastName: String, streetAddress: String, city: String, state: String, zipCode: String, emailAddress: String, profileImage: UIImage) {
         
         self.firstName = firstName
         self.lastName = lastName
@@ -47,12 +49,9 @@ struct User: FirebaseType {
         self.zipCode = zipCode
         self.emailAddress = emailAddress
         self.profileImage = profileImage
-        self.isBanned = isBanned
-        self.identifier = identifier
-        
-    }
+     }
     
- init?(dictionary: JSONDictionary, identifier: String) {
+    init?(dictionary: JSONDictionary, identifier: String) {
         guard let firstName = dictionary[.firstNameKey] as? String,
             let lastName = dictionary[.lastNameKey] as? String,
             let streetAddress = dictionary[.streetAddressKey] as? String,
@@ -62,7 +61,7 @@ struct User: FirebaseType {
             let emailAddress = dictionary[.emailAddressKey] as? String,
             let profileImage = dictionary[.profileImageKey] as? UIImage,
             let isBanned = dictionary[.isBannedKey] as? Bool
-        else { return nil }
+            else { return nil }
         
         self.identifier = identifier
         self.firstName = firstName
@@ -74,9 +73,8 @@ struct User: FirebaseType {
         self.emailAddress = emailAddress
         self.profileImage = profileImage
         self.isBanned = isBanned
-       
+        if let phoneNumber = dictionary[.phoneKey] as? Int { self.phoneNumber = phoneNumber }
     }
-    
 }
 
 
