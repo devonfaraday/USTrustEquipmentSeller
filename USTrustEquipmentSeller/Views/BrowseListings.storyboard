@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nox-Ga-vnD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -62,9 +62,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="UWo-dU-LyL" kind="show" id="mOz-Mz-o6S"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -85,14 +82,6 @@
             </objects>
             <point key="canvasLocation" x="200.80000000000001" y="125.4872563718141"/>
         </scene>
-        <!--ListingDetail-->
-        <scene sceneID="0Ml-3T-6mS">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ListingDetail" id="UWo-dU-LyL" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dJ6-GF-buK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="961" y="125"/>
-        </scene>
         <!--Search Filter View Controller-->
         <scene sceneID="bgZ-QZ-5Pa">
             <objects>
@@ -100,7 +89,20 @@
                     <view key="view" contentMode="scaleToFill" id="0Ae-kW-aZw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter By" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XtG-C2-fty">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XtG-C2-fty" firstAttribute="leading" secondItem="Zkd-xH-QZY" secondAttribute="leading" id="Gj1-8N-lUa"/>
+                            <constraint firstItem="XtG-C2-fty" firstAttribute="top" secondItem="0Ae-kW-aZw" secondAttribute="top" id="ISY-x2-ZpJ"/>
+                            <constraint firstItem="Zkd-xH-QZY" firstAttribute="trailing" secondItem="XtG-C2-fty" secondAttribute="trailing" id="wWr-1j-71m"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Zkd-xH-QZY"/>
                     </view>
                 </viewController>

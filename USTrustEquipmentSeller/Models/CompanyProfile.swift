@@ -17,14 +17,14 @@ struct CompanyProfile: FirebaseType {
     var state: String
     var zipCode: String
     var phone: String
-    var rating: Int
-    var logo: UIImage
+    var rating: Int = 0
+    var logo: UIImage?
     var einNumber: String
-    var administratorAccountsIdentifiers: [String]
-    var authorizedSellersIdentifiers: [String]
-    var authorizedBuyersIdentifiers: [String]
-    var isBanned: Bool
-    var isVerified: Bool
+    var administratorAccountsIdentifiers: [String] = []
+    var authorizedSellersIdentifiers: [String] = []
+    var authorizedBuyersIdentifiers: [String] = []
+    var isBanned: Bool = false
+    var isVerified: Bool = false
     var endpoint: String = .companiesEndpoint
     var identifier: String?
     var dictionaryCopy: [String : Any] {
@@ -35,7 +35,6 @@ struct CompanyProfile: FirebaseType {
             .zipCodeKey: zipCode,
             .phoneKey: phone,
             .ratingKey: rating,
-            .logoKey: logo,
             .einNumberKey: einNumber,
             .administratorAccountsIdentifierKey: administratorAccountsIdentifiers,
             .authorizedSellersIdentifierKey: authorizedSellersIdentifiers,
@@ -46,7 +45,7 @@ struct CompanyProfile: FirebaseType {
     }
     
     
-    init(companyName: String, streetAddress: String, city: String, state: String, zipCode: String, phone: String, rating: Int, logo: UIImage, einNumber: String, administratorAccountsIdentifiers: [String], authorizedSellersIdentifiers: [String], authorizedBuyersIdentifiers: [String], isBanned: Bool = false, isVerified: Bool = false, identifier: String) {
+    init(companyName: String, streetAddress: String, city: String, state: String, zipCode: String, phone: String, einNumber: String) {
         
         self.companyName = companyName
         self.streetAddress = streetAddress
@@ -54,15 +53,7 @@ struct CompanyProfile: FirebaseType {
         self.state = state
         self.zipCode = zipCode
         self.phone = phone
-        self.rating = rating
-        self.logo = logo
         self.einNumber = einNumber
-        self.administratorAccountsIdentifiers = administratorAccountsIdentifiers
-        self.authorizedSellersIdentifiers = authorizedSellersIdentifiers
-        self.authorizedBuyersIdentifiers = authorizedBuyersIdentifiers
-        self.isBanned = isBanned
-        self.isVerified = isVerified
-        self.identifier = identifier
         
     }
     
