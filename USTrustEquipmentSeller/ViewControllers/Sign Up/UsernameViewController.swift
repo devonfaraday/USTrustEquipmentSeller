@@ -14,10 +14,11 @@ class UsernameViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var verifyPasswordTextField: UITextField!
     
+    var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -26,14 +27,32 @@ class UsernameViewController: UIViewController {
     @IBAction func signUpButtonTapped(_ sender: Any) {
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func createUsernameAndPassword() {
+        guard let username = usernameTextField.text,
+            let password = passwordTextField.text,
+            let verifyPassword = verifyPasswordTextField.text else { return }
+        if checkIfTextFieldIsEmpty(textField: usernameTextField, addMessageIfEmpty: "Please enter a username") && checkIfTextFieldIsEmpty(textField: passwordTextField, addMessageIfEmpty: "Please enter your password")
     }
-    */
+    
+    func checkIfTextFieldIsEmpty(textField: UITextField, addMessageIfEmpty message: String) -> Bool {
+        var success = false
+        if let textFieldText = textField.text {
+            if textFieldText.isEmpty || textFieldText == "" {
+                showAlert(withMessage: message)
+                success = false
+            } else {
+                success = true
+            }
+        }
+        return success
+    }
+    
+    // MARK: - Alert Controller
+    func showAlert(withMessage message: String) {
+        let alertController = UIAlertController(title: "Something went wrong", message: message, preferredStyle: .alert)
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        alertController.addAction(dismissAction)
+        present(alertController, animated: true, completion: nil)
+    }
 
 }

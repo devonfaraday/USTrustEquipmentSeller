@@ -7,29 +7,42 @@
 //
 
 import UIKit
+import Firebase
 
 class InitialViewController: UIViewController {
-
+    
+    var currentUser: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        checkAuthentication()
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func checkAuthentication() {
+        if Auth.auth().currentUser != nil {
+            fetchCurrentUser {
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: .toUserProfileSegueKey, sender: self)
+                }
+            }
+        } else {
+            print("No User signed in")
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: .toLoginSegueKey, sender: self)
+            }
+            
+        }
     }
-    */
-
+    
+    func fetchCurrentUser(completion: @escaping() -> Void) {
+        guard let currentUser = Auth.auth().currentUser else { completion(); return }
+        let uid = currentUser.uid
+        UserController().fetchUser(withIdentifier: uid) { (user) in
+            print("User Fetched in profile")
+            self.currentUser = user
+            completion()
+        }
+    }
+    
 }

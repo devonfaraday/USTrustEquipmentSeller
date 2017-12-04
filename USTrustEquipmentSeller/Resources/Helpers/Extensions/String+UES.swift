@@ -52,9 +52,12 @@ extension String {
     static var storeTypeKey: String { get { return "storeType" } }
     static var listingsIdentifiersKey: String { get { return "listingsIdentifiers" } }
     static var storeOwnerIdentifierKey: String { get { return "storeOwnerIdentifier" } }
+    static var usernameKey: String { get { return "username" } }
     
     /* Segues */
     static var toUserProfileSegueKey: String { get { return "toUserProfile" } }
+    static var toLoginSegueKey: String { get { return "toLogin" } }
+    static var toUsernamePasswordCreationSegueKey: String { get { return "toUsernamePasswordCreation" } }
     
     /* Storyboard Identifiers */
     static var browseListingsStoryboardIdentifier: String { get { return "BrowseListingsViewController" } }

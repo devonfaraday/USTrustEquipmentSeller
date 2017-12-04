@@ -26,24 +26,36 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next" textContentType="given-name"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="MWy-oY-2rn" id="dGr-n7-hZL"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wow-sa-upM">
                                         <rect key="frame" x="0.0" y="38" width="295" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next" textContentType="family-name"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="MWy-oY-2rn" id="Mk4-Qd-nFZ"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hKq-m9-GqE">
                                         <rect key="frame" x="0.0" y="76" width="295" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="MWy-oY-2rn" id="8hG-fm-MJ2"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="street address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="89Z-u1-Fq9">
                                         <rect key="frame" x="0.0" y="114" width="295" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next" textContentType="address-line1"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="MWy-oY-2rn" id="H1A-QP-1GV"/>
+                                        </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="USp-Ci-qa5" userLabel="Address Stack">
                                         <rect key="frame" x="0.0" y="152" width="295" height="30"/>
@@ -53,12 +65,18 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="address-level2"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="MWy-oY-2rn" id="Rdm-Bm-1By"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="state" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K3t-S2-oLI">
                                                 <rect key="frame" x="171.5" y="0.0" width="53.5" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="next" textContentType="address-level1"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="MWy-oY-2rn" id="WrW-cp-Fg3"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="zip" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="90p-VR-Rpx">
                                                 <rect key="frame" x="230" y="0.0" width="65" height="30"/>
@@ -68,6 +86,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="send" textContentType="postal-code"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="MWy-oY-2rn" id="VJt-WI-8Dk"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -86,7 +107,6 @@
                                                 <state key="normal" title="Next"/>
                                                 <connections>
                                                     <action selector="nextButtonTapped:" destination="MWy-oY-2rn" eventType="touchUpInside" id="eZi-DC-gnx"/>
-                                                    <segue destination="bT9-Jm-vTa" kind="show" id="EvX-gu-UV8"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -116,6 +136,7 @@
                         <outlet property="stateTextField" destination="K3t-S2-oLI" id="plo-hh-4pv"/>
                         <outlet property="streetAddressTextField" destination="89Z-u1-Fq9" id="DZT-iT-W8O"/>
                         <outlet property="zipCodeTextField" destination="90p-VR-Rpx" id="kC1-pL-AjL"/>
+                        <segue destination="bT9-Jm-vTa" kind="show" identifier="toUsernamePasswordCreation" id="mkP-cX-E0k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xg5-lG-Ync" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -146,18 +167,27 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bT9-Jm-vTa" id="gee-Iw-asc"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="htQ-02-ZTX">
                                         <rect key="frame" x="0.0" y="38" width="295" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bT9-Jm-vTa" id="utK-TV-e7T"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="verify password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9kv-0B-50T">
                                         <rect key="frame" x="0.0" y="76" width="295" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bT9-Jm-vTa" id="7IY-XF-cXg"/>
+                                        </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4I0-M0-ZSR">
                                         <rect key="frame" x="0.0" y="114" width="295" height="30"/>
@@ -209,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zVH-zu-GMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2300" y="196"/>
+            <point key="canvasLocation" x="2444" y="196"/>
         </scene>
         <!--UserProfileViewController-->
         <scene sceneID="di6-be-duk">
