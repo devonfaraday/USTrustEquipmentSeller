@@ -12,7 +12,14 @@
 		5D7D81F41FBA522E00998B67 /* String+UES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7D81F31FBA522E00998B67 /* String+UES.swift */; };
 		5D7D81F61FBA5C6500998B67 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7D81F51FBA5C6500998B67 /* Constants.swift */; };
 		5D917ECB1FBA4AA0004BD9AC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D917ECA1FBA4AA0004BD9AC /* User.swift */; };
+		5D9E973C1FC4C06E00A7A34C /* ImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9E973B1FC4C06E00A7A34C /* ImageHandler.swift */; };
 		5DE07CEF1FBCE34D003146C5 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE07CEE1FBCE34D003146C5 /* Store.swift */; };
+		5DE07CF11FBF83D7003146C5 /* ListingDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DE07CF01FBF83D7003146C5 /* ListingDetail.storyboard */; };
+		5DE07CF31FBF8422003146C5 /* BrowseListings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DE07CF21FBF8422003146C5 /* BrowseListings.storyboard */; };
+		5DE07CF51FBF8A22003146C5 /* ListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE07CF41FBF8A22003146C5 /* ListingTableViewCell.swift */; };
+		5DE07CF71FBF8B19003146C5 /* CreateListing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DE07CF61FBF8B19003146C5 /* CreateListing.storyboard */; };
+		5DE07CF91FBF8B39003146C5 /* StoreProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DE07CF81FBF8B39003146C5 /* StoreProfile.storyboard */; };
+		5DE07CFB1FBF8B9F003146C5 /* SearchFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE07CFA1FBF8B9F003146C5 /* SearchFilterViewController.swift */; };
 		B63DCF96554579D6ED9AAD76 /* Pods_USTrustEquipmentSellerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE00F46DBF7E7FD4CB0B83A8 /* Pods_USTrustEquipmentSellerUITests.framework */; };
 		D4B8E9CF236B932ACAA4F8AF /* Pods_USTrustEquipmentSellerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFD8B9A30AC24FA8C74C66B /* Pods_USTrustEquipmentSellerTests.framework */; };
 		D65346530E477CC9C59B622A /* Pods_USTrustEquipmentSeller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DC235CFFC26022142FB369D /* Pods_USTrustEquipmentSeller.framework */; };
@@ -67,7 +74,14 @@
 		5D7D81F31FBA522E00998B67 /* String+UES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+UES.swift"; sourceTree = "<group>"; };
 		5D7D81F51FBA5C6500998B67 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5D917ECA1FBA4AA0004BD9AC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5D9E973B1FC4C06E00A7A34C /* ImageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHandler.swift; sourceTree = "<group>"; };
 		5DE07CEE1FBCE34D003146C5 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		5DE07CF01FBF83D7003146C5 /* ListingDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListingDetail.storyboard; sourceTree = "<group>"; };
+		5DE07CF21FBF8422003146C5 /* BrowseListings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BrowseListings.storyboard; sourceTree = "<group>"; };
+		5DE07CF41FBF8A22003146C5 /* ListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingTableViewCell.swift; sourceTree = "<group>"; };
+		5DE07CF61FBF8B19003146C5 /* CreateListing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateListing.storyboard; sourceTree = "<group>"; };
+		5DE07CF81FBF8B39003146C5 /* StoreProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoreProfile.storyboard; sourceTree = "<group>"; };
+		5DE07CFA1FBF8B9F003146C5 /* SearchFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterViewController.swift; sourceTree = "<group>"; };
 		7DC235CFFC26022142FB369D /* Pods_USTrustEquipmentSeller.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_USTrustEquipmentSeller.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDB12539C19074B5AC36091 /* Pods-USTrustEquipmentSeller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USTrustEquipmentSeller.debug.xcconfig"; path = "Pods/Target Support Files/Pods-USTrustEquipmentSeller/Pods-USTrustEquipmentSeller.debug.xcconfig"; sourceTree = "<group>"; };
 		A767C92D9303633DF0E291AC /* Pods-USTrustEquipmentSellerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USTrustEquipmentSellerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-USTrustEquipmentSellerTests/Pods-USTrustEquipmentSellerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -221,6 +235,7 @@
 				FD31340E1FB50D5F002BCA23 /* Extensions */,
 				FD557F191FB8B8F600A52EA1 /* FirebaseController.swift */,
 				5D7D81F51FBA5C6500998B67 /* Constants.swift */,
+				5D9E973B1FC4C06E00A7A34C /* ImageHandler.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -228,10 +243,10 @@
 		FD31340A1FB50805002BCA23 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FD557F3A1FBAB7B000A52EA1 /* BrowseListings.storyboard */,
-				FD557F3C1FBAB7B500A52EA1 /* CreateListing.storyboard */,
-				FD557F3B1FBAB7B300A52EA1 /* ListingDetail.storyboard */,
-				FD557F391FBAB70800A52EA1 /* StoreProfile.storyboard */,
+				5DE07CF21FBF8422003146C5 /* BrowseListings.storyboard */,
+				5DE07CF81FBF8B39003146C5 /* StoreProfile.storyboard */,
+				5DE07CF01FBF83D7003146C5 /* ListingDetail.storyboard */,
+				5DE07CF61FBF8B19003146C5 /* CreateListing.storyboard */,
 				FD557F371FBAB6EC00A52EA1 /* CompanyProfile.storyboard */,
 				FD557F321FBAB6B000A52EA1 /* UserProfile.storyboard */,
 				FD557F2F1FBAB66600A52EA1 /* Login.storyboard */,
@@ -246,6 +261,8 @@
 			isa = PBXGroup;
 			children = (
 				FDC207DB1FD0C26300860A0B /* Sign Up */,
+				5DE07CFA1FBF8B9F003146C5 /* SearchFilterViewController.swift */,
+				5DE07CF41FBF8A22003146C5 /* ListingTableViewCell.swift */,
 				FD557F1F1FBAB51600A52EA1 /* InitialViewController.swift */,
 				FD557F211FBAB52B00A52EA1 /* LoginViewController.swift */,
 				FD557F231FBAB54C00A52EA1 /* UserProfileViewController.swift */,
@@ -421,9 +438,13 @@
 			files = (
 				FD3133E61FB504E7002BCA23 /* LaunchScreen.storyboard in Resources */,
 				FD557F381FBAB6EC00A52EA1 /* CompanyProfile.storyboard in Resources */,
+				5DE07CF91FBF8B39003146C5 /* StoreProfile.storyboard in Resources */,
+				5DE07CF31FBF8422003146C5 /* BrowseListings.storyboard in Resources */,
 				FD3134111FB51644002BCA23 /* GoogleService-Info.plist in Resources */,
 				FD3133E31FB504E7002BCA23 /* Assets.xcassets in Resources */,
+				5DE07CF11FBF83D7003146C5 /* ListingDetail.storyboard in Resources */,
 				FD557F331FBAB6B000A52EA1 /* UserProfile.storyboard in Resources */,
+				5DE07CF71FBF8B19003146C5 /* CreateListing.storyboard in Resources */,
 				FD557F301FBAB66700A52EA1 /* Login.storyboard in Resources */,
 				FD557F401FBABBB800A52EA1 /* SignUp.storyboard in Resources */,
 				FD3133E11FB504E7002BCA23 /* Main.storyboard in Resources */,
@@ -610,13 +631,16 @@
 				FD557F221FBAB52B00A52EA1 /* LoginViewController.swift in Sources */,
 				FD557F241FBAB54C00A52EA1 /* UserProfileViewController.swift in Sources */,
 				5DE07CEF1FBCE34D003146C5 /* Store.swift in Sources */,
+				5DE07CFB1FBF8B9F003146C5 /* SearchFilterViewController.swift in Sources */,
 				FD557F261FBAB55500A52EA1 /* CompanyProfileViewController.swift in Sources */,
 				FD557F2A1FBAB56B00A52EA1 /* CreateListingViewController.swift in Sources */,
 				FD557F1A1FB8B8F600A52EA1 /* FirebaseController.swift in Sources */,
 				FD3133DC1FB504E7002BCA23 /* AppDelegate.swift in Sources */,
+				5D9E973C1FC4C06E00A7A34C /* ImageHandler.swift in Sources */,
 				5D7D81F01FBA4FC900998B67 /* Listing.swift in Sources */,
 				5D917ECB1FBA4AA0004BD9AC /* User.swift in Sources */,
 				FDC207DD1FD0C29400860A0B /* UsernameViewController.swift in Sources */,
+				5DE07CF51FBF8A22003146C5 /* ListingTableViewCell.swift in Sources */,
 				FD557F2E1FBAB5BC00A52EA1 /* ListingDetailViewController.swift in Sources */,
 				FD557F3E1FBABB9B00A52EA1 /* SignUpViewController.swift in Sources */,
 				FD557F2C1FBAB5B500A52EA1 /* BrowseListingsViewController.swift in Sources */,
