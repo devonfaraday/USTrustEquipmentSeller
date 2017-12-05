@@ -23,6 +23,15 @@ class UserController {
     }
     
     // MARK: - Read
+    func fetchCurrentUser(completion: @escaping(User?) -> Void) {
+        guard let currentUser = Auth.auth().currentUser else { completion(nil); return }
+        let uid = currentUser.uid
+        UserController().fetchUser(withIdentifier: uid) { (user) in
+            print("User Fetched in profile")
+            completion(user)
+        }
+    }
+    
     func fetchUser(withIdentifier identifier: String, completion: @escaping (User?) -> Void) {
         let userRef = FirebaseController.databaseRef.child(.usersEndpoint).child(identifier)
         userRef.observeSingleEvent(of: .value, with: { (data) in
@@ -35,7 +44,15 @@ class UserController {
         })
     }
     
+    func fetchUsers() {
+        
+    }
+    
     // MARK: - Update
+    func modifyUser(withUser user: User) {
+        var modifiedUser = user
+        modifiedUser.save()
+    }
     
     // MARK: - Delete
     

@@ -49,7 +49,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             let city = cityTextField.text,
             let state = stateTextField.text,
             let zipCode = zipCodeTextField.text else { return }
-        let user = User(firstName: firstName, lastName: lastName, streetAddress: streetAddress, city: city, state: state, zipCode: zipCode, emailAddress: email, username: "")
+        let user = User(firstName: firstName, lastName: lastName, streetAddress: streetAddress, city: city, state: state, zipCode: zipCode, email: email, username: "")
         self.user = user
     }
     

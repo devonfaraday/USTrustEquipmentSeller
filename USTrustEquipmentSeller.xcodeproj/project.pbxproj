@@ -46,6 +46,7 @@
 		FD557F401FBABBB800A52EA1 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD557F3F1FBABBB800A52EA1 /* SignUp.storyboard */; };
 		FDC207DD1FD0C29400860A0B /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC207DC1FD0C29400860A0B /* UsernameViewController.swift */; };
 		FDC207DF1FD0D3E000860A0B /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC207DE1FD0D3E000860A0B /* UserController.swift */; };
+		FDCD1D7A1FD60B940037FBFA /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD1D791FD60B940037FBFA /* FirebaseAuthentication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,14 +114,11 @@
 		FD557F2F1FBAB66600A52EA1 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		FD557F321FBAB6B000A52EA1 /* UserProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 		FD557F371FBAB6EC00A52EA1 /* CompanyProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CompanyProfile.storyboard; sourceTree = "<group>"; };
-		FD557F391FBAB70800A52EA1 /* StoreProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = StoreProfile.storyboard; path = /Users/christianmcmullin/Desktop/Swift/USTrust/USTrustEquipmentSeller/USTrustEquipmentSeller/Views/StoreProfile.storyboard; sourceTree = "<absolute>"; };
-		FD557F3A1FBAB7B000A52EA1 /* BrowseListings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = BrowseListings.storyboard; path = /Users/christianmcmullin/Desktop/Swift/USTrust/USTrustEquipmentSeller/USTrustEquipmentSeller/Views/BrowseListings.storyboard; sourceTree = "<absolute>"; };
-		FD557F3B1FBAB7B300A52EA1 /* ListingDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ListingDetail.storyboard; path = /Users/christianmcmullin/Desktop/Swift/USTrust/USTrustEquipmentSeller/USTrustEquipmentSeller/Views/ListingDetail.storyboard; sourceTree = "<absolute>"; };
-		FD557F3C1FBAB7B500A52EA1 /* CreateListing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = CreateListing.storyboard; path = /Users/christianmcmullin/Desktop/Swift/USTrust/USTrustEquipmentSeller/USTrustEquipmentSeller/Views/CreateListing.storyboard; sourceTree = "<absolute>"; };
 		FD557F3D1FBABB9B00A52EA1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FD557F3F1FBABBB800A52EA1 /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		FDC207DC1FD0C29400860A0B /* UsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameViewController.swift; sourceTree = "<group>"; };
 		FDC207DE1FD0D3E000860A0B /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		FDCD1D791FD60B940037FBFA /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,11 +258,11 @@
 		FD31340B1FB50806002BCA23 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FDCD1D781FD608810037FBFA /* Login */,
 				FDC207DB1FD0C26300860A0B /* Sign Up */,
 				5DE07CFA1FBF8B9F003146C5 /* SearchFilterViewController.swift */,
 				5DE07CF41FBF8A22003146C5 /* ListingTableViewCell.swift */,
 				FD557F1F1FBAB51600A52EA1 /* InitialViewController.swift */,
-				FD557F211FBAB52B00A52EA1 /* LoginViewController.swift */,
 				FD557F231FBAB54C00A52EA1 /* UserProfileViewController.swift */,
 				FD557F251FBAB55500A52EA1 /* CompanyProfileViewController.swift */,
 				FD557F271FBAB55D00A52EA1 /* StoreProfileViewController.swift */,
@@ -307,6 +305,7 @@
 			children = (
 				FD3134091FB50803002BCA23 /* Helpers */,
 				FD3133E21FB504E7002BCA23 /* Assets.xcassets */,
+				FDCD1D791FD60B940037FBFA /* FirebaseAuthentication.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -318,6 +317,14 @@
 				FDC207DC1FD0C29400860A0B /* UsernameViewController.swift */,
 			);
 			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		FDCD1D781FD608810037FBFA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FD557F211FBAB52B00A52EA1 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -647,6 +654,7 @@
 				5D7D81F61FBA5C6500998B67 /* Constants.swift in Sources */,
 				5D7D81F41FBA522E00998B67 /* String+UES.swift in Sources */,
 				5D7D81EE1FBA4F3900998B67 /* CompanyProfile.swift in Sources */,
+				FDCD1D7A1FD60B940037FBFA /* FirebaseAuthentication.swift in Sources */,
 				FD557F201FBAB51600A52EA1 /* InitialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

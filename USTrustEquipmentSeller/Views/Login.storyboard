@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ipo-QB-TLm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ipo-QB-TLm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,17 +43,21 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FC9-GC-WbN" userLabel="Button Stack">
                                         <rect key="frame" x="0.0" y="76" width="275" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3z-Fi-kVf">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3z-Fi-kVf" userLabel="Sign Up">
                                                 <rect key="frame" x="0.0" y="0.0" width="133.5" height="30"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Login"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Of-Ao-IlW">
-                                                <rect key="frame" x="141.5" y="0.0" width="133.5" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Sign Up"/>
                                                 <connections>
-                                                    <segue destination="d6i-dI-hQZ" kind="show" identifier="toSignUp" id="98X-k2-vcb"/>
+                                                    <action selector="signUpButtonTapped:" destination="ipo-QB-TLm" eventType="touchUpInside" id="eVA-F2-Ug6"/>
+                                                    <segue destination="d6i-dI-hQZ" kind="show" id="nf6-GK-tks"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Of-Ao-IlW" userLabel="Login">
+                                                <rect key="frame" x="141.5" y="0.0" width="133.5" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Login"/>
+                                                <connections>
+                                                    <action selector="loginButtonTapped:" destination="ipo-QB-TLm" eventType="touchUpInside" id="I60-mj-UNN"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -77,6 +81,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="bwI-Vq-RgS"/>
                     <connections>
+                        <outlet property="emailTextField" destination="jmC-3E-fsB" id="UVJ-8V-IoA"/>
+                        <outlet property="passwordTextField" destination="wDf-mD-04E" id="PLK-eS-B2e"/>
                         <segue destination="n4T-MJ-Qrb" kind="show" identifier="toUserProfile" id="DMn-FU-Oel"/>
                     </connections>
                 </viewController>

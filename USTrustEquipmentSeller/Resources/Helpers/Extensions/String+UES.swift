@@ -22,7 +22,7 @@ extension String {
     static var authorizedSellersKey: String { get { return "authorizedSellers" } }
     static var cityKey: String { get { return "city" } }
     static var companyNameKey: String { get { return "companyName" } }
-    static var emailAddressKey: String { get { return "emailAddress" } }
+    static var emailKey: String { get { return "email" } }
     static var einNumberKey: String { get { return "einNumber" } }
     static var firstNameKey: String { get { return "firstName" } }
     static var identifierKey: String { get { return "uid" } }

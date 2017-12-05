@@ -18,7 +18,7 @@ struct User: FirebaseType {
     var city: String
     var state: String
     var zipCode: String
-    var emailAddress: String
+    var email: String
     var profileImage: UIImage?
     var phoneNumber: Int?
     var isBanned: Bool = false
@@ -33,13 +33,13 @@ struct User: FirebaseType {
                 .cityKey: city,
                 .stateKey: state,
                 .zipCodeKey: zipCode,
-                .emailAddressKey: emailAddress,
+                .emailKey: email,
                 .phoneKey: phoneNumber as Any,
                 .isBannedKey: isBanned,
                 .usernameKey: username]
     }
     
-    init(firstName: String, lastName: String, streetAddress: String, city: String, state: String, zipCode: String, emailAddress: String, username: String) {
+    init(firstName: String, lastName: String, streetAddress: String, city: String, state: String, zipCode: String, email: String, username: String) {
         
         self.firstName = firstName
         self.lastName = lastName
@@ -47,7 +47,7 @@ struct User: FirebaseType {
         self.city = city
         self.state = state
         self.zipCode = zipCode
-        self.emailAddress = emailAddress
+        self.email = email
         self.username = username
      }
     
@@ -58,7 +58,7 @@ struct User: FirebaseType {
             let city = dictionary[.cityKey] as? String,
             let state = dictionary[.stateKey] as? String,
             let zipCode = dictionary[.zipCodeKey] as? String,
-            let emailAddress = dictionary[.emailAddressKey] as? String,
+            let email = dictionary[.emailKey] as? String,
             let isBanned = dictionary[.isBannedKey] as? Bool,
             let username = dictionary[.usernameKey] as? String
             else { return nil }
@@ -70,7 +70,7 @@ struct User: FirebaseType {
         self.city = city
         self.state = state
         self.zipCode = zipCode
-        self.emailAddress = emailAddress
+        self.email = email
         self.isBanned = isBanned
         self.username = username
         if let phoneNumber = dictionary[.phoneKey] as? Int { self.phoneNumber = phoneNumber }
