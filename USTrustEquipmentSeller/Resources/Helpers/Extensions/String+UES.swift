@@ -18,46 +18,43 @@ extension String {
     
     /*  Model Keys */
     static var administratorAccountKey: String { get { return "administratorAccount" } }
-    static var authorizedBuyersKey: String { get { return "authorizedBuyers" } }
-    static var authorizedSellersKey: String { get { return "authorizedSellers" } }
-    static var cityKey: String { get { return "city" } }
-    static var companyNameKey: String { get { return "companyName" } }
-    static var emailKey: String { get { return "email" } }
-    static var einNumberKey: String { get { return "einNumber" } }
-    static var firstNameKey: String { get { return "firstName" } }
-    static var identifierKey: String { get { return "uid" } }
-    static var isBannedKey: String { get { return "isBanned" } }
-    static var isVerifiedKey: String { get { return "isVerified" } }
-    static var lastNameKey: String { get { return "lastName" } }
-    static var logoKey: String { get { return "logo" } }
-    static var profileImageKey: String { get { return "profileImage" } }
-    static var phoneKey: String { get { return "phone" } }
-    static var ratingKey: String { get { return "rating" } }
-    static var stateKey: String { get { return "state" } }
-    static var streetAddressKey: String { get { return "streetAddress" } }
-    static var zipCodeKey: String { get { return "zipCode" } }
     static var administratorAccountsIdentifierKey: String { get { return "administratorAccountsIdentifiers" } }
     static var authorizedSellersIdentifierKey: String { get { return "authorizedSellersIdentifiers" } }
-    static var authorizedBuyersIdentifierKey: String { get { return "authorizedBuyersIdentifiers" } }
-    static var itemKey: String { get { return "item" } }
-    static var quantityKey: String { get { return "quantity" } }
     static var catagoryIdentifierKey: String { get { return "catagoryIdentifier" } }
+    static var cityKey: String { get { return "city" } }
+    static var companyNameKey: String { get { return "companyName" } }
     static var descriptionKey: String { get { return "description" } }
-    static var priceKey: String { get { return "price" } }
-    static var locationKey: String { get { return "location" } }
+    static var einNumberKey: String { get { return "einNumber" } }
+    static var emailKey: String { get { return "email" } }
+    static var firstNameKey: String { get { return "firstName" } }
+    static var identifierKey: String { get { return "uid" } }
     static var imageKey: String { get { return "image" } }
-    static var listingAccountIdentifierKey: String { get { return "listingAccountIdentifier" } }
+    static var isBannedKey: String { get { return "isBanned" } }
+    static var isVerifiedKey: String { get { return "isVerified" } }
+    static var itemKey: String { get { return "item" } }
+    static var lastNameKey: String { get { return "lastName" } }
     static var listingDateKey: String { get { return "listingDate" } }
-    static var storeNameKey: String { get { return "storeName" } }
-    static var storeTypeKey: String { get { return "storeType" } }
+    static var listingAccountIdentifierKey: String { get { return "listingAccountIdentifier" } }
     static var listingsIdentifiersKey: String { get { return "listingsIdentifiers" } }
+    static var locationKey: String { get { return "location" } }
+    static var logoKey: String { get { return "logo" } }
+    static var phoneKey: String { get { return "phone" } }
+    static var priceKey: String { get { return "price" } }
+    static var profileImageKey: String { get { return "profileImage" } }
+    static var quantityKey: String { get { return "quantity" } }
+    static var ratingKey: String { get { return "rating" } }
+    static var stateKey: String { get { return "state" } }
+    static var storeNameKey: String { get { return "storeName" } }
     static var storeOwnerIdentifierKey: String { get { return "storeOwnerIdentifier" } }
+    static var storeTypeKey: String { get { return "storeType" } }
+    static var streetAddressKey: String { get { return "streetAddress" } }
     static var usernameKey: String { get { return "username" } }
+    static var zipCodeKey: String { get { return "zipCode" } }
     
     /* Segues */
-    static var toUserProfileSegueKey: String { get { return "toUserProfile" } }
     static var toLoginSegueKey: String { get { return "toLogin" } }
     static var toUsernamePasswordCreationSegueKey: String { get { return "toUsernamePasswordCreation" } }
+    static var toUserProfileSegueKey: String { get { return "toUserProfile" } }
     
     /* Storyboard Identifiers */
     static var browseListingsStoryboardIdentifier: String { get { return "BrowseListingsViewController" } }

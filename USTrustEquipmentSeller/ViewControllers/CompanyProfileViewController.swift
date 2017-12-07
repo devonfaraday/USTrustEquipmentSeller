@@ -11,20 +11,20 @@ import UIKit
 class CompanyProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     /* Outlets */
-    @IBOutlet weak var logoImage: UIImageView!
-    @IBOutlet weak var companyName: UITextField!
-    @IBOutlet weak var streetAddress: UITextField!
     @IBOutlet weak var city: UITextField!
-    @IBOutlet weak var state: UITextField!
-    @IBOutlet weak var zipCode: UITextField!
-    @IBOutlet weak var phoneNumber: UITextField!
+    @IBOutlet weak var companyName: UITextField!
     @IBOutlet weak var einNumber: UITextField!
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var phoneNumber: UITextField!
+    @IBOutlet weak var state: UITextField!
+    @IBOutlet weak var streetAddress: UITextField!
+    @IBOutlet weak var zipCode: UITextField!
     
     /* Button Outlets */
-    @IBOutlet weak var saveEditButton: UIButton!
+    @IBOutlet weak var addImageButton: UIButton!
     @IBOutlet weak var administratorSettingsButton: UIButton!
     @IBOutlet weak var companyListingsButton: UIButton!
-    @IBOutlet weak var addImageButton: UIButton!
+    @IBOutlet weak var saveEditButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -36,13 +36,7 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
         }
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
     /*
     // MARK: - Navigation
 

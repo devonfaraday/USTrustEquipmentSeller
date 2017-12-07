@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 struct CompanyProfile: FirebaseType {
 
@@ -16,13 +17,12 @@ struct CompanyProfile: FirebaseType {
     var city: String
     var state: String
     var zipCode: String
-    var phone: String
+    var phone: Int
     var rating: Int = 0
     var logo: UIImage?
     var einNumber: String
     var administratorAccountsIdentifiers: [String] = []
     var authorizedSellersIdentifiers: [String] = []
-    var authorizedBuyersIdentifiers: [String] = []
     var isBanned: Bool = false
     var isVerified: Bool = false
     var endpoint: String = .companiesEndpoint
@@ -38,14 +38,13 @@ struct CompanyProfile: FirebaseType {
             .einNumberKey: einNumber,
             .administratorAccountsIdentifierKey: administratorAccountsIdentifiers,
             .authorizedSellersIdentifierKey: authorizedSellersIdentifiers,
-            .authorizedBuyersIdentifierKey: authorizedBuyersIdentifiers,
             .isBannedKey: isBanned,
             .isVerifiedKey: isVerified
             ]
     }
     
     
-    init(companyName: String, streetAddress: String, city: String, state: String, zipCode: String, phone: String, einNumber: String) {
+    init(companyName: String, streetAddress: String, city: String, state: String, zipCode: String, phone: Int, einNumber: String) {
         
         self.companyName = companyName
         self.streetAddress = streetAddress
@@ -63,13 +62,12 @@ struct CompanyProfile: FirebaseType {
             let city = dictionary[.cityKey] as? String,
             let state = dictionary[.stateKey] as? String,
             let zipCode = dictionary[.zipCodeKey] as? String,
-            let phone = dictionary[.phoneKey] as? String,
+            let phone = dictionary[.phoneKey] as? Int,
             let rating = dictionary[.ratingKey] as? Int,
             let logo = dictionary[.logoKey] as? UIImage,
             let einNumber = dictionary[.einNumberKey] as? String,
             let administratorAccountsIdentifiers = dictionary[.administratorAccountsIdentifierKey] as? [String],
             let authorizedSellersIdentifiers = dictionary[.authorizedSellersIdentifierKey] as? [String],
-            let authorizedBuyersIdentifiers = dictionary[.authorizedBuyersIdentifierKey] as? [String],
             let isBanned = dictionary[.isBannedKey] as? Bool,
             let isVerified = dictionary[.isVerifiedKey] as? Bool
             else { return nil }
@@ -86,7 +84,6 @@ struct CompanyProfile: FirebaseType {
         self.einNumber = einNumber
         self.administratorAccountsIdentifiers = administratorAccountsIdentifiers
         self.authorizedSellersIdentifiers = authorizedSellersIdentifiers
-        self.authorizedBuyersIdentifiers = authorizedBuyersIdentifiers
         self.isBanned = isBanned
         self.isVerified = isVerified
    
