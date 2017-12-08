@@ -11,20 +11,20 @@ import UIKit
 class CompanyProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     /* Outlets */
-    @IBOutlet weak var city: UITextField!
-    @IBOutlet weak var companyName: UITextField!
-    @IBOutlet weak var einNumber: UITextField!
-    @IBOutlet weak var logoImage: UIImageView!
-    @IBOutlet weak var phoneNumber: UITextField!
-    @IBOutlet weak var state: UITextField!
-    @IBOutlet weak var streetAddress: UITextField!
-    @IBOutlet weak var zipCode: UITextField!
+    @IBOutlet var city: UITextField!
+    @IBOutlet var companyName: UITextField!
+    @IBOutlet var einNumber: UITextField!
+    @IBOutlet var logoImage: UIImageView!
+    @IBOutlet var phoneNumber: UITextField!
+    @IBOutlet var state: UITextField!
+    @IBOutlet var streetAddress: UITextField!
+    @IBOutlet var zipCode: UITextField!
     
     /* Button Outlets */
-    @IBOutlet weak var addImageButton: UIButton!
-    @IBOutlet weak var administratorSettingsButton: UIButton!
-    @IBOutlet weak var companyListingsButton: UIButton!
-    @IBOutlet weak var saveEditButton: UIButton!
+    @IBOutlet var addImageButton: UIButton!
+    @IBOutlet var administratorSettingsButton: UIButton!
+    @IBOutlet var companyListingsButton: UIButton!
+    @IBOutlet var saveEditButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -75,7 +75,6 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
     }
-    
     
     func addPhotoActionSheet() {
         let actionController = UIAlertController(title: "Upload Photo", message: nil, preferredStyle: .actionSheet)
