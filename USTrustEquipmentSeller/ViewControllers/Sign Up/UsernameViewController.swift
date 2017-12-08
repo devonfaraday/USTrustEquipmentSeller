@@ -11,8 +11,8 @@ import Firebase
 
 class UsernameViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var verifyPasswordTextField: UITextField!
     
     let firebaseAuthentication = FirebaseAuthentication()
@@ -50,13 +50,6 @@ class UsernameViewController: UIViewController, UITextFieldDelegate {
         return success
     }
     
-    func createUser() {
-        guard let username = usernameTextField.text else { return }
-            user?.username = username
-            user?.save()
-        
-    }
-    
     func signUp() {
         guard let email = user?.email,
             let password = passwordTextField.text,
@@ -67,7 +60,9 @@ class UsernameViewController: UIViewController, UITextFieldDelegate {
                     print(error.localizedDescription)
                     self.showAlert(withMessage: error.localizedDescription)
                 } else {
-                    self.createUser()
+                    let userController = UserController()
+                    guard let user = self.user else { return }
+                    userController.createUser(withUser: user)
                     DispatchQueue.main.async {
                         self.performSegue(withIdentifier: .toUserProfileSegueKey, sender: self)
                     }

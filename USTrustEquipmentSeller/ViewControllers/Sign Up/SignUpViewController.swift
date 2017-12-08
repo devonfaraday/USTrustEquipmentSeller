@@ -10,14 +10,14 @@ import UIKit
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet var nextButton: UIButton!
     @IBOutlet var cancelButton: UIButton!
+    @IBOutlet var cityTextField: UITextField!
+    @IBOutlet var emailTextField: UITextField!
     @IBOutlet var firstNameTextField: UITextField!
     @IBOutlet var lastNameTextField: UITextField!
-    @IBOutlet var emailTextField: UITextField!
-    @IBOutlet var streetAddressTextField: UITextField!
-    @IBOutlet var cityTextField: UITextField!
+    @IBOutlet var nextButton: UIButton!
     @IBOutlet var stateTextField: UITextField!
+    @IBOutlet var streetAddressTextField: UITextField!
     @IBOutlet var zipCodeTextField: UITextField!
     
     var user: User?

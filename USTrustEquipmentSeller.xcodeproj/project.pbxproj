@@ -47,6 +47,7 @@
 		FDC207DD1FD0C29400860A0B /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC207DC1FD0C29400860A0B /* UsernameViewController.swift */; };
 		FDC207DF1FD0D3E000860A0B /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC207DE1FD0D3E000860A0B /* UserController.swift */; };
 		FDCD1D7A1FD60B940037FBFA /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD1D791FD60B940037FBFA /* FirebaseAuthentication.swift */; };
+		FDCD1D7C1FD6232E0037FBFA /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD1D7B1FD6232E0037FBFA /* ImageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		FDC207DC1FD0C29400860A0B /* UsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameViewController.swift; sourceTree = "<group>"; };
 		FDC207DE1FD0D3E000860A0B /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		FDCD1D791FD60B940037FBFA /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
+		FDCD1D7B1FD6232E0037FBFA /* ImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,8 @@
 				FD557F191FB8B8F600A52EA1 /* FirebaseController.swift */,
 				5D7D81F51FBA5C6500998B67 /* Constants.swift */,
 				5D9E973B1FC4C06E00A7A34C /* ImageHandler.swift */,
+				FDCD1D7B1FD6232E0037FBFA /* ImageController.swift */,
+				FDCD1D791FD60B940037FBFA /* FirebaseAuthentication.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -305,7 +309,6 @@
 			children = (
 				FD3134091FB50803002BCA23 /* Helpers */,
 				FD3133E21FB504E7002BCA23 /* Assets.xcassets */,
-				FDCD1D791FD60B940037FBFA /* FirebaseAuthentication.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				5D7D81EE1FBA4F3900998B67 /* CompanyProfile.swift in Sources */,
 				FDCD1D7A1FD60B940037FBFA /* FirebaseAuthentication.swift in Sources */,
 				FD557F201FBAB51600A52EA1 /* InitialViewController.swift in Sources */,
+				FDCD1D7C1FD6232E0037FBFA /* ImageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,14 +12,15 @@ import Firebase
 
 struct User: FirebaseType {
     
-    let firstName: String
-    let lastName: String
+    var firstName: String
+    var lastName: String
     var streetAddress: String
     var city: String
     var state: String
     var zipCode: String
     var email: String
-    var profileImage: UIImage?
+    // TODO: - change image to a url
+    var profileImageURL: UIImage?
     var phoneNumber: Int?
     var isBanned: Bool = false
     var endpoint: String = .usersEndpoint
@@ -74,7 +75,7 @@ struct User: FirebaseType {
         self.isBanned = isBanned
         self.username = username
         if let phoneNumber = dictionary[.phoneKey] as? Int { self.phoneNumber = phoneNumber }
-        if let profileImage = dictionary[.imageKey] as? UIImage { self.profileImage = profileImage }
+        if let profileImage = dictionary[.imageKey] as? UIImage { self.profileImageURL = profileImage }
     }
 }
 
