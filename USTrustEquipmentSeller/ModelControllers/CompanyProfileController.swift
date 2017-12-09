@@ -11,7 +11,8 @@ import Firebase
 
 // MARK: - Create
 
-
+func createCompany(company: Company) {
+}
 // MARK: - Read
 
 

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Firebase
 
-struct CompanyProfile: FirebaseType {
+struct Company: FirebaseType {
 
     let companyName: String
     var streetAddress: String

@@ -10,7 +10,8 @@ import UIKit
 
 class CompanyProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    /* Outlets */
+    // MARK: - Outlets ===================================================
+    
     @IBOutlet var city: UITextField!
     @IBOutlet var companyName: UITextField!
     @IBOutlet var einNumber: UITextField!
@@ -20,35 +21,45 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
     @IBOutlet var streetAddress: UITextField!
     @IBOutlet var zipCode: UITextField!
     
-    /* Button Outlets */
+    // MARK: - Button Outlets ============================================
+    
     @IBOutlet var addImageButton: UIButton!
     @IBOutlet var administratorSettingsButton: UIButton!
     @IBOutlet var companyListingsButton: UIButton!
     @IBOutlet var saveEditButton: UIButton!
     
+    // MARK: - Variables and Constants ====================================
+    
+    var company: Company?
+    var user: User?
+    var authenticatedUser: Bool
+    
+    // MARK: - Override Functions =========================================
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if saveEditButton.titleLabel?.text != nil {
-            saveEditButton.titleLabel?.text = "Edit"
-        } else {
-            saveEditButton.titleLabel?.text = "Save"
-        }
+        saveButtonSetup()
         
     }
+
     
-    /*
-    // MARK: - Navigation
+    // MARK: - Navigation ==================================================
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
+    // MARK: Add Image Functions ============================================
     
     @IBAction func addImageButtonTapped(_ sender: Any) {
         addPhotoActionSheet()
+        guard let user = user else { return }
+        authenticatedUser = verifyUser(user: user)
+        if !authenticatedUser {
+            
+        }
     }
     
     
@@ -112,5 +123,22 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
         dismiss(animated: true, completion: nil)
     }
     
+    // MARK: - Other Functions =============================================
+   
+    func saveButtonSetup() {
+        if saveEditButton.titleLabel?.text != nil {
+            saveEditButton.titleLabel?.text = "Edit"
+        } else {
+            saveEditButton.titleLabel?.text = "Save"
+        }
+    }
+    
+    func verifyUser(user: User) -> Bool {
+        if !user.isBanned {
+            return false
+        } else {
+            return true
+}
+}
     
 }
