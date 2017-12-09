@@ -16,23 +16,25 @@ struct User: FirebaseType {
     var lastName: String
     var streetAddress: String
     var city: String
+    var companyWatchList: [String] = []
     var state: String
     var zipCode: String
     var email: String
-    // TODO: - change image to a url
-    var profileImageURL: UIImage?
     var phoneNumber: Int?
     var isBanned: Bool = false
     var endpoint: String = .usersEndpoint
     var identifier: String?
     var username: String
+    var listingWatchList: [String] = []
     
     var dictionaryCopy: [String : Any] {
         return [.firstNameKey: firstName,
                 .lastNameKey: lastName,
                 .streetAddressKey: streetAddress,
+                .companyWatchListKey: companyWatchList,
                 .cityKey: city,
                 .stateKey: state,
+                .listingWatchListKey: listingWatchList,
                 .zipCodeKey: zipCode,
                 .emailKey: email,
                 .phoneKey: phoneNumber as Any,
@@ -74,9 +76,12 @@ struct User: FirebaseType {
         self.email = email
         self.isBanned = isBanned
         self.username = username
+        
         if let phoneNumber = dictionary[.phoneKey] as? Int { self.phoneNumber = phoneNumber }
-        if let profileImage = dictionary[.imageKey] as? UIImage { self.profileImageURL = profileImage }
+        if let companyWatchList = dictionary[.companyWatchListKey] as? [String] { self.companyWatchList = companyWatchList }
+        if let listingWatchList = dictionary[.listingWatchListKey] as? [String] { self.listingWatchList = listingWatchList }
+        }
     }
-}
+
 
 

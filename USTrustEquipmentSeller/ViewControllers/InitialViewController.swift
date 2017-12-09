@@ -15,6 +15,7 @@ class InitialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        try? Auth.auth().signOut()
         checkAuthentication()
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
@@ -45,4 +46,17 @@ class InitialViewController: UIViewController {
         }
     }
     
+    func segueToUserProfile(withSegue segue: UIStoryboardSegue) {
+        guard let destination = segue.destination as? UserProfileViewController else { return }
+        destination.currentUser = currentUser
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case String.toUserProfileSegueKey?:
+            segueToUserProfile(withSegue: segue)
+        default:
+            print("not logged in")
+        }
+    }
 }

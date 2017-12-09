@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate {
+class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     // MARK: - Properties
     @IBOutlet var addPhotoButton: UIButton!
@@ -42,7 +42,7 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     }
     
     @IBAction func addPhotoButtonTapped(_ sender: Any) {
-        
+        addPhotoActionSheet()
     }
     
     // MARK: - Image Picker Delegates
@@ -87,13 +87,12 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else { return }
+        guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else { dismiss(animated: true, completion: nil); return }
         let size = CGSize(width: 1000, height: 1000)
         let resizedImage = ImageHandler.resizeImage(image: selectedImage, targetSize: size )
-        
-        logoImage.image = resizedImage
-        
-        addImageButton.setTitle("", for: .normal)
+        profileImage.image = resizedImage
+        saveImage(withImage: resizedImage)
+        addPhotoButton.setTitle("", for: .normal)
         dismiss(animated: true, completion: nil)
     }
     
@@ -115,6 +114,17 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     
     func saveProfile() {
         modifyUser()
+    }
+    
+    func saveImage(withImage image: UIImage) {
+        let imageController = ImageController()
+        guard let imageData = createImageData(withImage: image) else { return }
+        imageController.createProfileImage(withImageData: imageData, forUser: currentUser)
+    }
+    
+    func createImageData(withImage image: UIImage) -> Data? {
+        let imageData = UIImageJPEGRepresentation(image, 1.0)
+        return imageData
     }
     
     func modifyUser() {

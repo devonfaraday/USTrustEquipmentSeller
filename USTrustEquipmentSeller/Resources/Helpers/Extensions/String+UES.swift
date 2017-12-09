@@ -12,7 +12,9 @@ extension String {
     
     /* Firebase Endpoints*/
     static var companiesEndpoint: String { get { return "companies" } }
+    static var imagesEndpointKey: String { get { return "images" } }
     static var listingsEndpoint: String { get { return "listings" } }
+    static var profileImagesEndpointKey: String { get { return "profileImages" } }
     static var storesEndpoint: String { get { return "stores" } }
     static var usersEndpoint: String { get { return "users" } }
     
@@ -22,6 +24,7 @@ extension String {
     static var authorizedSellersKey: String { get { return "authorizedSellers" } }
     static var cityKey: String { get { return "city" } }
     static var companyNameKey: String { get { return "companyName" } }
+    static var companyWatchListKey: String { get { return "companyWatchList" } }
     static var emailKey: String { get { return "email" } }
     static var einNumberKey: String { get { return "einNumber" } }
     static var firstNameKey: String { get { return "firstName" } }
@@ -53,6 +56,7 @@ extension String {
     static var listingsIdentifiersKey: String { get { return "listingsIdentifiers" } }
     static var storeOwnerIdentifierKey: String { get { return "storeOwnerIdentifier" } }
     static var usernameKey: String { get { return "username" } }
+    static var listingWatchListKey: String { get { return "listingWatchList" } }
     
     /* Segues */
     static var toUserProfileSegueKey: String { get { return "toUserProfile" } }
