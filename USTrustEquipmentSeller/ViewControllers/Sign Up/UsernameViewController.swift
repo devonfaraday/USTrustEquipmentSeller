@@ -76,7 +76,16 @@ class UsernameViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Text Field Delegates
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.text = textField.text?.trimmingCharacters(in: .whitespaces)
-        
+        switch textField.isFirstResponder {
+        case usernameTextField.isFirstResponder:
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField.isFirstResponder:
+            verifyPasswordTextField.becomeFirstResponder()
+        case verifyPasswordTextField.isFirstResponder:
+            signUp()
+        default:
+            print("signup didn't work")
+        }
         return true
     }
     

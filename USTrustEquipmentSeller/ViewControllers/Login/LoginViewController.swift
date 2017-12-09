@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
@@ -32,7 +32,6 @@ class LoginViewController: UIViewController {
     }
     
     // MARK: - Login Functions
-    
     func login() {
         guard let email = emailTextField.text,
             let password = passwordTextField.text else { return }
@@ -51,6 +50,17 @@ class LoginViewController: UIViewController {
                 })
             }
         }
+    }
+    
+    // MARK: - Text Field Delegates
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if emailTextField.isFirstResponder {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            passwordTextField.resignFirstResponder()
+            login()
+        }
+        return true
     }
     
     // MARK: - Alert Controller

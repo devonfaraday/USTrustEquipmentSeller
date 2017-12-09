@@ -82,6 +82,32 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: - TextField Delegates
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.text = textField.text?.trimmingCharacters(in: .whitespaces)
+        switch textField.isFirstResponder {
+        case firstNameTextField.isFirstResponder:
+            lastNameTextField.becomeFirstResponder()
+        case lastNameTextField.isFirstResponder:
+            emailTextField.becomeFirstResponder()
+        case emailTextField.isFirstResponder:
+            streetAddressTextField.becomeFirstResponder()
+        case streetAddressTextField.isFirstResponder:
+            cityTextField.becomeFirstResponder()
+        case cityTextField.isFirstResponder:
+            stateTextField.becomeFirstResponder()
+        case stateTextField.isFirstResponder:
+            zipCodeTextField.becomeFirstResponder()
+        case zipCodeTextField.isFirstResponder:
+            checkIfUserMeetsRequirements()
+            if userMeetsRequirements {
+                createUser()
+                performSegue(withIdentifier: .toUsernamePasswordCreationSegueKey, sender: self)
+            }
+        default:
+            print("Whatever")
+        }
+        return true
+    }
     
     // MARK: - Alert Controller
     func showAlert(withMessage message: String) {
