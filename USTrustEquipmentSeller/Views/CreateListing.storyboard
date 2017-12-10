@@ -26,11 +26,11 @@
             </objects>
             <point key="canvasLocation" x="2062" y="797"/>
         </scene>
-        <!--Item-->
+        <!--Post-->
         <scene sceneID="dIP-nq-m2g">
             <objects>
                 <navigationController storyboardIdentifier="CreateListingNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="BEE-aB-aaE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cJQ-pq-jtx" userLabel="Post"/>
+                    <tabBarItem key="tabBarItem" title="Post" id="cJQ-pq-jtx" userLabel="Post"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LPj-0L-7jX">
