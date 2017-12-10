@@ -44,10 +44,6 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         guard let user = currentUser else { return }
         firstNameTextField.text = user.firstName
         lastNameTextField.text = user.lastName
-        streetAddressTextField.text = user.streetAddress
-        cityTextField.text = user.city
-        stateTextField.text = user.state
-        zipCodeTextField.text = user.zipCode
     }
     
     // MARK: - Edit/Save Profile Functions
