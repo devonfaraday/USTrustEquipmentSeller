@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nox-Ga-vnD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CZr-Xh-6Dr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -77,10 +77,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="QCV-w1-hUs"/>
                     </view>
+                    <navigationItem key="navigationItem" id="PsM-Mb-TUY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gvC-nl-a8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="200.80000000000001" y="125.4872563718141"/>
+            <point key="canvasLocation" x="201" y="125"/>
         </scene>
         <!--Search Filter View Controller-->
         <scene sceneID="bgZ-QZ-5Pa">
@@ -109,6 +110,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgB-5s-yfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="201" y="887"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="vmr-WD-0A1">
+            <objects>
+                <navigationController storyboardIdentifier="ListingsNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="CZr-Xh-6Dr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" id="m2Q-Zt-nZb"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Bh-gc-miJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nox-Ga-vnD" kind="relationship" relationship="rootViewController" id="X0s-mc-OmO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xUD-om-Sf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-722" y="125"/>
         </scene>
     </scenes>
 </document>

@@ -22,8 +22,40 @@ class UserProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
+    // MARK: - View Update Functions
+    func updateViews() {
+        guard let user = currentUser else { return }
+        firstNameTextField.text = user.firstName
+        lastNameTextField.text = user.lastName
+    }
+    
+    // MARK: - Edit/Save Profile Functions
+    func editProfile() {
+        
+    }
+    
+    func saveProfile() {
+        modifyUser()
+    }
+    
+    func modifyUser() {
+        guard let firstName = firstNameTextField.text,
+            let lastName = lastNameTextField.text,
+            let streetAddress = streetAddressTextField.text,
+            let city = cityTextField.text,
+            let state = stateTextField.text,
+            let zipCode = zipCodeTextField.text else { return }
+        currentUser?.firstName = firstName
+        currentUser?.lastName = lastName
+        currentUser?.streetAddress = streetAddress
+        currentUser?.city = city
+        currentUser?.state = state
+        currentUser?.zipCode = zipCode
+        let userController = UserController()
+        guard let user = currentUser else { return }
+        userController.modifyUser(withUser: user)
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

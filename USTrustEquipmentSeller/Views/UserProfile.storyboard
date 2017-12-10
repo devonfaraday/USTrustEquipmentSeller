@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -65,12 +65,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="KVE-pb-qhd" userLabel="Name Stack">
+                                <rect key="frame" x="16" y="20" width="204.5" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EPe-Ok-20o">
+                                        <rect key="frame" x="0.0" y="0.0" width="99.5" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="122" id="YEF-IM-bVN"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lNa-As-uE1">
+                                        <rect key="frame" x="101.5" y="0.0" width="103" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="103" id="XoL-73-auY"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZl-cf-83M">
                                 <rect key="frame" x="138" y="353" width="100" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="EnZ-Yw-NrR"/>
                                     <constraint firstAttribute="width" constant="100" id="m4L-Do-Hwn"/>
                                 </constraints>
+                                <rect key="frame" x="259" y="20" width="100" height="40"/>
                                 <state key="normal" title="Save"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lNa-As-uE1">
@@ -106,9 +130,20 @@
                             <constraint firstItem="iZl-cf-83M" firstAttribute="top" secondItem="jZN-X7-r1G" secondAttribute="bottom" constant="73" id="qsi-eu-bHh"/>
                             <constraint firstItem="MLY-Xr-mJM" firstAttribute="baseline" secondItem="jZN-X7-r1G" secondAttribute="baseline" id="xGq-kg-cew"/>
                             <constraint firstItem="jZN-X7-r1G" firstAttribute="leading" secondItem="MLY-Xr-mJM" secondAttribute="trailing" constant="87" id="zbh-8I-DUU"/>
+                            <constraint firstItem="KVE-pb-qhd" firstAttribute="top" secondItem="iZl-cf-83M" secondAttribute="top" id="B4c-eq-T5P"/>
+                            <constraint firstItem="iZl-cf-83M" firstAttribute="trailing" secondItem="Xru-9r-sjn" secondAttribute="trailingMargin" id="MO6-ao-aCO"/>
+                            <constraint firstItem="KVE-pb-qhd" firstAttribute="leading" secondItem="Xru-9r-sjn" secondAttribute="leadingMargin" id="Szh-kK-VFQ"/>
+                            <constraint firstItem="KVE-pb-qhd" firstAttribute="top" secondItem="bjV-vD-mKD" secondAttribute="top" id="eMa-Ce-GLe"/>
+                            <constraint firstItem="bjV-vD-mKD" firstAttribute="bottom" secondItem="iZl-cf-83M" secondAttribute="bottom" constant="607" id="kQu-Pd-0wF"/>
+                            <constraint firstItem="iZl-cf-83M" firstAttribute="leading" secondItem="KVE-pb-qhd" secondAttribute="trailing" constant="38" id="wJ4-i8-og9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bjV-vD-mKD"/>
                     </view>
+                    <connections>
+                        <outlet property="firstNameTextField" destination="EPe-Ok-20o" id="UIV-4C-KVt"/>
+                        <outlet property="lastNameTextField" destination="lNa-As-uE1" id="aav-as-UIY"/>
+                        <outlet property="saveButton" destination="iZl-cf-83M" id="Ipg-4D-Frl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rha-Kt-cJU" sceneMemberID="firstResponder"/>
             </objects>
