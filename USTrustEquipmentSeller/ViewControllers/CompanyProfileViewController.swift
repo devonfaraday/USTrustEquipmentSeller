@@ -9,7 +9,7 @@
 import UIKit
 
 class CompanyProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     // MARK: - Outlets ===================================================
     
     @IBOutlet var city: UITextField!
@@ -33,6 +33,8 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
     var company: Company?
     var user: User?
     var authenticatedUser: Bool
+    var categories: [ItemCategory] = []
+    var selectedCategory: ItemCategory?
     
     // MARK: - Override Functions =========================================
     
@@ -41,10 +43,11 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
         saveButtonSetup()
         
     }
-
+    
+    
     
     // MARK: - Navigation ==================================================
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -55,20 +58,29 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
     
     @IBAction func addImageButtonTapped(_ sender: Any) {
         addPhotoActionSheet()
-        guard let user = user else { return }
-        authenticatedUser = verifyUser(user: user)
-        if !authenticatedUser {
-            
-        }
+        
     }
+    
+    
     
     
     @IBAction func saveEditButtonTapped(_ sender: Any) {
         saveEditButton.isEnabled = false
+        
         if saveEditButton.titleLabel?.text == "Edit" {
-           saveEditButton.titleLabel?.text = "Save"
+            saveEditButton.titleLabel?.text = "Save"
         } else {
             saveEditButton.titleLabel?.text = "Edit"
+            guard let companyName = companyName.text,
+                let streetAddress = streetAddress.text,
+                let city = city.text,
+                let state = state.text,
+                let zipCode = zipCode.text,
+                let phone = phoneNumber.text,
+                let einNumber = einNumber.text
+                else { return }
+           
+            company = Company(companyName: companyName, streetAddress: streetAddress, city: city, state: state, zipCode: zipCode, phone: phone, einNumber: einNumber)
         }
         
     }
@@ -124,7 +136,7 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
     }
     
     // MARK: - Other Functions =============================================
-   
+    
     func saveButtonSetup() {
         if saveEditButton.titleLabel?.text != nil {
             saveEditButton.titleLabel?.text = "Edit"
@@ -138,7 +150,11 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
             return false
         } else {
             return true
-}
-}
+        }
+    }
+    func delete() {
+        guard let identifier = identifier else { return }
+        FirebaseController.databaseRef.child(endpoint).child(identifier).removeValue()
+    }
     
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Xa-da-1jn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -153,26 +153,6 @@
             </objects>
             <point key="canvasLocation" x="196" y="-319"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="tUP-Xj-ElG">
-            <objects>
-                <tabBarController id="4Xa-da-1jn" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uHQ-Hr-KH7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="VGs-v7-ALw" kind="relationship" relationship="viewControllers" id="CLC-Im-MXz"/>
-                        <segue destination="I2S-Gn-ICN" kind="relationship" relationship="viewControllers" id="T8J-5Z-ZSL"/>
-                        <segue destination="uqm-uP-emA" kind="relationship" relationship="viewControllers" id="OL8-Di-SiX"/>
-                        <segue destination="Sl8-Sp-oTh" kind="relationship" relationship="viewControllers" id="Okv-S4-RiD"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xzx-NS-ueP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-658" y="195"/>
-        </scene>
         <!--Settings-->
         <scene sceneID="dka-N9-mdm">
             <objects>
@@ -188,7 +168,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XrY-0D-0lt">
-                                <rect key="frame" x="0.0" y="323" width="375" height="295"/>
+                                <rect key="frame" x="0.0" y="372" width="375" height="295"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="295" id="AWW-BX-8YP"/>
@@ -216,7 +196,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cOO-AX-zD6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="vuQ-Ay-eJY"/>
+                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="settings" id="vuQ-Ay-eJY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2se-SA-xsi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,6 +205,7 @@
         <!--Add-->
         <scene sceneID="RTE-Dt-Aqu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tj0-wV-dAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Sl8-Sp-oTh" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JOk-Hf-Pi6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -234,7 +215,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" id="OvT-EV-WtT"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tj0-wV-dAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-681" y="1201"/>
         </scene>
@@ -247,7 +227,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kv0-22-7m2">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="115" id="0Hz-IM-ljr" customClass="ListingTableViewCell" customModule="USTrustEquipmentSeller" customModuleProvider="target">
@@ -326,4 +306,7 @@
             <point key="canvasLocation" x="29.600000000000001" y="1201.3493253373315"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="settings" width="50" height="50"/>
+    </resources>
 </document>

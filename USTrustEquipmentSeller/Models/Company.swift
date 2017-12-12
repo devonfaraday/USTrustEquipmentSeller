@@ -17,7 +17,7 @@ struct Company: FirebaseType {
     var city: String
     var state: String
     var zipCode: String
-    var phone: Int
+    var phone: String
     var rating: Int = 0
     var logo: UIImage?
     var einNumber: String
@@ -44,7 +44,7 @@ struct Company: FirebaseType {
     }
     
     
-    init(companyName: String, streetAddress: String, city: String, state: String, zipCode: String, phone: Int, einNumber: String) {
+    init(companyName: String, streetAddress: String, city: String, state: String, zipCode: String, phone: String, einNumber: String) {
         
         self.companyName = companyName
         self.streetAddress = streetAddress
@@ -62,7 +62,7 @@ struct Company: FirebaseType {
             let city = dictionary[.cityKey] as? String,
             let state = dictionary[.stateKey] as? String,
             let zipCode = dictionary[.zipCodeKey] as? String,
-            let phone = dictionary[.phoneKey] as? Int,
+            let phone = dictionary[.phoneKey] as? String,
             let rating = dictionary[.ratingKey] as? Int,
             let logo = dictionary[.logoKey] as? UIImage,
             let einNumber = dictionary[.einNumberKey] as? String,
@@ -86,7 +86,14 @@ struct Company: FirebaseType {
         self.authorizedSellersIdentifiers = authorizedSellersIdentifiers
         self.isBanned = isBanned
         self.isVerified = isVerified
-   
+        switch category {
+            case category.powerTools.rawValue: self.category = Category
+        }
     }
-    
+    case StoryCategory.fantasy.rawValue: self.category = StoryCategory.fantasy
+    enum catagory {
+        case powerTools
+        case heavyEquipment
+        case misc
+    }
 }
