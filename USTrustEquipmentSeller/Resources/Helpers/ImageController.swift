@@ -13,16 +13,17 @@ class ImageController {
     let storage = Storage()
     
     // MARK: - Create
-    func createProfileImage(withImageData imageData: Data, forUser user: User?) {
-        guard let userId = user?.identifier else { return }
+    func createListingImages(withImageData imageDataArray: [Data], forCompany company: CompanyProfile) {
+        guard let companyId = company.identifier else { return }
         let storageRef = storage.reference()
-        let imageRef = storageRef.child("\(String.imagesEndpointKey)/\(String.profileImagesEndpointKey)/\(userId)/\(UUID().uuidString)")
-        let metaData = StorageMetadata()
-        metaData.contentType = "images/jpeg"
-        imageRef.putData(imageData, metadata: metaData) { (storageMetaData, error) in
+        let imageRef = storageRef.child("\(String.imagesEndpointKey)/\(companyId)/\(UUID().uuidString).jpg")
+        for imageData in imageDataArray {
+        let uploadTask = imageRef.putData(imageData, metadata: nil) { (storageMetaData, error) in
             if let error = error {
                 print(error.localizedDescription)
             }
+        }
+            uploadTask.resume()
         }
     }
     

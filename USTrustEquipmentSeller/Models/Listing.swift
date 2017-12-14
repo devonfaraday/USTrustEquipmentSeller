@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Listing: FirebaseType {
+class Listing: FirebaseType, Equatable {
 
     let item: String
     let quantity: Int
@@ -18,10 +18,10 @@ class Listing: FirebaseType {
     let price: Double
     let location: String
     let images: [UIImage]
-    let listingAccountIdentifier: String
+    let companyIdentifier: String
     var endpoint: String = .listingsEndpoint
     var identifier: String?
-    let listingDate: Date
+    let created: Date
     
     var dictionaryCopy: [String : Any] {
         return [.itemKey: item,
@@ -31,12 +31,12 @@ class Listing: FirebaseType {
                 .priceKey: price,
                 .locationKey: location,
                 .imageKey: images,
-                .listingAccountIdentifierKey: listingAccountIdentifier,
-                .listingDateKey: listingDate
+                .companyIdentifierKey: companyIdentifier,
+                .createdKey: created
         ]
     }
     
-    init(item: String, quantity: Int, catagoryIdentifer: String, description: String, price: Double, location: String, images: [UIImage], listingAccountIdentifer: String, identifier: String, listingDate: Date = Date()) {
+    init(item: String, quantity: Int, catagoryIdentifer: String, description: String, price: Double, location: String, images: [UIImage], companyIdentifer: String, identifier: String, created: Date = Date()) {
         
         self.item = item
         self.quantity = quantity
@@ -45,9 +45,9 @@ class Listing: FirebaseType {
         self.price = price
         self.location = location
         self.images = images
-        self.listingAccountIdentifier = listingAccountIdentifer
+        self.companyIdentifier = companyIdentifer
         self.identifier = identifier
-        self.listingDate = listingDate
+        self.created = created
         
     }
     
@@ -59,8 +59,8 @@ class Listing: FirebaseType {
               let price = dictionary[.priceKey] as? Double,
               let location = dictionary[.locationKey] as? String,
               let images = dictionary[.imageKey] as? [UIImage],
-              let listingAccountIdentifer = dictionary[.listingAccountIdentifierKey] as? String,
-              let listingDate = dictionary[.listingDateKey] as? Date
+              let companyIdentifier = dictionary[.companyIdentifierKey] as? String,
+              let created = dictionary[.createdKey] as? Date
             else { return nil }
         
         self.identifier = identifier
@@ -71,8 +71,8 @@ class Listing: FirebaseType {
         self.price = price
         self.location = location
         self.images = images
-        self.listingAccountIdentifier = listingAccountIdentifer
-        self.listingDate = listingDate
+        self.companyIdentifier = companyIdentifier
+        self.created = created
         
     }
   
@@ -81,4 +81,8 @@ class Listing: FirebaseType {
         case powerTools
     }
     
+}
+
+func ==(lhs: Listing, rhs: Listing) -> Bool {
+    return lhs.identifier == rhs.identifier
 }

@@ -49,8 +49,8 @@ extension String {
     static var priceKey: String { get { return "price" } }
     static var locationKey: String { get { return "location" } }
     static var imageKey: String { get { return "image" } }
-    static var listingAccountIdentifierKey: String { get { return "listingAccountIdentifier" } }
-    static var listingDateKey: String { get { return "listingDate" } }
+    static var companyIdentifierKey: String { get { return "companyIdentifier" } }
+    static var createdKey: String { get { return "listingDate" } }
     static var storeNameKey: String { get { return "storeName" } }
     static var storeTypeKey: String { get { return "storeType" } }
     static var listingsIdentifiersKey: String { get { return "listingsIdentifiers" } }
