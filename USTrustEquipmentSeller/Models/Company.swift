@@ -86,14 +86,6 @@ struct Company: FirebaseType {
         self.authorizedSellersIdentifiers = authorizedSellersIdentifiers
         self.isBanned = isBanned
         self.isVerified = isVerified
-        switch category {
-            case category.powerTools.rawValue: self.category = Category
+       
         }
     }
-    case StoryCategory.fantasy.rawValue: self.category = StoryCategory.fantasy
-    enum catagory {
-        case powerTools
-        case heavyEquipment
-        case misc
-    }
-}

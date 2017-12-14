@@ -32,9 +32,8 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
     
     var company: Company?
     var user: User?
-    var authenticatedUser: Bool
-    var categories: [ItemCategory] = []
-    var selectedCategory: ItemCategory?
+    var authenticatedUser: Bool = false
+    
     
     // MARK: - Override Functions =========================================
     
@@ -60,9 +59,6 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
         addPhotoActionSheet()
         
     }
-    
-    
-    
     
     @IBAction func saveEditButtonTapped(_ sender: Any) {
         saveEditButton.isEnabled = false
@@ -143,18 +139,6 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
         } else {
             saveEditButton.titleLabel?.text = "Save"
         }
-    }
-    
-    func verifyUser(user: User) -> Bool {
-        if !user.isBanned {
-            return false
-        } else {
-            return true
-        }
-    }
-    func delete() {
-        guard let identifier = identifier else { return }
-        FirebaseController.databaseRef.child(endpoint).child(identifier).removeValue()
     }
     
 }
