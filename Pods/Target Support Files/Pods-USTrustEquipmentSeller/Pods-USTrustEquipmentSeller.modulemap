@@ -1,0 +1,6 @@
+framework module Pods_USTrustEquipmentSeller {
+  umbrella header "Pods-USTrustEquipmentSeller-umbrella.h"
+
+  export *
+  module * { export * }
+}
