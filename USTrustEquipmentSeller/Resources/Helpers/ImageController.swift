@@ -13,7 +13,7 @@ class ImageController {
     let storage = Storage()
     
     // MARK: - Create
-    func createListingImages(withImageData imageDataArray: [Data], forCompany company: CompanyProfile) {
+    func createListingImages(withImageData imageDataArray: [Data], forCompany company: Company) {
         guard let companyId = company.identifier else { return }
         let storageRef = storage.reference()
         let imageRef = storageRef.child("\(String.imagesEndpointKey)/\(companyId)/\(UUID().uuidString).jpg")

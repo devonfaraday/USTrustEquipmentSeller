@@ -43,7 +43,7 @@ extension FirebaseType {
     }
     
     // posting a listing for a company use this save
-    mutating func saveListing(toCompany company: CompanyProfile) {
+    mutating func saveListing(toCompany company: Company) {
         var newEndpoint = FirebaseController.databaseRef.child("\(company.endpoint)/\(String.listingsEndpoint)")
         if let identifier = identifier {
             newEndpoint = newEndpoint.child(identifier)

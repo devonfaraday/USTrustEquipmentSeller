@@ -1,0 +1,26 @@
+//
+//  CompanyController.swift
+//  USTrustEquipmentSeller
+//
+//  Created by Demick McMullin on 12/13/17.
+//  Copyright © 2017 Christian McMullin. All rights reserved.
+//
+
+import Foundation
+import Firebase
+
+class CompanyController {
+   
+    func createCompany(company: Company) {
+        var uid = ""
+        if let currentCompany = Auth.auth().currentUser {
+            uid = currentCompany.uid
+        }
+        
+        var newCompany  = company
+        newCompany.identifier = uid
+        newCompany.save()
+    }
+    
+    
+}
