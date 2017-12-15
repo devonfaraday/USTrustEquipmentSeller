@@ -17,8 +17,8 @@ class Listing: FirebaseType, Equatable {
     let description: String
     let price: Double
     let location: String
-    let imageURLs: [URL] = []
-    let images: [UIImage] = []
+    var imageURLReferences: [String] = []
+    var images: [UIImage] = []
     let companyIdentifier: String
     var endpoint: String = .listingsEndpoint
     var identifier: String?
@@ -53,7 +53,7 @@ class Listing: FirebaseType, Equatable {
     }
     
     required init?(dictionary: JSONDictionary, identifier: String) {
-        guard let item = dictionary[.itemKey] as? String,
+        guard let itemName = dictionary[.itemNameKey] as? String,
               let quantity = dictionary[.quantityKey] as? Int,
               let catagoryIdentifier = dictionary[.catagoryIdentifierKey] as? String,
               let description = dictionary[.descriptionKey] as? String,
@@ -64,7 +64,7 @@ class Listing: FirebaseType, Equatable {
             else { return nil }
         
         self.identifier = identifier
-        self.item = item
+        self.itemName = itemName
         self.quantity = quantity
         self.catagoryIdentifier = catagoryIdentifier
         self.description = description

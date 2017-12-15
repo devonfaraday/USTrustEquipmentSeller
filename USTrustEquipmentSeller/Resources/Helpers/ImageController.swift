@@ -24,10 +24,8 @@ class ImageController {
                     if let error = error {
                         print(error.localizedDescription)
                     } else if let metaData = storageMetaData {
-                        guard let downloadURL = metaData.downloadURL() else { return }
-                        let urlString = downloadURL.absoluteString
-                        let listingToModify = listing
-                        listingToModify.imageURLs.append(urlString)
+                        var listingToModify = listing
+                        listingToModify.imageURLReferences.append(metaData.storageReference)
                         listingToModify.saveListing(toCompany: company)
                     }
                 }
@@ -44,7 +42,7 @@ class ImageController {
                 print(error.localizedDescription)
             } else if let metaData = metaData {
                 guard let downloadURL = metaData.downloadURL() else { return }
-                let modifiedCompany = company
+                var modifiedCompany = company
                 // modifiedCompany.logoURL = downloadURL
                 modifiedCompany.save()
             }
@@ -53,12 +51,28 @@ class ImageController {
     }
     
     // MARK: - Read
-    func fetchImage(fromURL url: URL, completion: @escaping() -> Void) {
-        
+    func fetchImage(withURL url: URL, completion: @escaping(UIImage?) -> Void) {
+        let downloadRef = storageRef
+            var image: UIImage?
+            if let imageData = try? Data(contentsOf: url) {
+                image = UIImage(data: imageData, scale: 1)
+                completion(image)
+            } else {
+                completion(nil)
+            }
     }
     
-    func fetchImages(fromURLs urls: [URL], completion: @escaping() -> Void) {
-        
+    func fetchImages(withURLs urls: [URL], completion: @escaping([UIImage]) -> Void) {
+        var images = [UIImage]()
+        for url in urls {
+            DispatchQueue.global().async {
+                self.fetchImage(withURL: url, completion: { (image) in
+                    guard let image = image else { return }
+                    images.append(image)
+                })
+            }
+        }
+        completion(images)
     }
     
     // MARK: - Update
@@ -67,7 +81,14 @@ class ImageController {
     }
     
     // MARK: - Delete
-    func deleteImage(atURL url: URL)  {
-        
+    func deleteImage(withURLReference reference: String)  {
+        let deleteRef = storageRef.child(reference)
+        deleteRef.delete { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                print("image deleted successfully")
+            }
+        }
     }
 }
