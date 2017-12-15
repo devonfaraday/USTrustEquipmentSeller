@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct CompanyProfile: FirebaseType {
+struct Company: FirebaseType {
 
     let companyName: String
     var streetAddress: String
@@ -18,11 +18,10 @@ struct CompanyProfile: FirebaseType {
     var zipCode: String
     var phone: String
     var rating: Int = 0
-    var logo: UIImage?
+    //var logo: UIImage?
     var einNumber: String
     var administratorAccountsIdentifiers: [String] = []
     var authorizedSellersIdentifiers: [String] = []
-    var authorizedBuyersIdentifiers: [String] = []
     var isBanned: Bool = false
     var isVerified: Bool = false
     var endpoint: String = .companiesEndpoint
@@ -38,7 +37,6 @@ struct CompanyProfile: FirebaseType {
             .einNumberKey: einNumber,
             .administratorAccountsIdentifierKey: administratorAccountsIdentifiers,
             .authorizedSellersIdentifierKey: authorizedSellersIdentifiers,
-            .authorizedBuyersIdentifierKey: authorizedBuyersIdentifiers,
             .isBannedKey: isBanned,
             .isVerifiedKey: isVerified
             ]
@@ -65,11 +63,10 @@ struct CompanyProfile: FirebaseType {
             let zipCode = dictionary[.zipCodeKey] as? String,
             let phone = dictionary[.phoneKey] as? String,
             let rating = dictionary[.ratingKey] as? Int,
-            let logo = dictionary[.logoKey] as? UIImage,
+            // let logo = dictionary[.logoKey] as? UIImage,
             let einNumber = dictionary[.einNumberKey] as? String,
             let administratorAccountsIdentifiers = dictionary[.administratorAccountsIdentifierKey] as? [String],
             let authorizedSellersIdentifiers = dictionary[.authorizedSellersIdentifierKey] as? [String],
-            let authorizedBuyersIdentifiers = dictionary[.authorizedBuyersIdentifierKey] as? [String],
             let isBanned = dictionary[.isBannedKey] as? Bool,
             let isVerified = dictionary[.isVerifiedKey] as? Bool
             else { return nil }
@@ -82,11 +79,10 @@ struct CompanyProfile: FirebaseType {
         self.zipCode = zipCode
         self.phone = phone
         self.rating = rating
-        self.logo = logo
+        // self.logo = logo
         self.einNumber = einNumber
         self.administratorAccountsIdentifiers = administratorAccountsIdentifiers
         self.authorizedSellersIdentifiers = authorizedSellersIdentifiers
-        self.authorizedBuyersIdentifiers = authorizedBuyersIdentifiers
         self.isBanned = isBanned
         self.isVerified = isVerified
    

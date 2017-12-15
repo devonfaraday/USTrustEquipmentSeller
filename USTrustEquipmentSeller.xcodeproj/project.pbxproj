@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D7D81EE1FBA4F3900998B67 /* CompanyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7D81ED1FBA4F3900998B67 /* CompanyProfile.swift */; };
+		5D7D81EE1FBA4F3900998B67 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7D81ED1FBA4F3900998B67 /* Company.swift */; };
 		5D7D81F01FBA4FC900998B67 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7D81EF1FBA4FC900998B67 /* Listing.swift */; };
 		5D7D81F41FBA522E00998B67 /* String+UES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7D81F31FBA522E00998B67 /* String+UES.swift */; };
 		5D7D81F61FBA5C6500998B67 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7D81F51FBA5C6500998B67 /* Constants.swift */; };
 		5D917ECB1FBA4AA0004BD9AC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D917ECA1FBA4AA0004BD9AC /* User.swift */; };
 		5D9E973C1FC4C06E00A7A34C /* ImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9E973B1FC4C06E00A7A34C /* ImageHandler.swift */; };
+		5DC911C91FE22FA6002CE612 /* CompanyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC911C81FE22FA6002CE612 /* CompanyController.swift */; };
 		5DE07CEF1FBCE34D003146C5 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE07CEE1FBCE34D003146C5 /* Store.swift */; };
 		5DE07CF11FBF83D7003146C5 /* ListingDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DE07CF01FBF83D7003146C5 /* ListingDetail.storyboard */; };
 		5DE07CF31FBF8422003146C5 /* BrowseListings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DE07CF21FBF8422003146C5 /* BrowseListings.storyboard */; };
@@ -78,12 +79,13 @@
 		45D672E1F278B0E64DDD84B0 /* Pods-USTrustEquipmentSellerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USTrustEquipmentSellerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-USTrustEquipmentSellerUITests/Pods-USTrustEquipmentSellerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		48B66815514C5D2869A28116 /* Pods-USTrustEquipmentSeller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USTrustEquipmentSeller.release.xcconfig"; path = "Pods/Target Support Files/Pods-USTrustEquipmentSeller/Pods-USTrustEquipmentSeller.release.xcconfig"; sourceTree = "<group>"; };
 		5C275AE25E2F63BB3CF30F5A /* Pods-USTrustEquipmentSellerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USTrustEquipmentSellerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-USTrustEquipmentSellerTests/Pods-USTrustEquipmentSellerTests.release.xcconfig"; sourceTree = "<group>"; };
-		5D7D81ED1FBA4F3900998B67 /* CompanyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyProfile.swift; sourceTree = "<group>"; };
+		5D7D81ED1FBA4F3900998B67 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		5D7D81EF1FBA4FC900998B67 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
 		5D7D81F31FBA522E00998B67 /* String+UES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+UES.swift"; sourceTree = "<group>"; };
 		5D7D81F51FBA5C6500998B67 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5D917ECA1FBA4AA0004BD9AC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5D9E973B1FC4C06E00A7A34C /* ImageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHandler.swift; sourceTree = "<group>"; };
+		5DC911C81FE22FA6002CE612 /* CompanyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyController.swift; sourceTree = "<group>"; };
 		5DE07CEE1FBCE34D003146C5 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		5DE07CF01FBF83D7003146C5 /* ListingDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListingDetail.storyboard; sourceTree = "<group>"; };
 		5DE07CF21FBF8422003146C5 /* BrowseListings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BrowseListings.storyboard; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC207DE1FD0D3E000860A0B /* UserController.swift */,
+				5DC911C81FE22FA6002CE612 /* CompanyController.swift */,
 				FD172B401FE37E1B005A92EC /* ListingController.swift */,
 			);
 			path = ModelControllers;
@@ -311,7 +314,7 @@
 			children = (
 				5D917ECA1FBA4AA0004BD9AC /* User.swift */,
 				5D7D81EF1FBA4FC900998B67 /* Listing.swift */,
-				5D7D81ED1FBA4F3900998B67 /* CompanyProfile.swift */,
+				5D7D81ED1FBA4F3900998B67 /* Company.swift */,
 				5DE07CEE1FBCE34D003146C5 /* Store.swift */,
 			);
 			path = Models;
@@ -665,6 +668,7 @@
 				FD557F221FBAB52B00A52EA1 /* LoginViewController.swift in Sources */,
 				FD557F241FBAB54C00A52EA1 /* UserProfileViewController.swift in Sources */,
 				5DE07CEF1FBCE34D003146C5 /* Store.swift in Sources */,
+				5DC911C91FE22FA6002CE612 /* CompanyController.swift in Sources */,
 				5DE07CFB1FBF8B9F003146C5 /* SearchFilterViewController.swift in Sources */,
 				FD557F261FBAB55500A52EA1 /* CompanyProfileViewController.swift in Sources */,
 				FD557F2A1FBAB56B00A52EA1 /* CreateListingViewController.swift in Sources */,
@@ -681,7 +685,7 @@
 				FD557F2C1FBAB5B500A52EA1 /* BrowseListingsViewController.swift in Sources */,
 				5D7D81F61FBA5C6500998B67 /* Constants.swift in Sources */,
 				5D7D81F41FBA522E00998B67 /* String+UES.swift in Sources */,
-				5D7D81EE1FBA4F3900998B67 /* CompanyProfile.swift in Sources */,
+				5D7D81EE1FBA4F3900998B67 /* Company.swift in Sources */,
 				FDCD1D7A1FD60B940037FBFA /* FirebaseAuthentication.swift in Sources */,
 				FD10F5EF1FDCAA2D00698CFA /* ProfileViewController.swift in Sources */,
 				FD172B411FE37E1B005A92EC /* ListingController.swift in Sources */,
