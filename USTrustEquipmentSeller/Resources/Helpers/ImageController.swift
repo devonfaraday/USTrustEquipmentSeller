@@ -25,7 +25,7 @@ class ImageController {
                         print(error.localizedDescription)
                     } else if let metaData = storageMetaData {
                         var listingToModify = listing
-                        listingToModify.imageURLReferences.append(metaData.storageReference)
+                        listingToModify.imageURLReferences.append(metaData.bucket)
                         listingToModify.saveListing(toCompany: company)
                     }
                 }
