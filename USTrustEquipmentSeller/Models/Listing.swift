@@ -37,6 +37,9 @@ class Listing: FirebaseType, Equatable {
         ]
     }
     
+    let decoder = JSONDecoder()
+    
+    
     init(itemName: String, quantity: Int = 1, catagoryIdentifer: String, description: String, price: Double, location: String, images: [UIImage], companyIdentifer: String, identifier: String, created: Date = Date()) {
         
         self.itemName = itemName

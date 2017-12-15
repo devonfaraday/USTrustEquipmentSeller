@@ -26,7 +26,7 @@ class ImageController {
                     } else if let metaData = storageMetaData {
                         var listingToModify = listing
                         listingToModify.imageURLReferences.append(metaData.bucket)
-                        listingToModify.saveListing(toCompany: company)
+                        listingToModify.save()
                     }
                 }
                 uploadTask.resume()
