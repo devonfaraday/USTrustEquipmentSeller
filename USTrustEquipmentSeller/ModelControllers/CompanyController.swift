@@ -12,13 +12,7 @@ import Firebase
 class CompanyController {
    
     func createCompany(company: Company) {
-        var uid = ""
-        if let currentCompany = Auth.auth().currentUser {
-            uid = currentCompany.uid
-        }
-        
-        var newCompany  = company
-        newCompany.identifier = uid
+        var newCompany = company
         newCompany.save()
     }
     
