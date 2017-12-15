@@ -6,43 +6,68 @@
 //  Copyright © 2017 Christian McMullin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import FirebaseStorage
 
 class ImageController {
-    let storage = Storage()
+    let storageRef = Storage().reference()
     
     // MARK: - Create
-    func createListingImages(withImageData imageDataArray: [Data], forCompany company: CompanyProfile) {
-        guard let companyId = company.identifier else { return }
-        let storageRef = storage.reference()
-        let imageRef = storageRef.child("\(String.imagesEndpointKey)/\(companyId)/\(UUID().uuidString).jpg")
+    func createListingImages(withImageData imageDataArray: [Data], forCompany company: CompanyProfile, underListingEndpoint listing: Listing) {
+        guard let companyId = company.identifier,
+            let listingID = listing.identifier
+        else { return }
+        let imageRef = storageRef.child("\(String.imagesEndpointKey)/\(companyId)/\(listing.endpoint)/\(listingID)/\(UUID().uuidString).jpg")
         for imageData in imageDataArray {
-        let uploadTask = imageRef.putData(imageData, metadata: nil) { (storageMetaData, error) in
-            if let error = error {
-                print(error.localizedDescription)
+            DispatchQueue.global().async {
+                let uploadTask = imageRef.putData(imageData, metadata: nil) { (storageMetaData, error) in
+                    if let error = error {
+                        print(error.localizedDescription)
+                    } else if let metaData = storageMetaData {
+                        guard let downloadURL = metaData.downloadURL() else { return }
+                        let urlString = downloadURL.absoluteString
+                        let listingToModify = listing
+                        listingToModify.imageURLs.append(urlString)
+                        listingToModify.saveListing(toCompany: company)
+                    }
+                }
+                uploadTask.resume()
             }
         }
-            uploadTask.resume()
+    }
+    
+    func createLogo(withImageData imageData: Data, forCompany company: CompanyProfile) {
+        guard let companyId = company.identifier else { return }
+        let logoRef = storageRef.child("\(String.imagesEndpointKey)/\(companyId)/\(String.logoKey)/\(UUID().uuidString).jpg")
+        let uploadTask = logoRef.putData(imageData, metadata: nil) { (metaData, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let metaData = metaData {
+                guard let downloadURL = metaData.downloadURL() else { return }
+                let modifiedCompany = company
+                // modifiedCompany.logoURL = downloadURL
+                modifiedCompany.save()
+            }
         }
+        uploadTask.resume()
     }
     
     // MARK: - Read
-    func fetchImage() {
+    func fetchImage(fromURL url: URL, completion: @escaping() -> Void) {
         
     }
     
-    func fetchImages() {
+    func fetchImages(fromURLs urls: [URL], completion: @escaping() -> Void) {
         
     }
     
     // MARK: - Update
-    func updateImage() {
+    func updateImage(withURL url: URL) {
         
     }
     
     // MARK: - Delete
-    func deleteImage()  {
+    func deleteImage(atURL url: URL)  {
         
     }
 }

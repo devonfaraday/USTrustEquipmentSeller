@@ -11,20 +11,21 @@ import UIKit
 
 class Listing: FirebaseType, Equatable {
 
-    let item: String
+    let itemName: String
     let quantity: Int
     let catagoryIdentifier: String
     let description: String
     let price: Double
     let location: String
-    let images: [UIImage]
+    let imageURLs: [URL] = []
+    let images: [UIImage] = []
     let companyIdentifier: String
     var endpoint: String = .listingsEndpoint
     var identifier: String?
     let created: Date
     
     var dictionaryCopy: [String : Any] {
-        return [.itemKey: item,
+        return [.itemNameKey: itemName,
                 .quantityKey: quantity,
                 .catagoryIdentifierKey: catagoryIdentifier,
                 .descriptionKey: description,
@@ -36,9 +37,9 @@ class Listing: FirebaseType, Equatable {
         ]
     }
     
-    init(item: String, quantity: Int, catagoryIdentifer: String, description: String, price: Double, location: String, images: [UIImage], companyIdentifer: String, identifier: String, created: Date = Date()) {
+    init(itemName: String, quantity: Int = 1, catagoryIdentifer: String, description: String, price: Double, location: String, images: [UIImage], companyIdentifer: String, identifier: String, created: Date = Date()) {
         
-        self.item = item
+        self.itemName = itemName
         self.quantity = quantity
         self.catagoryIdentifier = catagoryIdentifer
         self.description = description
@@ -58,7 +59,6 @@ class Listing: FirebaseType, Equatable {
               let description = dictionary[.descriptionKey] as? String,
               let price = dictionary[.priceKey] as? Double,
               let location = dictionary[.locationKey] as? String,
-              let images = dictionary[.imageKey] as? [UIImage],
               let companyIdentifier = dictionary[.companyIdentifierKey] as? String,
               let created = dictionary[.createdKey] as? Date
             else { return nil }
@@ -70,9 +70,9 @@ class Listing: FirebaseType, Equatable {
         self.description = description
         self.price = price
         self.location = location
-        self.images = images
         self.companyIdentifier = companyIdentifier
         self.created = created
+        if let images = dictionary[.imageKey] as? [UIImage] { self.images = images }
         
     }
   

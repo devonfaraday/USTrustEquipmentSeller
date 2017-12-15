@@ -42,7 +42,7 @@ extension String {
     static var administratorAccountsIdentifierKey: String { get { return "administratorAccountsIdentifiers" } }
     static var authorizedSellersIdentifierKey: String { get { return "authorizedSellersIdentifiers" } }
     static var authorizedBuyersIdentifierKey: String { get { return "authorizedBuyersIdentifiers" } }
-    static var itemKey: String { get { return "item" } }
+    static var itemNameKey: String { get { return "itemName" } }
     static var quantityKey: String { get { return "quantity" } }
     static var catagoryIdentifierKey: String { get { return "catagoryIdentifier" } }
     static var descriptionKey: String { get { return "description" } }
@@ -57,6 +57,7 @@ extension String {
     static var storeOwnerIdentifierKey: String { get { return "storeOwnerIdentifier" } }
     static var usernameKey: String { get { return "username" } }
     static var listingWatchListKey: String { get { return "listingWatchList" } }
+    static var imageURLsKey: String { get { return "imageURLreferences" } }
     
     /* Segues */
     static var toUserProfileSegueKey: String { get { return "toUserProfile" } }
