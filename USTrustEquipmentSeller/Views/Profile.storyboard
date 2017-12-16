@@ -18,15 +18,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rE6-S9-DHv">
-                                <rect key="frame" x="166" y="215" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qWe-Zn-dSG">
+                                <rect key="frame" x="37" y="20" width="300" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NX0-NH-5Dn">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="Hng-pD-3fP"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O52-zL-WLa">
+                                        <rect key="frame" x="150" y="0.0" width="150" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="qNj-pL-u6M"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="b33-zk-bnb"/>
+                                </constraints>
+                            </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k61-pK-9fF">
+                                <rect key="frame" x="0.0" y="114" width="375" height="504"/>
+                            </containerView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rNW-RW-TdU">
+                                <rect key="frame" x="0.0" y="70" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vwp-8l-RxP"/>
+                                    <barButtonItem title="User" id="zBL-EJ-R0t"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="iWl-ZV-nsU"/>
+                                    <barButtonItem title="Company" id="1fG-0g-2bB"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0ba-oc-yAi"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qWe-Zn-dSG" firstAttribute="top" secondItem="5wH-Sb-9pW" secondAttribute="top" id="18N-oG-BWf"/>
+                            <constraint firstItem="qWe-Zn-dSG" firstAttribute="leading" secondItem="5wH-Sb-9pW" secondAttribute="leading" constant="37" id="3km-WV-ves"/>
+                            <constraint firstItem="k61-pK-9fF" firstAttribute="bottom" secondItem="5wH-Sb-9pW" secondAttribute="bottom" id="9SC-M6-AwK"/>
+                            <constraint firstItem="k61-pK-9fF" firstAttribute="trailing" secondItem="5wH-Sb-9pW" secondAttribute="trailing" id="9d2-aL-axf"/>
+                            <constraint firstItem="k61-pK-9fF" firstAttribute="leading" secondItem="5wH-Sb-9pW" secondAttribute="leading" id="HWk-p8-JQP"/>
+                            <constraint firstItem="rNW-RW-TdU" firstAttribute="leading" secondItem="5wH-Sb-9pW" secondAttribute="leading" id="RCj-fw-OJD"/>
+                            <constraint firstItem="k61-pK-9fF" firstAttribute="top" secondItem="rNW-RW-TdU" secondAttribute="bottom" id="fEy-pf-y0r"/>
+                            <constraint firstItem="rNW-RW-TdU" firstAttribute="trailing" secondItem="5wH-Sb-9pW" secondAttribute="trailing" id="gX2-ha-BHw"/>
+                            <constraint firstItem="rNW-RW-TdU" firstAttribute="top" secondItem="qWe-Zn-dSG" secondAttribute="bottom" constant="20" id="iUW-Ch-gvf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5wH-Sb-9pW"/>
                     </view>
                     <navigationItem key="navigationItem" id="DeT-rb-GPJ"/>
@@ -34,7 +77,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sTB-yV-wFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="323.5" y="53.5"/>
+            <point key="canvasLocation" x="416.80000000000001" y="53.523238380809602"/>
+        </scene>
+        <!--UserProfileViewController-->
+        <scene sceneID="Uae-gt-2ek">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="UserProfileViewController" storyboardName="UserProfile" referencedIdentifier="UserProfileViewController" id="enk-d5-4iS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y5p-Uz-85h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1070" y="-66"/>
+        </scene>
+        <!--CompanyProfileViewController-->
+        <scene sceneID="OLg-3h-bWP">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CompanyProfileViewController" storyboardName="CompanyProfile" referencedIdentifier="CompanyProfileViewController" id="SMW-oq-4Sg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kw5-7M-j7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071" y="12"/>
         </scene>
         <!--Profile-->
         <scene sceneID="by7-tN-jSe">
