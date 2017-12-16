@@ -43,16 +43,16 @@ extension FirebaseType {
     }
     
     // posting a listing for a company use this save
-    mutating func saveListing(toCompany company: CompanyProfile) {
-        var newEndpoint = FirebaseController.databaseRef.child("\(company.endpoint)/\(String.listingsEndpoint)")
-        if let identifier = identifier {
-            newEndpoint = newEndpoint.child(identifier)
-        } else {
-            newEndpoint = newEndpoint.childByAutoId()
-            self.identifier = newEndpoint.key
-        }
-        newEndpoint.updateChildValues(dictionaryCopy)
-    }
+//    mutating func saveListing(toCompany company: CompanyProfile) {
+//        var newEndpoint = FirebaseController.databaseRef.child("\(String.listingsEndpoint)")
+//        if let identifier = identifier {
+//            newEndpoint = newEndpoint.child(identifier)
+//        } else {
+//            newEndpoint = newEndpoint.childByAutoId()
+//            self.identifier = newEndpoint.key
+//        }
+//        newEndpoint.updateChildValues(dictionaryCopy)
+//    }
     
     // posting a listing for a store use this save
     mutating func saveListing(toStore store: Store) {

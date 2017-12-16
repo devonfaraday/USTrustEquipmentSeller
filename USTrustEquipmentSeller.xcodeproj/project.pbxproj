@@ -29,6 +29,7 @@
 		FD10F5F11FDCB0AD00698CFA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD10F5F01FDCB0AD00698CFA /* TabBarViewController.swift */; };
 		FD10F5F31FDCB2FF00698CFA /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD10F5F21FDCB2FF00698CFA /* WatchListViewController.swift */; };
 		FD10F5F51FDCB30F00698CFA /* WatchList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD10F5F41FDCB30F00698CFA /* WatchList.storyboard */; };
+		FD172B411FE37E1B005A92EC /* ListingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD172B401FE37E1B005A92EC /* ListingController.swift */; };
 		FD3133DC1FB504E7002BCA23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3133DB1FB504E7002BCA23 /* AppDelegate.swift */; };
 		FD3133E11FB504E7002BCA23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3133DF1FB504E7002BCA23 /* Main.storyboard */; };
 		FD3133E31FB504E7002BCA23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD3133E21FB504E7002BCA23 /* Assets.xcassets */; };
@@ -102,6 +103,7 @@
 		FD10F5F01FDCB0AD00698CFA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		FD10F5F21FDCB2FF00698CFA /* WatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewController.swift; sourceTree = "<group>"; };
 		FD10F5F41FDCB30F00698CFA /* WatchList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WatchList.storyboard; sourceTree = "<group>"; };
+		FD172B401FE37E1B005A92EC /* ListingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingController.swift; sourceTree = "<group>"; };
 		FD3133D81FB504E7002BCA23 /* USTrustEquipmentSeller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = USTrustEquipmentSeller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3133DB1FB504E7002BCA23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD3133E01FB504E7002BCA23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC207DE1FD0D3E000860A0B /* UserController.swift */,
+				FD172B401FE37E1B005A92EC /* ListingController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -681,6 +684,7 @@
 				5D7D81EE1FBA4F3900998B67 /* CompanyProfile.swift in Sources */,
 				FDCD1D7A1FD60B940037FBFA /* FirebaseAuthentication.swift in Sources */,
 				FD10F5EF1FDCAA2D00698CFA /* ProfileViewController.swift in Sources */,
+				FD172B411FE37E1B005A92EC /* ListingController.swift in Sources */,
 				FD557F201FBAB51600A52EA1 /* InitialViewController.swift in Sources */,
 				FD10F5F31FDCB2FF00698CFA /* WatchListViewController.swift in Sources */,
 				FDCD1D7C1FD6232E0037FBFA /* ImageController.swift in Sources */,
