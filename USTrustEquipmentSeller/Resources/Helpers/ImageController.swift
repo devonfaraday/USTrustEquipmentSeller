@@ -13,7 +13,7 @@ class ImageController {
     let storageRef = Storage().reference()
     
     // MARK: - Create
-    func createListingImages(withImageData imageDataArray: [Data], forCompany company: CompanyProfile, underListingEndpoint listing: Listing) {
+    func createListingImages(withImageData imageDataArray: [Data], forCompany company: Company, underListingEndpoint listing: Listing) {
         guard let companyId = company.identifier,
             let listingID = listing.identifier
         else { return }
@@ -34,7 +34,7 @@ class ImageController {
         }
     }
     
-    func createLogo(withImageData imageData: Data, forCompany company: CompanyProfile) {
+    func createLogo(withImageData imageData: Data, forCompany company: Company) {
         guard let companyId = company.identifier else { return }
         let logoRef = storageRef.child("\(String.imagesEndpointKey)/\(companyId)/\(String.logoKey)/\(UUID().uuidString).jpg")
         let uploadTask = logoRef.putData(imageData, metadata: nil) { (metaData, error) in
