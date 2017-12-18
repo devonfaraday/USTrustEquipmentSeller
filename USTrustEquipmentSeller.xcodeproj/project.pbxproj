@@ -190,6 +190,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FD172B421FE7717D005A92EC /* Profiles */ = {
+			isa = PBXGroup;
+			children = (
+				FD557F251FBAB55500A52EA1 /* CompanyProfileViewController.swift */,
+				FD10F5EE1FDCAA2D00698CFA /* ProfileViewController.swift */,
+				FD557F271FBAB55D00A52EA1 /* StoreProfileViewController.swift */,
+				FD557F231FBAB54C00A52EA1 /* UserProfileViewController.swift */,
+			);
+			path = Profiles;
+			sourceTree = "<group>";
+		};
 		FD3133CF1FB504E7002BCA23 = {
 			isa = PBXGroup;
 			children = (
@@ -281,18 +292,15 @@
 		FD31340B1FB50806002BCA23 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FD172B421FE7717D005A92EC /* Profiles */,
 				FDCD1D781FD608810037FBFA /* Login */,
 				FDC207DB1FD0C26300860A0B /* Sign Up */,
 				5DE07CFA1FBF8B9F003146C5 /* SearchFilterViewController.swift */,
 				5DE07CF41FBF8A22003146C5 /* ListingTableViewCell.swift */,
 				FD557F1F1FBAB51600A52EA1 /* InitialViewController.swift */,
-				FD557F231FBAB54C00A52EA1 /* UserProfileViewController.swift */,
-				FD557F251FBAB55500A52EA1 /* CompanyProfileViewController.swift */,
-				FD557F271FBAB55D00A52EA1 /* StoreProfileViewController.swift */,
 				FD557F291FBAB56B00A52EA1 /* CreateListingViewController.swift */,
 				FD557F2B1FBAB5B500A52EA1 /* BrowseListingsViewController.swift */,
 				FD557F2D1FBAB5BC00A52EA1 /* ListingDetailViewController.swift */,
-				FD10F5EE1FDCAA2D00698CFA /* ProfileViewController.swift */,
 				FD10F5F01FDCB0AD00698CFA /* TabBarViewController.swift */,
 				FD10F5F21FDCB2FF00698CFA /* WatchListViewController.swift */,
 			);

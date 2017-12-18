@@ -11,13 +11,15 @@ import UIKit
 class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     // MARK: - Properties
-    @IBOutlet var cityTextField: UITextField!
     @IBOutlet var firstNameTextField: UITextField!
+    @IBOutlet var emailTextField: UITextField!
     @IBOutlet var lastNameTextField: UITextField!
     @IBOutlet var saveButton: UIButton!
     @IBOutlet var stateTextField: UITextField!
     @IBOutlet var streetAddressTextField: UITextField!
+    @IBOutlet var phoneNumberTextField: UITextField!
     @IBOutlet var zipCodeTextField: UITextField!
+    @IBOutlet var cityTextField: UITextField!
     
     var currentUser: User? {
         didSet {
@@ -27,16 +29,22 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             updateViews()
         }
     }
-    var viewState: ViewState = .viewing
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setCurrentUser()
     }
     
     // MARK: - IB Actions
     @IBAction func saveButtonTapped(_ sender: Any) {
-        
+        modifyUser()
+    }
+    
+    // MARK: - Text Field Delegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     // MARK: - View Update Functions
@@ -44,13 +52,24 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         guard let user = currentUser else { return }
         firstNameTextField.text = user.firstName
         lastNameTextField.text = user.lastName
-    }
-    
-    // MARK: - Edit/Save Profile Functions
-    func editProfile() {
+        emailTextField.text = user.email
+        phoneNumberTextField.text = user.phoneNumber
+        streetAddressTextField.text = user.streetAddress
+        cityTextField.text = user.city
+        stateTextField.text = user.state
+        zipCodeTextField.text = user.zipCode
         
     }
     
+    // MARK: - Helper
+    func setCurrentUser() {
+        let userController = UserController()
+        userController.fetchCurrentUser { (user) in
+            self.currentUser = user
+        }
+    }
+    
+    // MARK: - Edit/Save Profile Functions
     func saveProfile() {
         modifyUser()
     }
@@ -61,13 +80,18 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             let streetAddress = streetAddressTextField.text,
             let city = cityTextField.text,
             let state = stateTextField.text,
-            let zipCode = zipCodeTextField.text else { return }
+            let zipCode = zipCodeTextField.text,
+            let phoneNumber = phoneNumberTextField.text,
+            let email = emailTextField.text
+        else { return }
         currentUser?.firstName = firstName
         currentUser?.lastName = lastName
         currentUser?.streetAddress = streetAddress
         currentUser?.city = city
         currentUser?.state = state
         currentUser?.zipCode = zipCode
+        currentUser?.phoneNumber = phoneNumber
+        currentUser?.email = email
         let userController = UserController()
         guard let user = currentUser else { return }
         userController.modifyUser(withUser: user)
@@ -77,12 +101,5 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-}
-
-extension UserProfileViewController {
-    enum ViewState {
-        case viewing
-        case editing
     }
 }

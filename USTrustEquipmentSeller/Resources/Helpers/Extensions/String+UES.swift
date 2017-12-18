@@ -34,7 +34,7 @@ extension String {
     static var lastNameKey: String { get { return "lastName" } }
     static var logoKey: String { get { return "logo" } }
     static var profileImageKey: String { get { return "profileImage" } }
-    static var phoneKey: String { get { return "phone" } }
+    static var phoneKey: String { get { return "phoneNumber" } }
     static var ratingKey: String { get { return "rating" } }
     static var stateKey: String { get { return "state" } }
     static var streetAddressKey: String { get { return "streetAddress" } }
