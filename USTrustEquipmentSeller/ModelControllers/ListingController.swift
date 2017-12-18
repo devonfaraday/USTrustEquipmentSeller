@@ -12,7 +12,7 @@ import Firebase
 class ListingController {
     
     // MARK: - Create
-    func createListing(withListing listing: Listing, forCompany company: CompanyProfile) {
+    func createListing(withListing listing: Listing, forCompany company: Company) {
         var newListing = listing
         newListing.save()
     }
