@@ -74,4 +74,8 @@ extension String {
     static var signUpStoryboardIdentifier: String { get { return "SignUpViewController" } }
     static var storyProfileStoryboardIdentifier: String  { get { return "StoryProfileViewController" } }
     static var userProfileStoryboardIdentifier: String { get { return "UserProfileViewController" } }
+    
+    /* Storyboard Names */
+    static var companyProfileStoryboardNameKey: String { get { return "CompanyProfile" } }
+    static var userProfileStoryboardNameKey: String { get { return "UserProfile" } }
 }
