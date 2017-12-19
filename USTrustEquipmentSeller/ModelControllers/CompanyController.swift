@@ -16,5 +16,33 @@ class CompanyController {
         newCompany.save()
     }
     
+    // MARK: - Read
+   
+    func fetchCompany(identifier: String, completion: @escaping(Company?) -> Void) {
+        let companyRef = FirebaseController.databaseRef.child(.companiesEndpoint).child(identifier)
+        companyRef.observeSingleEvent(of: .value, with: { (data) in
+            guard let companyDict = data.value as? [String: Any] else {
+                completion(nil)
+                return
+            }
+            let company = Company(dictionary: companyDict, identifier: identifier)
+            completion(company)
+        })
+    }
     
+    // MARK: - Update
+   
+    func update(company: Company) {
+        var modifiedCompany = company
+       modifiedCompany.save()
+    }
+    
+    // MARK: - Delete
+   
+    func deleteCompany(identifier: String) {
+        let companyRef = FirebaseController.databaseRef.child(.companiesEndpoint).child(identifier)
+        companyRef.removeValue()
+    }
 }
+    
+
