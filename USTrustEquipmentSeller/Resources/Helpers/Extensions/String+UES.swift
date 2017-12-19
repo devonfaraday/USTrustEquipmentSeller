@@ -10,6 +10,28 @@ import Foundation
 
 extension String {
     
+    /* Date Converter */
+    func toDate() -> Date? {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = String.dateAndTimeFormateForSortingKey
+        let dateFormatter = DateFormatter()
+        dateFormatter.amSymbol = "AM"
+        dateFormatter.pmSymbol = "PM"
+        dateFormatter.dateFormat = String.dateAndTimeFormateForSortingKey
+        guard let date = dateFormatterGet.date(from: self) else { return Date() }
+        let createdString = dateFormatter.string(from: date)
+        guard let newDate = dateFormatter.date(from: createdString) else { return Date() }
+        return newDate
+    }
+    
+    /* Date Formatting Keys */
+    
+    static var dateAndTimeFormatKey: String { get { return "MM/dd/yyyy hh:mm a" } }
+    static var dateAndTimeFormateForSortingKey: String { get { return "MM/dd/yyyy hh:mm:ss a" } }
+    static var dateFormatKey: String { get { return "MM/dd/yyyy" } }
+    static var timeFormatKey: String { get { return "hh:mm a" } }
+    static var timeFormatForSortingKey: String { get { return "hh:mm:ss a" } }
+    
     /* Firebase Endpoints*/
     static var companiesEndpoint: String { get { return "companies" } }
     static var imagesEndpointKey: String { get { return "images" } }
@@ -58,6 +80,7 @@ extension String {
     static var usernameKey: String { get { return "username" } }
     static var listingWatchListKey: String { get { return "listingWatchList" } }
     static var imageURLsKey: String { get { return "imageURLreferences" } }
+    static var updatedKey: String { get { return "updated" } }
     
     /* Segues */
     static var toUserProfileSegueKey: String { get { return "toUserProfile" } }
