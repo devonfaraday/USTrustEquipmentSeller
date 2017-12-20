@@ -7,29 +7,54 @@
 //
 
 import UIKit
+import Firebase
 
-class CreateListingViewController: UIViewController {
+class CreateListingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    // MARK: - Properties
+    @IBOutlet var categoryLabel: UILabel!
+    @IBOutlet var itemNameTextField: UITextField!
+    @IBOutlet var priceTextField: UITextField!
+    @IBOutlet var zipCodeTextField: UITextField!
+    @IBOutlet var postButton: UIButton!
+    @IBOutlet var descriptionTextView: UITextView!
+    @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var phoneNumberCheckBoxButton: UIButton!
+    @IBOutlet var emailCheckBoxButton: UIButton!
+    @IBOutlet var noTextingCheckBoxButton: UIButton!
+    @IBOutlet var addImagesButton: UIButton!
+    
+    var images = [UIImage]()
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
+    // MARK: - IB Actions
+    @IBAction func addImagesButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func postButtonTapped(_ sender: UIButton) {
+    }
+    
+    // MARK: - Create Functions
+    func postListing() {
+        
+    }
+    
+    func saveImages() {
+        
+    }
+    
+    // MARK: - Image Selection Functions
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

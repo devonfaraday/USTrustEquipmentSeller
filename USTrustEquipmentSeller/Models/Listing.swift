@@ -54,8 +54,6 @@ class Listing: FirebaseType, Equatable {
         self.updated = updated
         
     }
-}
-    extension Listing {
     
     required init?(dictionary: JSONDictionary, identifier: String) {
         guard let itemName = dictionary[.itemNameKey] as? String,
@@ -82,7 +80,6 @@ class Listing: FirebaseType, Equatable {
         self.updated = updated
         // this will not work.  It's only here to silence warnings and errors.  The images will need their own network call to fetch the images fromt the firebase storage.
         if let images = dictionary[.imageKey] as? [UIImage] { self.images = images }
-        
     }
 }
 
