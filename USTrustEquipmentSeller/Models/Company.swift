@@ -11,7 +11,7 @@ import UIKit
 
 struct Company: FirebaseType {
 
-    let companyName: String
+    var companyName: String
     var streetAddress: String
     var city: String
     var state: String

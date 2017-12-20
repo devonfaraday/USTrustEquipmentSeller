@@ -60,7 +60,7 @@ struct User: FirebaseType {
      }
     
     init?(dictionary: JSONDictionary, identifier: String) {
-        guard let firstName = dictionary[.firstNameKey] as? String,
+          guard let firstName = dictionary[.firstNameKey] as? String,
             let lastName = dictionary[.lastNameKey] as? String,
             let streetAddress = dictionary[.streetAddressKey] as? String,
             let city = dictionary[.cityKey] as? String,
