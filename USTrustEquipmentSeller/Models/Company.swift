@@ -16,7 +16,7 @@ struct Company: FirebaseType {
     var city: String
     var state: String
     var zipCode: String
-    var phone: String
+    var phoneNumber: String
     var rating: Int = 0
     //var logo: UIImage?
     var einNumber: String
@@ -32,7 +32,7 @@ struct Company: FirebaseType {
             .cityKey: city,
             .stateKey: state,
             .zipCodeKey: zipCode,
-            .phoneKey: phone,
+            .phoneKey: phoneNumber,
             .ratingKey: rating,
             .einNumberKey: einNumber,
             .administratorAccountsIdentifierKey: administratorAccountsIdentifiers,
@@ -43,14 +43,14 @@ struct Company: FirebaseType {
     }
     
     
-    init(companyName: String, streetAddress: String, city: String, state: String, zipCode: String, phone: String, einNumber: String) {
+    init(companyName: String, streetAddress: String, city: String, state: String, zipCode: String, phoneNumber: String, einNumber: String) {
         
         self.companyName = companyName
         self.streetAddress = streetAddress
         self.city = city
         self.state = state
         self.zipCode = zipCode
-        self.phone = phone
+        self.phoneNumber = phoneNumber
         self.einNumber = einNumber
         
     }
@@ -61,7 +61,7 @@ struct Company: FirebaseType {
             let city = dictionary[.cityKey] as? String,
             let state = dictionary[.stateKey] as? String,
             let zipCode = dictionary[.zipCodeKey] as? String,
-            let phone = dictionary[.phoneKey] as? String,
+            let phoneNumber = dictionary[.phoneKey] as? String,
             let rating = dictionary[.ratingKey] as? Int,
             // let logo = dictionary[.logoKey] as? UIImage,
             let einNumber = dictionary[.einNumberKey] as? String,
@@ -77,7 +77,7 @@ struct Company: FirebaseType {
         self.city = city
         self.state = state
         self.zipCode = zipCode
-        self.phone = phone
+        self.phoneNumber = phoneNumber
         self.rating = rating
         // self.logo = logo
         self.einNumber = einNumber

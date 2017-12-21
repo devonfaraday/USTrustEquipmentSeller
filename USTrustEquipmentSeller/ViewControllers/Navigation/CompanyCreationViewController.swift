@@ -1,5 +1,5 @@
 //
-//  CompanyAddressViewController.swift
+//  CompanyCreationViewController.swift
 //  USTrustEquipmentSeller
 //
 //  Created by Christian McMullin on 12/20/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CompanyAddressViewController: UIViewController {
+class CompanyCreationNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

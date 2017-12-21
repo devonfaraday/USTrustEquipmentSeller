@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class CompanyProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     
     /* Outlets */
     @IBOutlet weak var logoImage: UIImageView!
@@ -28,20 +28,8 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
     @IBOutlet weak var companyListingsButton: UIButton!
     @IBOutlet weak var addImageButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let companyController = CompanyController()
-        
-    }
-
-    var currentCompany: Company? {
-        didSet {
-            if !isViewLoaded {
-                loadViewIfNeeded()
-            }
-            saveCompany()
-        }
-    }
+    var company: Company?
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -56,8 +44,6 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
     @IBAction func saveEditButtonTapped(_ sender: Any) {
         saveEditButton.isEnabled = false
         saveCompany()
-        
-        
     }
     
     func uploadButton() {
@@ -114,6 +100,27 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
     
     
     func editCompany() {
+//        guard let companyName = companyName.text,
+//            let streetAddress = streetAddress.text,
+//            let city = city.text,
+//            let state = state.text,
+//            let zipCode = zipCode.text,
+//            let phoneNumber = phoneNumber.text,
+//            let einNumber = einNumber.text
+//            else { return }
+//        currentCompany?.companyName = companyName
+//        currentCompany?.streetAddress = streetAddress
+//        currentCompany?.city = city
+//        currentCompany?.state = state
+//        currentCompany?.zipCode = zipCode
+//        currentCompany?.phone = phoneNumber
+//        currentCompany?.einNumber = einNumber
+//        let companyController = CompanyController()
+//        guard let currentCompany = currentCompany else { return }
+//        companyController.update(company: currentCompany)
+    }
+    
+    func saveCompany() {
         guard let companyName = companyName.text,
             let streetAddress = streetAddress.text,
             let city = city.text,
@@ -122,32 +129,9 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
             let phoneNumber = phoneNumber.text,
             let einNumber = einNumber.text
             else { return }
-        currentCompany?.companyName = companyName
-        currentCompany?.streetAddress = streetAddress
-        currentCompany?.city = city
-        currentCompany?.state = state
-        currentCompany?.zipCode = zipCode
-        currentCompany?.phone = phoneNumber
-        currentCompany?.einNumber = einNumber
-        let companyController = CompanyController()
-        guard let currentCompany = currentCompany else { return }
-            companyController.update(company: currentCompany)
-    }
-    
-    func saveCompany() {
-        
-//            logoImage: UIImageView!
-        guard let companyName = companyName.text,
-              let streetAddress = streetAddress.text,
-              let city = city.text,
-              let state = state.text,
-              let zipCode = zipCode.text,
-              let phoneNumber = phoneNumber.text,
-              let einNumber = einNumber.text
-            else { return }
-        let company = Company(companyName: companyName, streetAddress: streetAddress, city: city, state: state, zipCode: zipCode, phone: phoneNumber, einNumber: einNumber)
+        let company = Company(companyName: companyName, streetAddress: streetAddress, city: city, state: state, zipCode: zipCode, phoneNumber: phoneNumber, einNumber: einNumber)
         let companyController = CompanyController()
         companyController.createCompany(company: company)
-
-        }
+    }
+    
 }

@@ -83,7 +83,7 @@ extension String {
     static var updatedKey: String { get { return "updated" } }
     
     /* Segues */
-    
+    static var toCreateCompanyNavigationControllerSegueKey: String { get { return "toCreateCompanyNavigationController" } }
     static var toCompanyNameViewControllerSegueKey: String { get { return "toCompanyNameViewController" } }
     static var toCompanyAddressViewControllerSegueKey: String { get { return "toCompanyAddressViewController" } }
     static var toCompanyPhoneNumberViewControllerSegueKey: String { get { return "toCompanyPhoneNumberViewController" } }
@@ -96,6 +96,7 @@ extension String {
     
     /* Storyboard Identifiers */
     static var browseListingsStoryboardIdentifier: String { get { return "BrowseListingsViewController" } }
+    static var CompanyCreationNavigationStoryboardIdentifier: String { get { return "CompanyCreationNavigationController" } }
     static var companyProfileStoryboardIdentifier: String { get { return "CompanyProfileViewController" } }
     static var createListingStoryboardIdentifier: String { get { return "CreateListingViewController" } }
     static var initialStoryboardIdentifier: String { get { return "InitialViewController" } }
@@ -106,6 +107,7 @@ extension String {
     static var userProfileStoryboardIdentifier: String { get { return "UserProfileViewController" } }
     
     /* Storyboard Names */
+    static var createCompanyNavigationStoryboardNameKey: String { get { return "CreateCompany" } }
     static var companyProfileStoryboardNameKey: String { get { return "CompanyProfile" } }
     static var userProfileStoryboardNameKey: String { get { return "UserProfile" } }
 }
