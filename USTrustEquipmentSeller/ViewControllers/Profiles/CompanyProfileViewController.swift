@@ -31,7 +31,6 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         let companyController = CompanyController()
-        companyController.fetchCompany(identifier: <#T##String#>, completion: <#T##(Company?) -> Void#>)
         
     }
 

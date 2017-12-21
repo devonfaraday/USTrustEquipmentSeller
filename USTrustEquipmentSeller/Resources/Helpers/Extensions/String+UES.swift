@@ -83,6 +83,13 @@ extension String {
     static var updatedKey: String { get { return "updated" } }
     
     /* Segues */
+    
+    static var toCompanyNameViewControllerSegueKey: String { get { return "toCompanyNameViewController" } }
+    static var toCompanyAddressViewControllerSegueKey: String { get { return "toCompanyAddressViewController" } }
+    static var toCompanyPhoneNumberViewControllerSegueKey: String { get { return "toCompanyPhoneNumberViewController" } }
+    static var toCompanyEINViewControllerSegueKey: String { get { return "toCompanyEINViewController" } }
+    static var toCompanyLogoViewControllerSegueKey: String { get { return "toCompanyLogoViewController" } }
+    static var toCompanyCompletionViewControllerSegueKey: String { get { return "toCompanyCompletionViewController" } }
     static var toUserProfileSegueKey: String { get { return "toUserProfile" } }
     static var toLoginSegueKey: String { get { return "toLogin" } }
     static var toUsernamePasswordCreationSegueKey: String { get { return "toUsernamePasswordCreation" } }

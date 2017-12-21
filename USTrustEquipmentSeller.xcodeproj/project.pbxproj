@@ -233,6 +233,76 @@
 			path = Company;
 			sourceTree = "<group>";
 		};
+		FD2D7A751FEB53A70044F2BD /* Listing */ = {
+			isa = PBXGroup;
+			children = (
+				FD10F5F21FDCB2FF00698CFA /* WatchListViewController.swift */,
+				FD557F2D1FBAB5BC00A52EA1 /* ListingDetailViewController.swift */,
+				FD557F2B1FBAB5B500A52EA1 /* BrowseListingsViewController.swift */,
+				FD557F291FBAB56B00A52EA1 /* CreateListingViewController.swift */,
+				5DE07CF41FBF8A22003146C5 /* ListingTableViewCell.swift */,
+				5DE07CFA1FBF8B9F003146C5 /* SearchFilterViewController.swift */,
+			);
+			path = Listing;
+			sourceTree = "<group>";
+		};
+		FD2D7A761FEB53C20044F2BD /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FD10F5F01FDCB0AD00698CFA /* TabBarViewController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		FD2D7A771FEB53E20044F2BD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5DE07CF81FBF8B39003146C5 /* StoreProfile.storyboard */,
+				FD10F5EC1FDCAA1600698CFA /* Profile.storyboard */,
+				FD557F321FBAB6B000A52EA1 /* UserProfile.storyboard */,
+				FD2D7A641FEB343D0044F2BD /* CreateCompany.storyboard */,
+				FD557F371FBAB6EC00A52EA1 /* CompanyProfile.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FD2D7A781FEB54040044F2BD /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				FD557F2F1FBAB66600A52EA1 /* Login.storyboard */,
+				FD557F3F1FBABBB800A52EA1 /* SignUp.storyboard */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		FD2D7A791FEB54100044F2BD /* Listing */ = {
+			isa = PBXGroup;
+			children = (
+				FD10F5F41FDCB30F00698CFA /* WatchList.storyboard */,
+				5DE07CF01FBF83D7003146C5 /* ListingDetail.storyboard */,
+				5DE07CF21FBF8422003146C5 /* BrowseListings.storyboard */,
+				5DE07CF61FBF8B19003146C5 /* CreateListing.storyboard */,
+			);
+			path = Listing;
+			sourceTree = "<group>";
+		};
+		FD2D7A7A1FEB54320044F2BD /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FD10F5E91FDCA91B00698CFA /* TabBar.storyboard */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		FD2D7A7B1FEB54510044F2BD /* Main+Launch */ = {
+			isa = PBXGroup;
+			children = (
+				FD3133DF1FB504E7002BCA23 /* Main.storyboard */,
+				FD3133E41FB504E7002BCA23 /* LaunchScreen.storyboard */,
+			);
+			path = "Main+Launch";
+			sourceTree = "<group>";
+		};
 		FD3133CF1FB504E7002BCA23 = {
 			isa = PBXGroup;
 			children = (
@@ -304,20 +374,11 @@
 		FD31340A1FB50805002BCA23 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5DE07CF21FBF8422003146C5 /* BrowseListings.storyboard */,
-				5DE07CF81FBF8B39003146C5 /* StoreProfile.storyboard */,
-				5DE07CF01FBF83D7003146C5 /* ListingDetail.storyboard */,
-				FD2D7A641FEB343D0044F2BD /* CreateCompany.storyboard */,
-				5DE07CF61FBF8B19003146C5 /* CreateListing.storyboard */,
-				FD557F371FBAB6EC00A52EA1 /* CompanyProfile.storyboard */,
-				FD557F321FBAB6B000A52EA1 /* UserProfile.storyboard */,
-				FD10F5EC1FDCAA1600698CFA /* Profile.storyboard */,
-				FD557F2F1FBAB66600A52EA1 /* Login.storyboard */,
-				FD557F3F1FBABBB800A52EA1 /* SignUp.storyboard */,
-				FD3133DF1FB504E7002BCA23 /* Main.storyboard */,
-				FD3133E41FB504E7002BCA23 /* LaunchScreen.storyboard */,
-				FD10F5E91FDCA91B00698CFA /* TabBar.storyboard */,
-				FD10F5F41FDCB30F00698CFA /* WatchList.storyboard */,
+				FD2D7A7B1FEB54510044F2BD /* Main+Launch */,
+				FD2D7A7A1FEB54320044F2BD /* Navigation */,
+				FD2D7A781FEB54040044F2BD /* Authentication */,
+				FD2D7A791FEB54100044F2BD /* Listing */,
+				FD2D7A771FEB53E20044F2BD /* Profile */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -325,18 +386,13 @@
 		FD31340B1FB50806002BCA23 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FD2D7A661FEB3B1E0044F2BD /* Company */,
-				FD172B421FE7717D005A92EC /* Profiles */,
-				FDCD1D781FD608810037FBFA /* Login */,
-				FDC207DB1FD0C26300860A0B /* Sign Up */,
-				5DE07CFA1FBF8B9F003146C5 /* SearchFilterViewController.swift */,
-				5DE07CF41FBF8A22003146C5 /* ListingTableViewCell.swift */,
 				FD557F1F1FBAB51600A52EA1 /* InitialViewController.swift */,
-				FD557F291FBAB56B00A52EA1 /* CreateListingViewController.swift */,
-				FD557F2B1FBAB5B500A52EA1 /* BrowseListingsViewController.swift */,
-				FD557F2D1FBAB5BC00A52EA1 /* ListingDetailViewController.swift */,
-				FD10F5F01FDCB0AD00698CFA /* TabBarViewController.swift */,
-				FD10F5F21FDCB2FF00698CFA /* WatchListViewController.swift */,
+				FD2D7A661FEB3B1E0044F2BD /* Company */,
+				FD2D7A751FEB53A70044F2BD /* Listing */,
+				FDCD1D781FD608810037FBFA /* Login */,
+				FD2D7A761FEB53C20044F2BD /* Navigation */,
+				FD172B421FE7717D005A92EC /* Profiles */,
+				FDC207DB1FD0C26300860A0B /* Sign Up */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
