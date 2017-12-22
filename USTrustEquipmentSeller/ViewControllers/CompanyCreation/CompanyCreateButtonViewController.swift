@@ -9,4 +9,19 @@
 import UIKit
 
 class CompanyCreateButtonViewController: UIViewController {
+    
+    
+    
+    override func viewDidLoad() {
+        
+    }
+    
+    @IBAction func createCompanyButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "createCompany", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationController = segue.destination as? CompanyNameViewController else { return }
+        
+    }
 }

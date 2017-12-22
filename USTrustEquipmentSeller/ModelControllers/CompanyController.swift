@@ -16,6 +16,12 @@ class CompanyController {
         newCompany.save()
     }
     
+    func createUserDefaultCompany(withCompany company: Company) {
+        let userDefaults = UserDefaults()
+        userDefaults.set(company.dictionaryCopy, forKey: "company")
+        userDefaults.set(company.identifier ?? "", forKey: "companyIdentifier")
+    }
+    
     // MARK: - Read
    
     func fetchCompany(identifier: String, completion: @escaping(Company?) -> Void) {

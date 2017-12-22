@@ -18,7 +18,7 @@ class Store: FirebaseType {
     var identifier: String?
     var endpoint: String = .storesEndpoint
     
-    var dictionaryCopy: [String : Any] {
+    var dictionaryCopy: JSONDictionary {
         return [.storeNameKey: storeName,
                 .storeTypeKey: storeType,
                 .listingsIdentifiersKey: listingsIdentifiers,

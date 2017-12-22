@@ -16,6 +16,7 @@ class CompanyNameViewController: UIViewController {
     
     var company: Company?
     
+    
     // MARK: - IB Actions
     @IBAction func nextButtonTapped(_ sender: UIButton) {
         createCompanyName()
@@ -41,5 +42,6 @@ class CompanyNameViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destinationController = segue.destination as? CompanyAddressViewController else { return }
         destinationController.company = company
+        
     }
 }

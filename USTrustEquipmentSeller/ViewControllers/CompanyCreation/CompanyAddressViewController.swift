@@ -12,6 +12,7 @@ class CompanyAddressViewController: UIViewController {
 
     var company: Company?
     
+    
     @IBOutlet var cityTextfield: UITextField!
     @IBOutlet var stateTextField: UITextField!
     @IBOutlet var streetAddressTextField: UITextField!
@@ -47,6 +48,7 @@ class CompanyAddressViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destinationController = segue.destination as? CompanyPhoneNumberViewController else { return }
         destinationController.company = company
+        
     }
 
 }

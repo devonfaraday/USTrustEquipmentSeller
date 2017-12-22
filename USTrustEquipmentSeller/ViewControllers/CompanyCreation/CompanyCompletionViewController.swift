@@ -12,7 +12,7 @@ import Firebase
 class CompanyCompletionViewController: UIViewController {
 
     var company: Company?
-    let userID: String {
+    var userID: String {
         guard let uid = Auth.auth().currentUser?.uid else { return "" }
         return uid
     }
@@ -33,10 +33,16 @@ class CompanyCompletionViewController: UIViewController {
         self.company?.administratorAccountsIdentifiers.append(userID)
         guard let company = self.company else { return }
         let companyController = CompanyController()
+        companyController.createUserDefaultCompany(withCompany: company)
         companyController.createCompany(company: company)
     }
     
     func removeNavigationControllerFromParent() {
-        //create a notification that tells the profile view to remove this view heirarchy and to display company profile
+        NotificationCenter.default.post(name: NSNotification.Name(.companyCreationDidFinishNotificationNameKey), object: nil)
     }
+    
+     
 }
+
+
+

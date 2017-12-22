@@ -14,13 +14,13 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
     
     /* Outlets */
     @IBOutlet weak var logoImage: UIImageView!
-    @IBOutlet weak var companyName: UITextField!
-    @IBOutlet weak var streetAddress: UITextField!
-    @IBOutlet weak var city: UITextField!
-    @IBOutlet weak var state: UITextField!
-    @IBOutlet weak var zipCode: UITextField!
-    @IBOutlet weak var phoneNumber: UITextField!
-    @IBOutlet weak var einNumber: UITextField!
+    @IBOutlet weak var companyNameTextField: UITextField!
+    @IBOutlet weak var streetAddressTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var stateTextField: UITextField!
+    @IBOutlet weak var zipCodeTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var einNumberTextField: UITextField!
     
     /* Button Outlets */
     @IBOutlet weak var saveEditButton: UIButton!
@@ -28,13 +28,14 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
     @IBOutlet weak var companyListingsButton: UIButton!
     @IBOutlet weak var addImageButton: UIButton!
     
-    var company: Company?
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+    var company: Company? {
+        didSet {
+            if !isViewLoaded {
+                loadViewIfNeeded()
+            }
+            updateViews()
+        }
     }
-    
     
     @IBAction func addImageButtonTapped(_ sender: Any) {
         addPhotoActionSheet()
@@ -88,46 +89,40 @@ class CompanyProfileViewController: UIViewController, UIImagePickerControllerDel
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else { return }
-        let size = CGSize(width: 600, height: 400)
+        let size = CGSize(width: selectedImage.size.width / 3, height: selectedImage.size.height / 3)
         let resizedImage = ImageHandler.resizeImage(image: selectedImage, targetSize: size )
         
         logoImage.image = resizedImage
+        guard let imageData = UIImageJPEGRepresentation(resizedImage, 1.0),
+            let company = company
+        else { return }
+        let imageController = ImageController()
+        imageController.createLogo(withImageData: imageData, forCompany: company)
         
         addImageButton.setTitle("", for: .normal)
         dismiss(animated: true, completion: nil)
     }
     
     
-    
-    func editCompany() {
-//        guard let companyName = companyName.text,
-//            let streetAddress = streetAddress.text,
-//            let city = city.text,
-//            let state = state.text,
-//            let zipCode = zipCode.text,
-//            let phoneNumber = phoneNumber.text,
-//            let einNumber = einNumber.text
-//            else { return }
-//        currentCompany?.companyName = companyName
-//        currentCompany?.streetAddress = streetAddress
-//        currentCompany?.city = city
-//        currentCompany?.state = state
-//        currentCompany?.zipCode = zipCode
-//        currentCompany?.phone = phoneNumber
-//        currentCompany?.einNumber = einNumber
-//        let companyController = CompanyController()
-//        guard let currentCompany = currentCompany else { return }
-//        companyController.update(company: currentCompany)
+    func updateViews() {
+        guard let company = company else { return }
+        companyNameTextField.text = company.companyName
+        streetAddressTextField.text = company.streetAddress
+        cityTextField.text = company.city
+        stateTextField.text = company.state
+        zipCodeTextField.text = company.zipCode
+        phoneNumberTextField.text = company.phoneNumber
+        einNumberTextField.text = company.einNumber
     }
     
     func saveCompany() {
-        guard let companyName = companyName.text,
-            let streetAddress = streetAddress.text,
-            let city = city.text,
-            let state = state.text,
-            let zipCode = zipCode.text,
-            let phoneNumber = phoneNumber.text,
-            let einNumber = einNumber.text
+        guard let companyName = companyNameTextField.text,
+            let streetAddress = streetAddressTextField.text,
+            let city = cityTextField.text,
+            let state = stateTextField.text,
+            let zipCode = zipCodeTextField.text,
+            let phoneNumber = phoneNumberTextField.text,
+            let einNumber = einNumberTextField.text
             else { return }
         let company = Company(companyName: companyName, streetAddress: streetAddress, city: city, state: state, zipCode: zipCode, phoneNumber: phoneNumber, einNumber: einNumber)
         let companyController = CompanyController()

@@ -80,7 +80,11 @@ extension String {
     static var usernameKey: String { get { return "username" } }
     static var listingWatchListKey: String { get { return "listingWatchList" } }
     static var imageURLsKey: String { get { return "imageURLreferences" } }
+    static var logoImageReferenceKey: String { get { return "logoImageReference" } }
     static var updatedKey: String { get { return "updated" } }
+    
+    /* Notification Names */
+    static var companyCreationDidFinishNotificationNameKey: String { get { return "companyCreationDidFinish" } }
     
     /* Segues */
     static var toCreateCompanyNavigationControllerSegueKey: String { get { return "toCreateCompanyNavigationController" } }

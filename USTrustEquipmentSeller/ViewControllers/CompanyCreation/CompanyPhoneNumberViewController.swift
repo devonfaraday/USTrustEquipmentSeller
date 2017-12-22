@@ -17,6 +17,7 @@ class CompanyPhoneNumberViewController: UIViewController {
     
     var company: Company?
     
+    
     @IBAction func nextButtonTapped(_ sender: UIButton) {
         addPhoneNumberToCompany()
         segueToCompanyEINViewController()
@@ -39,5 +40,6 @@ class CompanyPhoneNumberViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destinationController = segue.destination as? CompanyEINViewController else { return }
         destinationController.company = company
+        
     }
 }

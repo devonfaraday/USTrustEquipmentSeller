@@ -25,7 +25,7 @@ class Listing: FirebaseType, Equatable {
     let created: Date
     var updated: Date
     
-    var dictionaryCopy: [String : Any] {
+    var dictionaryCopy: JSONDictionary {
         return [.itemNameKey: itemName,
                 .quantityKey: quantity,
                 .catagoryIdentifierKey: catagoryIdentifier,

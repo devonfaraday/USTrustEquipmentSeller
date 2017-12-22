@@ -31,7 +31,7 @@ struct User: FirebaseType {
         return "\(firstName) \(lastName)"
     }
     
-    var dictionaryCopy: [String : Any] {
+    var dictionaryCopy: JSONDictionary {
         return [.firstNameKey: firstName,
                 .lastNameKey: lastName,
                 .streetAddressKey: streetAddress,

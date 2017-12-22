@@ -96,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="1236" y="177.66116941529236"/>
         </scene>
-        <!--UserProfileViewController-->
+        <!--ProfileNavigationController-->
         <scene sceneID="lqK-Eu-yPu">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="UserProfileViewController" storyboardName="UserProfile" referencedIdentifier="UserProfileViewController" id="n4T-MJ-Qrb" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="ProfileNavigationController" storyboardName="Profile" referencedIdentifier="ProfileNavigationController" id="n4T-MJ-Qrb" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MO8-9G-YGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1965" y="23"/>

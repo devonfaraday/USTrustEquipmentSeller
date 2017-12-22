@@ -36,11 +36,12 @@ class ProfileViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        addDidCompleteSettingUpCompanyObserver()
         displayUserProfileView()
         setCurrentUser()
         setUserInfo()
     }
-    
+
     
     // MARK: - UI Actions
     @IBAction func userProfileButtonTapped(_ sender: Any) {
@@ -67,6 +68,7 @@ class ProfileViewController: UIViewController {
     
     func displayCompanyProfileView() {
         guard let companyViewController = companyViewController else { return }
+        companyViewController.company = company
         containerView.addSubview(companyViewController.view)
         viewState = .companyProfile
     }
@@ -93,6 +95,28 @@ class ProfileViewController: UIViewController {
         nameLabel.text = company?.companyName
     }
     
+    // MARK: - Observers
+    func addDidCompleteSettingUpCompanyObserver() {
+        if company == nil {
+        NotificationCenter.default.addObserver(self, selector: #selector(createCompanyCompleted), name: NSNotification.Name(.companyCreationDidFinishNotificationNameKey), object: nil)
+        }
+    }
+    
+    func removeDidCompleteSettingUpCompanyObserver() {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(.companyCreationDidFinishNotificationNameKey), object: nil)
+    }
+    
+    @objc func createCompanyCompleted() {
+        setCompanyFromUserDefaults()
+        displayCompanyProfileView()
+    }
+    
+    func setCompanyFromUserDefaults() {
+        guard let companyDictionary = UserDefaults().value(forKey: "company") as? JSONDictionary,
+            let companyIdentifier = UserDefaults().string(forKey: "companyIdentifier")
+            else { return }
+        self.company = Company(dictionary: companyDictionary, identifier: companyIdentifier)
+    }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

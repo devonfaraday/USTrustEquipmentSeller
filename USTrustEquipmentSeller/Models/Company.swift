@@ -19,27 +19,30 @@ struct Company: FirebaseType {
     var phoneNumber: String
     var rating: Int = 0
     //var logo: UIImage?
+    var logoImageReference: String?
     var einNumber: String
     var administratorAccountsIdentifiers: [String] = []
     var authorizedSellersIdentifiers: [String] = []
     var isBanned: Bool = false
     var isVerified: Bool = false
     var endpoint: String = .companiesEndpoint
-    var identifier: String?
-    var dictionaryCopy: [String : Any] {
-        return [.companyNameKey: companyName,
-            .streetAddressKey: streetAddress,
-            .cityKey: city,
-            .stateKey: state,
-            .zipCodeKey: zipCode,
-            .phoneKey: phoneNumber,
-            .ratingKey: rating,
-            .einNumberKey: einNumber,
-            .administratorAccountsIdentifierKey: administratorAccountsIdentifiers,
-            .authorizedSellersIdentifierKey: authorizedSellersIdentifiers,
-            .isBannedKey: isBanned,
-            .isVerifiedKey: isVerified
-            ]
+    var identifier: String? = UUID().uuidString
+    var dictionaryCopy: JSONDictionary {
+        var returnDict: JSONDictionary = [.companyNameKey: companyName,
+                          .streetAddressKey: streetAddress,
+                          .cityKey: city,
+                          .stateKey: state,
+                          .zipCodeKey: zipCode,
+                          .phoneKey: phoneNumber,
+                          .ratingKey: rating,
+                          .einNumberKey: einNumber,
+                          .administratorAccountsIdentifierKey: administratorAccountsIdentifiers,
+                          .authorizedSellersIdentifierKey: authorizedSellersIdentifiers,
+                          .isBannedKey: isBanned,
+                          .isVerifiedKey: isVerified
+        ]
+        if let logoImageReference = self.logoImageReference { returnDict[String.logoImageReferenceKey] = logoImageReference  }
+        return returnDict
     }
     
     
