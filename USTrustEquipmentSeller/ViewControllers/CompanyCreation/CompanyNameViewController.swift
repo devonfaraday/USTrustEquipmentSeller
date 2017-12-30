@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CompanyNameViewController: UIViewController {
+class CompanyNameViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var companyNameTextField: UITextField!
     @IBOutlet var backButton: UIButton!
@@ -16,6 +16,11 @@ class CompanyNameViewController: UIViewController {
     
     var company: Company?
     
+    // MARK: - Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        nextButton.setState(isEnabled: false)
+    }
     
     // MARK: - IB Actions
     @IBAction func nextButtonTapped(_ sender: UIButton) {
@@ -34,6 +39,35 @@ class CompanyNameViewController: UIViewController {
         self.company = newCompany
     }
     
+    func checkIfNameIsEmpty() -> Bool {
+        var returnValue = false
+        if companyNameTextField == nil || companyNameTextField.text?.isEmpty {
+            returnValue = true
+        }
+        return returnValue
+    }
+    
+    func checkIfUserMayProgress() -> Bool {
+        var returnValue = true
+        if checkIfNameIsEmpty() {
+            returnValue = false
+        }
+        return returnValue
+    }
+    
+    // MARK: - UI Elements
+    
+    
+    // MARK: - TextField Delegates
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+    
+    // MARK: - Touch gesture methods
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        companyNameTextField.resignFirstResponder()
+    }
+    
     // MARK: - Navigation
     func segueToCompanyAddressViewController() {
         performSegue(withIdentifier: .toCompanyAddressViewControllerSegueKey, sender: self)
@@ -42,6 +76,5 @@ class CompanyNameViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destinationController = segue.destination as? CompanyAddressViewController else { return }
         destinationController.company = company
-        
     }
 }

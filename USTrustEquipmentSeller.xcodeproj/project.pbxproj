@@ -48,6 +48,7 @@
 		FD3133FC1FB504E7002BCA23 /* USTrustEquipmentSellerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3133FB1FB504E7002BCA23 /* USTrustEquipmentSellerUITests.swift */; };
 		FD3134111FB51644002BCA23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD3134101FB51644002BCA23 /* GoogleService-Info.plist */; };
 		FD3358EF1FE89AC9001DA1E7 /* Date+UES.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3358EE1FE89AC9001DA1E7 /* Date+UES.swift */; };
+		FD42E69E1FF8340A0035E021 /* UIButton+UES.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD42E69D1FF8340A0035E021 /* UIButton+UES.swift */; };
 		FD557F1A1FB8B8F600A52EA1 /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F191FB8B8F600A52EA1 /* FirebaseController.swift */; };
 		FD557F201FBAB51600A52EA1 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F1F1FBAB51600A52EA1 /* InitialViewController.swift */; };
 		FD557F221FBAB52B00A52EA1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F211FBAB52B00A52EA1 /* LoginViewController.swift */; };
@@ -139,6 +140,7 @@
 		FD3133FD1FB504E7002BCA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD3134101FB51644002BCA23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FD3358EE1FE89AC9001DA1E7 /* Date+UES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+UES.swift"; sourceTree = "<group>"; };
+		FD42E69D1FF8340A0035E021 /* UIButton+UES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+UES.swift"; sourceTree = "<group>"; };
 		FD557F191FB8B8F600A52EA1 /* FirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
 		FD557F1F1FBAB51600A52EA1 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		FD557F211FBAB52B00A52EA1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -426,6 +428,7 @@
 			children = (
 				5D7D81F31FBA522E00998B67 /* String+UES.swift */,
 				FD3358EE1FE89AC9001DA1E7 /* Date+UES.swift */,
+				FD42E69D1FF8340A0035E021 /* UIButton+UES.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -793,6 +796,7 @@
 				5D7D81F61FBA5C6500998B67 /* Constants.swift in Sources */,
 				FD2D7A6C1FEB3B540044F2BD /* CompanyAddressViewController.swift in Sources */,
 				5D7D81F41FBA522E00998B67 /* String+UES.swift in Sources */,
+				FD42E69E1FF8340A0035E021 /* UIButton+UES.swift in Sources */,
 				5D7D81EE1FBA4F3900998B67 /* Company.swift in Sources */,
 				FDCD1D7A1FD60B940037FBFA /* FirebaseAuthentication.swift in Sources */,
 				FD10F5EF1FDCAA2D00698CFA /* ProfileViewController.swift in Sources */,

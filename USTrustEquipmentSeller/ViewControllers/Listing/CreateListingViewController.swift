@@ -34,12 +34,18 @@ class CreateListingViewController: UIViewController, UIImagePickerControllerDele
     
     // MARK: - IB Actions
     @IBAction func addImagesButtonTapped(_ sender: UIButton) {
+        
     }
     
     @IBAction func postButtonTapped(_ sender: UIButton) {
+        
     }
     
     // MARK: - Create Functions
+    func createListing() {
+        
+    }
+    
     func postListing() {
         
     }

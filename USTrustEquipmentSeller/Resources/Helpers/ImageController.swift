@@ -53,7 +53,6 @@ class ImageController {
     
     // MARK: - Read
     func fetchImage(withURL url: URL, completion: @escaping(UIImage?) -> Void) {
-        let downloadRef = storageRef
             var image: UIImage?
             if let imageData = try? Data(contentsOf: url) {
                 image = UIImage(data: imageData, scale: 1)
