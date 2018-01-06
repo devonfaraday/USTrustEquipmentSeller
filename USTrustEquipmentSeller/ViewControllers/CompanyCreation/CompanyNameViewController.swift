@@ -24,8 +24,12 @@ class CompanyNameViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - IB Actions
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        createCompanyName()
-        segueToCompanyAddressViewController()
+        if userMayProgress() {
+            createCompanyName()
+            segueToCompanyAddressViewController()
+        } else {
+            textFieldsEmptyAlert()
+        }
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
@@ -40,14 +44,10 @@ class CompanyNameViewController: UIViewController, UITextFieldDelegate {
     }
     
     func checkIfNameIsEmpty() -> Bool {
-        var returnValue = false
-        if companyNameTextField == nil || companyNameTextField.text?.isEmpty {
-            returnValue = true
-        }
-        return returnValue
+        return companyNameTextField.isTextFieldEmpty()
     }
     
-    func checkIfUserMayProgress() -> Bool {
+    func userMayProgress() -> Bool {
         var returnValue = true
         if checkIfNameIsEmpty() {
             returnValue = false
@@ -55,16 +55,27 @@ class CompanyNameViewController: UIViewController, UITextFieldDelegate {
         return returnValue
     }
     
-    // MARK: - UI Elements
-    
+    func setButtonState() {
+        nextButton.setState(isEnabled: checkIfUserMayProgress())
+    }
     
     // MARK: - TextField Delegates
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        setButtonState()
         textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldsEmptyAlert() {
+        let alertController = UIAlertController(title: "Empty Fields", message: "Please make sure to enter in all the information", preferredStyle: .alert)
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        alertController.addAction(dismissAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     // MARK: - Touch gesture methods
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        setButtonState()
         companyNameTextField.resignFirstResponder()
     }
     

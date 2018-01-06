@@ -44,7 +44,7 @@ class ImageController {
                 guard let downloadURL = metaData.downloadURL() else { return }
                 print(metaData.description)
                 var modifiedCompany = company
-                // modifiedCompany.logoURL = downloadURL
+                modifiedCompany.logoURL = downloadURL
                 modifiedCompany.save()
             }
         }

@@ -49,6 +49,7 @@
 		FD3134111FB51644002BCA23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD3134101FB51644002BCA23 /* GoogleService-Info.plist */; };
 		FD3358EF1FE89AC9001DA1E7 /* Date+UES.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3358EE1FE89AC9001DA1E7 /* Date+UES.swift */; };
 		FD42E69E1FF8340A0035E021 /* UIButton+UES.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD42E69D1FF8340A0035E021 /* UIButton+UES.swift */; };
+		FD42E6A21FFB4AF60035E021 /* UITextField+UES.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD42E6A11FFB4AF60035E021 /* UITextField+UES.swift */; };
 		FD557F1A1FB8B8F600A52EA1 /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F191FB8B8F600A52EA1 /* FirebaseController.swift */; };
 		FD557F201FBAB51600A52EA1 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F1F1FBAB51600A52EA1 /* InitialViewController.swift */; };
 		FD557F221FBAB52B00A52EA1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F211FBAB52B00A52EA1 /* LoginViewController.swift */; };
@@ -141,6 +142,7 @@
 		FD3134101FB51644002BCA23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FD3358EE1FE89AC9001DA1E7 /* Date+UES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+UES.swift"; sourceTree = "<group>"; };
 		FD42E69D1FF8340A0035E021 /* UIButton+UES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+UES.swift"; sourceTree = "<group>"; };
+		FD42E6A11FFB4AF60035E021 /* UITextField+UES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+UES.swift"; sourceTree = "<group>"; };
 		FD557F191FB8B8F600A52EA1 /* FirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
 		FD557F1F1FBAB51600A52EA1 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		FD557F211FBAB52B00A52EA1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 				5D7D81F31FBA522E00998B67 /* String+UES.swift */,
 				FD3358EE1FE89AC9001DA1E7 /* Date+UES.swift */,
 				FD42E69D1FF8340A0035E021 /* UIButton+UES.swift */,
+				FD42E6A11FFB4AF60035E021 /* UITextField+UES.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -784,6 +787,7 @@
 				FD557F1A1FB8B8F600A52EA1 /* FirebaseController.swift in Sources */,
 				FD3133DC1FB504E7002BCA23 /* AppDelegate.swift in Sources */,
 				FD10F5F11FDCB0AD00698CFA /* TabBarViewController.swift in Sources */,
+				FD42E6A21FFB4AF60035E021 /* UITextField+UES.swift in Sources */,
 				5D9E973C1FC4C06E00A7A34C /* ImageHandler.swift in Sources */,
 				5D7D81F01FBA4FC900998B67 /* Listing.swift in Sources */,
 				5D917ECB1FBA4AA0004BD9AC /* User.swift in Sources */,

@@ -8,10 +8,10 @@
 
 import UIKit
 
-class CompanyAddressViewController: UIViewController {
+class CompanyAddressViewController: UIViewController, UITextFieldDelegate {
 
+    // MARK: - Properties
     var company: Company?
-    
     
     @IBOutlet var cityTextfield: UITextField!
     @IBOutlet var stateTextField: UITextField!
@@ -20,15 +20,27 @@ class CompanyAddressViewController: UIViewController {
     @IBOutlet var backButton: UIButton!
     @IBOutlet var nextButton: UIButton!
     
+    // MARK: - View Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    // MARK: - IB Actions
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        addAddressToCompany()
-        segueToCompanyPhoneNumberViewController()
+        if !checkIfTextFieldIsEmpty() {
+            addAddressToCompany()
+            segueToCompanyPhoneNumberViewController()
+        } else {
+            textFieldsEmptyAlert()
+        }
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
         let _ = navigationController?.popViewController(animated: true)
     }
     
+    // MARK: - Company Helper
     func addAddressToCompany() {
         guard let streetAddress = streetAddressTextField.text,
             let city = cityTextfield.text,
@@ -41,6 +53,33 @@ class CompanyAddressViewController: UIViewController {
         company?.zipCode = zipCode
     }
     
+    // MARK: - Progression Methods
+    func checkIfTextFieldIsEmpty() -> Bool {
+        return streetAddressTextField.isTextFieldEmpty() || cityTextfield.isTextFieldEmpty() || stateTextField.isTextFieldEmpty() || zipCodeTextField.isTextFieldEmpty()
+    }
+    
+    // MARK: - Text Field Delegates
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    // MARK: - Touch Gestures
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        streetAddressTextField.resignFirstResponder()
+        cityTextfield.resignFirstResponder()
+        stateTextField.resignFirstResponder()
+        zipCodeTextField.resignFirstResponder()
+    }
+    
+    // MARK: - AlertController
+    func textFieldsEmptyAlert() {
+        let alertController = UIAlertController(title: "Empty Fields", message: "Please make sure to enter in all the information", preferredStyle: .alert)
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        alertController.addAction(dismissAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    // MARK: - Navigation
     func segueToCompanyPhoneNumberViewController() {
         performSegue(withIdentifier: .toCompanyPhoneNumberViewControllerSegueKey, sender: self)
     }

@@ -21,7 +21,7 @@ class CompanyCreateButtonViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destinationController = segue.destination as? CompanyNameViewController else { return }
+//        guard let destinationController = segue.destination as? CompanyNameViewController else { return }
         
     }
 }

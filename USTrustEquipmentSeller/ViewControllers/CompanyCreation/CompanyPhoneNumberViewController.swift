@@ -19,8 +19,12 @@ class CompanyPhoneNumberViewController: UIViewController {
     
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        addPhoneNumberToCompany()
-        segueToCompanyEINViewController()
+        if !phoneNumberTextField.isTextFieldEmpty() {
+            addPhoneNumberToCompany()
+            segueToCompanyEINViewController()
+        } else {
+            textFieldsEmptyAlert()
+        }
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
@@ -31,6 +35,13 @@ class CompanyPhoneNumberViewController: UIViewController {
         guard let phoneNumber = phoneNumberTextField.text
             else { return }
         company?.phoneNumber = phoneNumber
+    }
+    
+    func textFieldsEmptyAlert() {
+        let alertController = UIAlertController(title: "Empty Fields", message: "Please make sure to enter in all the information", preferredStyle: .alert)
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        alertController.addAction(dismissAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     func segueToCompanyEINViewController() {

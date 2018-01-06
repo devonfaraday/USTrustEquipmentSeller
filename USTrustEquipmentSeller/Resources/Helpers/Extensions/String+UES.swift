@@ -10,6 +10,11 @@ import Foundation
 
 extension String {
     
+    
+    /* Cell Identifiers */
+    static var imageCellIdentifierKey: String { get { return "imageCell" } }
+    static var listingCellIdentifierKey: String { get { return "listingCell" } }
+    
     /* Date Converter */
     func toDate() -> Date? {
         let dateFormatterGet = DateFormatter()

@@ -18,7 +18,7 @@ struct Company: FirebaseType {
     var zipCode: String
     var phoneNumber: String
     var rating: Int = 0
-    //var logo: UIImage?
+    var logoURL: URL?
     var logoImageReference: String?
     var einNumber: String
     var administratorAccountsIdentifiers: [String] = []

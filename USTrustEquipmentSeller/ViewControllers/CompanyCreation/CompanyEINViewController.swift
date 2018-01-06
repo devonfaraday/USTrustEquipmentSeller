@@ -17,8 +17,12 @@ class CompanyEINViewController: UIViewController {
     var company: Company?
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        addEINToCompany()
-        segueToCompanyLogoViewController()
+        if !einTextField.isTextFieldEmpty() {
+            addEINToCompany()
+            segueToCompanyLogoViewController()
+        } else {
+            textFieldsEmptyAlert()
+        }
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
@@ -29,6 +33,13 @@ class CompanyEINViewController: UIViewController {
         guard let ein = einTextField.text
             else { return }
         company?.einNumber = ein
+    }
+    
+    func textFieldsEmptyAlert() {
+        let alertController = UIAlertController(title: "Empty Fields", message: "Please make sure to enter in all the information", preferredStyle: .alert)
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        alertController.addAction(dismissAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     func segueToCompanyLogoViewController() {
