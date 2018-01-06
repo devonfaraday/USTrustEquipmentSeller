@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CompanyEINViewController: UIViewController {
+class CompanyEINViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var einTextField: UITextField!
     @IBOutlet var nextButton: UIButton!
@@ -33,6 +33,15 @@ class CompanyEINViewController: UIViewController {
         guard let ein = einTextField.text
             else { return }
         company?.einNumber = ein
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        einTextField.resignFirstResponder()
     }
     
     func textFieldsEmptyAlert() {

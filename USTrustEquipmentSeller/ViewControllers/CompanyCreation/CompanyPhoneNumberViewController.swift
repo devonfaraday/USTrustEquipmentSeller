@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CompanyPhoneNumberViewController: UIViewController {
+class CompanyPhoneNumberViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet var phoneNumberTextField: UITextField!
@@ -35,6 +35,15 @@ class CompanyPhoneNumberViewController: UIViewController {
         guard let phoneNumber = phoneNumberTextField.text
             else { return }
         company?.phoneNumber = phoneNumber
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        phoneNumberTextField.resignFirstResponder()
     }
     
     func textFieldsEmptyAlert() {
