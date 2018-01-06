@@ -56,7 +56,7 @@ class CompanyNameViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setButtonState() {
-        nextButton.setState(isEnabled: checkIfUserMayProgress())
+        nextButton.setState(isEnabled: userMayProgress())
     }
     
     // MARK: - TextField Delegates
