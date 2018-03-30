@@ -9,10 +9,9 @@
 import Foundation
 import UIKit
 
-class Listing: FirebaseType, Equatable {
+class Listing: FirebaseType {
 
     let itemName: String
-    let quantity: Int
     let catagoryIdentifier: String
     let description: String
     let price: Double
@@ -24,10 +23,10 @@ class Listing: FirebaseType, Equatable {
     var identifier: String?
     let created: Date
     var updated: Date
+    let quantity: Int
     
     var dictionaryCopy: JSONDictionary {
         return [.itemNameKey: itemName,
-                .quantityKey: quantity,
                 .catagoryIdentifierKey: catagoryIdentifier,
                 .descriptionKey: description,
                 .priceKey: price,
@@ -52,7 +51,6 @@ class Listing: FirebaseType, Equatable {
         self.identifier = identifier
         self.created = created
         self.updated = updated
-        
     }
     
     required init?(dictionary: JSONDictionary, identifier: String) {
@@ -96,8 +94,4 @@ extension Listing {
     enum SubCategoryType {
         
     }
-}
-
-func ==(lhs: Listing, rhs: Listing) -> Bool {
-    return lhs.identifier == rhs.identifier
 }

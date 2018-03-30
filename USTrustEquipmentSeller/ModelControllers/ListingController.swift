@@ -34,7 +34,7 @@ class ListingController {
         let listingsRef = FirebaseController.databaseRef.child(.listingsEndpoint)
         listingsRef.observeSingleEvent(of: .value) { (data) in
             guard let listingsDict = data.value as? [String: Any] else { return }
-            let listings = listingsDict.flatMap { Listing(dictionary: $0.value as! JSONDictionary, identifier: $0.key) }
+            let listings = listingsDict.compactMap { Listing(dictionary: $0.value as! JSONDictionary, identifier: $0.key) }
             competion(listings)
         }
     }

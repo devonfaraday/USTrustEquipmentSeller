@@ -15,34 +15,44 @@ class InitialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //try? Auth.auth().signOut()
+//        try? Auth.auth().signOut()
         checkAuthentication()
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     
     func checkAuthentication() {
         if Auth.auth().currentUser != nil {
-            fetchCurrentUser {
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: .toUserProfileSegueKey, sender: self)
+            fetchCurrentUser(completion: { (success) in
+                if success {
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: .toUserProfileSegueKey, sender: self)
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: .toLoginSegueKey, sender: self)
+                    }
                 }
-            }
+            })
         } else {
-            print("No User signed in")
-            DispatchQueue.main.async {
-                self.performSegue(withIdentifier: .toLoginSegueKey, sender: self)
+                print("No User signed in")
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: .toLoginSegueKey, sender: self)
             }
             
         }
     }
     
-    func fetchCurrentUser(completion: @escaping() -> Void) {
-        guard let currentUser = Auth.auth().currentUser else { completion(); return }
+    func fetchCurrentUser(completion: @escaping(_ success: Bool) -> Void) {
+        guard let currentUser = Auth.auth().currentUser else { completion(false); return }
         let uid = currentUser.uid
         UserController().fetchUser(withIdentifier: uid) { (user) in
             print("User Fetched in profile")
-            self.currentUser = user
-            completion()
+            if user != nil {
+                self.currentUser = user
+                completion(true)
+            } else {
+                completion(false)
+            }
         }
     }
     

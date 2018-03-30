@@ -34,13 +34,15 @@ class UserController {
     
     func fetchUser(withIdentifier identifier: String, completion: @escaping (User?) -> Void) {
         let userRef = FirebaseController.databaseRef.child(.usersEndpoint).child(identifier)
-        userRef.observeSingleEvent(of: .value, with: { (data) in
-            guard let userDict = data.value as? [String: Any] else {
+        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let value = snapshot.value as? JSONDictionary else { return }
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: value, options: [])
+                let user = try JSONDecoder().decode(User.self, from: jsonData)
+                completion(user)
+            } catch {
                 completion(nil)
-                return
             }
-            guard let user = User(dictionary: userDict, identifier: identifier) else { return }
-            completion(user)
         })
     }
     

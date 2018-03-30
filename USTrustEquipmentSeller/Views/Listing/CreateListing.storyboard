@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BEE-aB-aaE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -53,6 +53,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pQG-2k-AyH"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uka-cC-Ovq"/>
+                    <connections>
+                        <segue destination="Ljo-JU-XDQ" kind="show" identifier="createListingStepOne" id="4H8-PU-hLJ"/>
+                        <segue destination="sib-iz-qDl" kind="show" identifier="CreateListingFull" id="eHF-Cd-vhN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLq-aI-MWq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,10 +103,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xBH-Lz-Nfq"/>
                     </view>
+                    <connections>
+                        <segue destination="hv8-rQ-yfS" kind="show" identifier="createListingStepTwo" id="qoF-ys-g0B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xO-32-3Ch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2501.5999999999999" y="41.829085457271368"/>
+            <point key="canvasLocation" x="2248" y="42"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="NCn-MH-cda">
@@ -145,10 +153,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bfi-CG-FSl"/>
                     </view>
+                    <connections>
+                        <segue destination="zE3-N2-YUs" kind="show" identifier="createListingStepThre" id="WL7-l4-S7R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dL8-bR-0MQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3204" y="42"/>
+            <point key="canvasLocation" x="2762" y="42"/>
         </scene>
         <!--Create Listing View Controller-->
         <scene sceneID="Wwv-r1-u4W">
@@ -367,7 +378,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hkv-wp-dHx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2150" y="1544"/>
+            <point key="canvasLocation" x="1745" y="862"/>
         </scene>
         <!--Post-->
         <scene sceneID="dIP-nq-m2g">
@@ -381,12 +392,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="sib-iz-qDl" kind="relationship" relationship="rootViewController" id="fZU-uC-ZmC"/>
+                        <segue destination="Vfg-WY-qVm" kind="relationship" relationship="rootViewController" id="dAf-qG-NV2"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlD-e1-PG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1340" y="1543"/>
+            <point key="canvasLocation" x="1206" y="42"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SZY-d3-x5T">
@@ -431,10 +442,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dE7-9x-wB0"/>
                     </view>
+                    <connections>
+                        <segue destination="3w6-Es-Trs" kind="show" identifier="createListingStepFour" id="hhQ-Xx-6vf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhU-gS-Bmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3962" y="42"/>
+            <point key="canvasLocation" x="3310" y="42"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nbA-CF-p6h">
@@ -473,10 +487,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cHU-nU-Cds"/>
                     </view>
+                    <connections>
+                        <segue destination="3er-tj-0fB" kind="show" identifier="createListingStepFive" id="snp-jz-pke"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqC-h2-pX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1744.8" y="730.88455772113946"/>
+            <point key="canvasLocation" x="2248" y="862"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bmW-JW-AtV">
@@ -518,10 +535,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qqW-H7-6eA"/>
                     </view>
+                    <connections>
+                        <segue destination="K7y-2j-bOA" kind="show" identifier="createListingStepSix" id="zGj-8k-KW1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgE-Dp-R77" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2501.5999999999999" y="741.67916041979015"/>
+            <point key="canvasLocation" x="2762" y="862"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="lL3-ZG-JL8">
@@ -588,10 +608,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wkl-4D-chT"/>
                     </view>
+                    <connections>
+                        <segue destination="ahl-Tj-mar" kind="show" identifier="Seven" id="VC0-8E-HRA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZf-6E-poC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3186.4000000000001" y="741.67916041979015"/>
+            <point key="canvasLocation" x="3291" y="862"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Uea-T4-UCT">
@@ -686,10 +709,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8BR-q5-kxU"/>
                     </view>
+                    <connections>
+                        <segue destination="m0K-8C-c1q" kind="show" identifier="Eight" id="RpZ-s9-4Eg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWT-0H-U6t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3961" y="742"/>
+            <point key="canvasLocation" x="3845" y="862"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="iwp-7u-eXF">
@@ -734,7 +760,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HGh-9A-1Cd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4668" y="742"/>
+            <point key="canvasLocation" x="4394" y="862"/>
         </scene>
     </scenes>
 </document>

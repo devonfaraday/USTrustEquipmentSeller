@@ -12,17 +12,17 @@ import Firebase
 class CreateListingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     // MARK: - Properties
+    @IBOutlet var addImagesButton: UIButton!
     @IBOutlet var categoryLabel: UILabel!
+    @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var descriptionTextView: UITextView!
+    @IBOutlet var emailCheckBoxButton: UIButton!
     @IBOutlet var itemNameTextField: UITextField!
+    @IBOutlet var noTextingCheckBoxButton: UIButton!
+    @IBOutlet var phoneNumberCheckBoxButton: UIButton!
+    @IBOutlet var postButton: UIButton!
     @IBOutlet var priceTextField: UITextField!
     @IBOutlet var zipCodeTextField: UITextField!
-    @IBOutlet var postButton: UIButton!
-    @IBOutlet var descriptionTextView: UITextView!
-    @IBOutlet var collectionView: UICollectionView!
-    @IBOutlet var phoneNumberCheckBoxButton: UIButton!
-    @IBOutlet var emailCheckBoxButton: UIButton!
-    @IBOutlet var noTextingCheckBoxButton: UIButton!
-    @IBOutlet var addImagesButton: UIButton!
     
     var images = [UIImage]()
     
@@ -43,7 +43,11 @@ class CreateListingViewController: UIViewController, UIImagePickerControllerDele
     
     // MARK: - Create Functions
     func createListing() {
-        
+//        guard let itemName = itemNameTextField.text,
+//            let price = priceTextField.text,
+//            let zipCode = zipCodeTextField.text,
+//            let description = descriptionTextView.text else { return }
+//        let listing = Listing(itemName: itemName, quantity: <#T##Int#>, catagoryIdentifer: <#T##String#>, description: description, price: price, location: <#T##String#>, images: <#T##[UIImage]#>, companyIdentifer: <#T##String#>, identifier: UUID().uuidString, created: <#T##Date#>, updated: <#T##Date#>)
     }
     
     func postListing() {
@@ -61,6 +65,4 @@ class CreateListingViewController: UIViewController, UIImagePickerControllerDele
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    
-
 }
