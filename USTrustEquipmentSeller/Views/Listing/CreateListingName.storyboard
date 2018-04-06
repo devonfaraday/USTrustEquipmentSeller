@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Listing Name View Controller-->
+        <scene sceneID="RuX-km-g9c">
+            <objects>
+                <viewController storyboardIdentifier="CreateListingNameViewController" id="Ljo-JU-XDQ" customClass="CreateListingNameViewController" customModule="USTrustEquipmentSeller" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kc4-eR-tLC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First thing we need to do is give your posting a name.  What are you selling?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXE-dA-Rob">
+                                <rect key="frame" x="8" y="71" width="359" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yDi-hD-5Rj">
+                                <rect key="frame" x="8" y="134" width="351" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xf-p4-0Bt">
+                                <rect key="frame" x="95" y="582" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Previous"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1b7-PH-EhF">
+                                <rect key="frame" x="215" y="582" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xBH-Lz-Nfq" firstAttribute="trailing" secondItem="UXE-dA-Rob" secondAttribute="trailing" constant="8" id="CGh-ti-1X7"/>
+                            <constraint firstItem="UXE-dA-Rob" firstAttribute="leading" secondItem="xBH-Lz-Nfq" secondAttribute="leading" constant="8" id="h11-ts-swq"/>
+                            <constraint firstItem="UXE-dA-Rob" firstAttribute="top" secondItem="xBH-Lz-Nfq" secondAttribute="top" constant="51" id="wDs-Ly-ndf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xBH-Lz-Nfq"/>
+                    </view>
+                    <connections>
+                        <segue destination="yqE-K4-Wpj" kind="show" identifier="createListingStepTwo" id="qoF-ys-g0B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2xO-32-3Ch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2076" y="36"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nbA-CF-p6h">
+            <objects>
+                <viewController storyboardIdentifier="UIViewController-3w6-Es-Trs" id="3w6-Es-Trs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="73V-xy-kIJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's place your listing into a category for buyers to find what you are selling" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQB-1N-8GL">
+                                <rect key="frame" x="8" y="88" width="359" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFe-vh-K8Z">
+                                <rect key="frame" x="111" y="575" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Previous"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8h-8Y-vIZ">
+                                <rect key="frame" x="231" y="575" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oES-2Z-UEE">
+                                <rect key="frame" x="0.0" y="137" width="375" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JQB-1N-8GL" firstAttribute="leading" secondItem="cHU-nU-Cds" secondAttribute="leading" constant="8" id="M86-e4-yWO"/>
+                            <constraint firstItem="cHU-nU-Cds" firstAttribute="trailing" secondItem="JQB-1N-8GL" secondAttribute="trailing" constant="8" id="Qdd-3H-2o8"/>
+                            <constraint firstItem="JQB-1N-8GL" firstAttribute="top" secondItem="cHU-nU-Cds" secondAttribute="top" constant="68" id="nrd-Wp-K2T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cHU-nU-Cds"/>
+                    </view>
+                    <connections>
+                        <segue destination="CXE-Xx-sOI" kind="show" identifier="createListingStepFive" id="snp-jz-pke"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eqC-h2-pX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2248" y="862"/>
+        </scene>
+        <!--UIViewController-hv8-rQ-yfS-->
+        <scene sceneID="EOJ-Zr-W39">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateListingZipCode" referencedIdentifier="UIViewController-hv8-rQ-yfS" id="yqE-K4-Wpj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CbC-bF-fPp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2762" y="42"/>
+        </scene>
+        <!--UIViewController-3er-tj-0fB-->
+        <scene sceneID="3fp-WL-t6Q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateListingZipCode" referencedIdentifier="UIViewController-3er-tj-0fB" id="CXE-Xx-sOI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O45-l1-qvM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2762" y="862"/>
+        </scene>
+    </scenes>
+</document>

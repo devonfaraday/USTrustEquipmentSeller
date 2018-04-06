@@ -93,6 +93,9 @@ extension String {
     static var companyCreationDidFinishNotificationNameKey: String { get { return "companyCreationDidFinish" } }
     
     /* Segues */
+    static var listingPreferenceButtonsEmbededSegueKey: String { get { return "preferenceButtons" } }
+    static var toCreateListingFullSegueKey: String { get { return "createListingFull" } }
+    static var toCreateListingNameSegueKey: String { get { return "createListingName" } }
     static var toCreateCompanyNavigationControllerSegueKey: String { get { return "toCreateCompanyNavigationController" } }
     static var toCompanyNameViewControllerSegueKey: String { get { return "toCompanyNameViewController" } }
     static var toCompanyAddressViewControllerSegueKey: String { get { return "toCompanyAddressViewController" } }
