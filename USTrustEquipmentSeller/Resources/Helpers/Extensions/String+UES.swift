@@ -16,7 +16,7 @@ extension String {
     static var listingCellIdentifierKey: String { get { return "listingCell" } }
     
     /* Date Converter */
-    func toDate() -> Date? {
+    func toDate() -> Date {
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = String.dateAndTimeFormateForSortingKey
         let dateFormatter = DateFormatter()
@@ -51,6 +51,7 @@ extension String {
     static var authorizedSellersKey: String { get { return "authorizedSellers" } }
     static var cityKey: String { get { return "city" } }
     static var companyNameKey: String { get { return "companyName" } }
+    static var companyReferenceKey: String { get { return "companyReference" } }
     static var companyWatchListKey: String { get { return "companyWatchList" } }
     static var emailKey: String { get { return "email" } }
     static var einNumberKey: String { get { return "einNumber" } }
@@ -77,14 +78,14 @@ extension String {
     static var locationKey: String { get { return "location" } }
     static var imageKey: String { get { return "image" } }
     static var companyIdentifierKey: String { get { return "companyIdentifier" } }
-    static var createdKey: String { get { return "listingDate" } }
+    static var createdKey: String { get { return "created" } }
     static var storeNameKey: String { get { return "storeName" } }
     static var storeTypeKey: String { get { return "storeType" } }
     static var listingsIdentifiersKey: String { get { return "listingsIdentifiers" } }
     static var storeOwnerIdentifierKey: String { get { return "storeOwnerIdentifier" } }
     static var usernameKey: String { get { return "username" } }
     static var listingWatchListKey: String { get { return "listingWatchList" } }
-    static var imageURLsKey: String { get { return "imageURLreferences" } }
+    static var imageURLsKey: String { get { return "imageURLReferences" } }
     static var logoImageReferenceKey: String { get { return "logoImageReference" } }
     static var updatedKey: String { get { return "updated" } }
     

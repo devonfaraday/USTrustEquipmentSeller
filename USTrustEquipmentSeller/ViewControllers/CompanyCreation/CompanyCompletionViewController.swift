@@ -35,6 +35,10 @@ class CompanyCompletionViewController: UIViewController {
         let companyController = CompanyController()
         companyController.createUserDefaultCompany(withCompany: company)
         companyController.createCompany(company: company)
+        var companyOwner = UserController.shared.user
+        companyOwner?.companyReference = company.identifier
+        companyOwner?.save()
+        
     }
     
     func removeNavigationControllerFromParent() {

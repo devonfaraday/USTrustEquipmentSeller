@@ -21,22 +21,36 @@ class ListingController {
     func fetchListing(withIdentifier identifier: String, completion: @escaping(Listing?) -> Void) {
         let listingRef = FirebaseController.databaseRef.child(.listingsEndpoint).child(identifier)
         listingRef.observeSingleEvent(of: .value, with: { (data) in
-            guard let listingDict = data.value as? [String: Any] else {
+            guard let value = data.value as? JSONDictionary else { return }
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: value, options: [])
+                let listing = try JSONDecoder().decode(Listing.self, from: jsonData)
+                completion(listing)
+            } catch  {
                 completion(nil)
-                return
             }
-            let listing = Listing(dictionary: listingDict, identifier: identifier)
-            completion(listing)
+            
         })
     }
     
     func fetchAllListings(competion: @escaping([Listing]) -> Void)  {
         let listingsRef = FirebaseController.databaseRef.child(.listingsEndpoint)
-        listingsRef.observeSingleEvent(of: .value) { (data) in
-            guard let listingsDict = data.value as? [String: Any] else { return }
-            let listings = listingsDict.compactMap { Listing(dictionary: $0.value as! JSONDictionary, identifier: $0.key) }
-            competion(listings)
+        listingsRef.observeSingleEvent(of: .value) { (snapshot) in
+            // the dictionary key is the identifier
+            guard let values = snapshot.value as? [JSONDictionary] else { return }
+            var listings: [Listing] = []
+            for value in values {
+                do {
+                    let jsonData = try JSONSerialization.data(withJSONObject: value, options: [])
+                    let listing = try JSONDecoder().decode(Listing.self, from: jsonData)
+                    listings.append(listing)
+                } catch {
+                    print("YOU SUCK")
+                }
+                competion(listings)
+            }
         }
+
     }
     
     // MARK: - Update

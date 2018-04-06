@@ -84,6 +84,14 @@ class ProfileViewController: UIViewController {
         let userController = UserController()
         userController.fetchCurrentUser { (user) in
             self.user = user
+            self.setUsersCompany()
+        }
+    }
+    
+    func setUsersCompany() {
+        guard let companyIdentifier = user?.companyReference else { return }
+        CompanyController().fetchCompany(identifier: companyIdentifier) { (company) in
+            self.company = company
         }
     }
     

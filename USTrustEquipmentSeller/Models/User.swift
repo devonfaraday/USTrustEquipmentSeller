@@ -10,13 +10,14 @@ import Foundation
 import UIKit
 import Firebase
 
-struct User: FirebaseType, Codable {
+struct User: FirebaseType {
     
     
     var firstName: String
     var lastName: String
     var streetAddress: String
     var city: String
+    var companyReference: String? = nil
     var companyWatchList: [String]? = nil
     var state: String
     var zipCode: String
@@ -35,6 +36,7 @@ struct User: FirebaseType, Codable {
         case firstName
         case lastName
         case streetAddress
+        case companyReference
         case companyWatchList
         case city
         case state
@@ -47,18 +49,18 @@ struct User: FirebaseType, Codable {
     }
     
     var dictionaryCopy: JSONDictionary {
-//        return [.firstNameKey: firstName,
-//                .lastNameKey: lastName,
-//                .streetAddressKey: streetAddress,
-//                .companyWatchListKey: companyWatchList,
-//                .cityKey: city,
-//                .stateKey: state,
-//                .listingWatchListKey: listingWatchList,
-//                .zipCodeKey: zipCode,
-//                .emailKey: email,
-//                .phoneKey: phoneNumber,
-//                .isBannedKey: isBanned]
-        return [:]
+        return [.firstNameKey: firstName,
+                .lastNameKey: lastName,
+                .streetAddressKey: streetAddress,
+                .companyReferenceKey: companyReference ?? "",
+                .companyWatchListKey: companyWatchList ?? [],
+                .cityKey: city,
+                .stateKey: state,
+                .listingWatchListKey: listingWatchList ?? [],
+                .zipCodeKey: zipCode,
+                .emailKey: email,
+                .phoneKey: phoneNumber,
+                .isBannedKey: isBanned]
     }
     
     init(firstName: String, lastName: String, streetAddress: String, city: String, state: String, zipCode: String, email: String, username: String, phoneNumber: String) {
@@ -73,19 +75,14 @@ struct User: FirebaseType, Codable {
      }
 }
 
-// MARK: - Encoder
-extension User {
-    func encode(to encoder: Encoder) throws {
-    }
-}
-
 // MARK: - Decoder
-extension User {
+extension User: Decodable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         firstName = try values.decode(String.self, forKey: .firstName)
         lastName = try values.decode(String.self, forKey: .lastName)
         streetAddress = try values.decode(String.self, forKey: .streetAddress)
+        companyReference = try values.decodeIfPresent(String.self, forKey: .companyReference)
         companyWatchList = try values.decodeIfPresent([String].self, forKey: .companyWatchList)
         city = try values.decode(String.self, forKey: .city)
         state = try values.decode(String.self, forKey: .state)

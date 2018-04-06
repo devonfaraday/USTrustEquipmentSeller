@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-class Listing: FirebaseType {
+class Listing: FirebaseType, Decodable {
 
     let itemName: String
     let catagoryIdentifier: String
     let description: String
     let price: Double
     let location: String
-    var imageURLReferences: [String] = []
+    var imageURLReferences: [String]? = nil
     var images: [UIImage] = []
     let companyIdentifier: String
     var endpoint: String = .listingsEndpoint
@@ -53,32 +53,34 @@ class Listing: FirebaseType {
         self.updated = updated
     }
     
-    required init?(dictionary: JSONDictionary, identifier: String) {
-        guard let itemName = dictionary[.itemNameKey] as? String,
-            let quantity = dictionary[.quantityKey] as? Int,
-            let catagoryIdentifier = dictionary[.catagoryIdentifierKey] as? String,
-            let description = dictionary[.descriptionKey] as? String,
-            let price = dictionary[.priceKey] as? Double,
-            let location = dictionary[.locationKey] as? String,
-            let companyIdentifier = dictionary[.companyIdentifierKey] as? String,
-            let createdString = dictionary[.createdKey] as? String,
-            let created = createdString.toDate(),
-            let updatedString = dictionary[.updatedKey] as? String,
-            let updated = updatedString.toDate()
-            else { return nil }
-        self.identifier = identifier
-        self.itemName = itemName
-        self.quantity = quantity
-        self.catagoryIdentifier = catagoryIdentifier
-        self.description = description
-        self.price = price
-        self.location = location
-        self.companyIdentifier = companyIdentifier
-        self.created = created
-        self.updated = updated
-        // this will not work.  It's only here to silence warnings and errors.  The images will need their own network call to fetch the images fromt the firebase storage.
-        if let images = dictionary[.imageKey] as? [UIImage] { self.images = images }
+    
+    enum CodingKeys: String, CodingKey {
+        case itemName
+        case quantity
+        case catagoryIdentifier
+        case description
+        case price
+        case location
+        case companyIdentifier
+        case created
+        case updated
+        case imageURLReferences
     }
+    
+    required init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        itemName = try values.decode(String.self, forKey: .itemName)
+        quantity = try values.decode(Int.self, forKey: .quantity)
+        catagoryIdentifier = try values.decode(String.self, forKey: .catagoryIdentifier)
+        description = try values.decode(String.self, forKey: .description)
+        price = try values.decode(Double.self, forKey: .price)
+        location = try values.decode(String.self, forKey: .location)
+        companyIdentifier = try values.decode(String.self, forKey: .companyIdentifier)
+        created = try values.decode(String.self, forKey: .created).toDate()
+        updated = try values.decode(String.self, forKey: .updated).toDate()
+        imageURLReferences = try values.decodeIfPresent([String].self, forKey: .imageURLReferences)
+    }
+    
 }
 
 extension Listing {

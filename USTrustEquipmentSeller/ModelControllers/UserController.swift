@@ -11,6 +11,9 @@ import Firebase
 
 class UserController {
     
+    static let shared = UserController()
+    var user: User?
+    
     // MARK: - Create
     func createUser(withUser user: User) {
         var uid = ""
@@ -38,7 +41,9 @@ class UserController {
             guard let value = snapshot.value as? JSONDictionary else { return }
             do {
                 let jsonData = try JSONSerialization.data(withJSONObject: value, options: [])
-                let user = try JSONDecoder().decode(User.self, from: jsonData)
+                var user = try JSONDecoder().decode(User.self, from: jsonData)
+                user.identifier = identifier
+                UserController.shared.user = user
                 completion(user)
             } catch {
                 completion(nil)
