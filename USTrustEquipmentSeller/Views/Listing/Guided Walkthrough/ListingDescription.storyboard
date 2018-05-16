@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Listing Description View Controller-->
+        <scene sceneID="bmW-JW-AtV">
+            <objects>
+                <viewController storyboardIdentifier="ListingDescriptionViewController" id="3er-tj-0fB" customClass="ListingDescriptionViewController" customModule="USTrustEquipmentSeller" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u5h-Xo-zGJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This is the bread and butter of your post.  Give a good description on what you are selling and give good details." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okH-Jl-6jP">
+                                <rect key="frame" x="8" y="88" width="359" height="87"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvx-aa-NsR">
+                                <rect key="frame" x="111" y="575" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Previous"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaT-fs-M9W">
+                                <rect key="frame" x="231" y="575" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This is a description of a product" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nLc-JR-1kX">
+                                <rect key="frame" x="8" y="203" width="359" height="291"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="okH-Jl-6jP" firstAttribute="top" secondItem="qqW-H7-6eA" secondAttribute="top" constant="68" id="4rt-IG-yBu"/>
+                            <constraint firstItem="okH-Jl-6jP" firstAttribute="leading" secondItem="qqW-H7-6eA" secondAttribute="leading" constant="8" id="OCa-in-KS8"/>
+                            <constraint firstItem="qqW-H7-6eA" firstAttribute="trailing" secondItem="okH-Jl-6jP" secondAttribute="trailing" constant="8" id="v3d-Ng-khi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qqW-H7-6eA"/>
+                    </view>
+                    <connections>
+                        <segue destination="yGw-46-FZi" kind="show" identifier="toAddListingImages" id="zGj-8k-KW1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgE-Dp-R77" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2762" y="862"/>
+        </scene>
+        <!--ListingImagesViewController-->
+        <scene sceneID="SpV-Go-x0g">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ListingImagesViewController" storyboardName="ListingImages" referencedIdentifier="ListingImagesViewController" id="yGw-46-FZi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3iX-EA-f3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3291" y="862"/>
+        </scene>
+        <!--ListingPreferredContactTypeViewController-->
+        <scene sceneID="ve2-O0-nnW">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ListingPreferredContactTypeViewController" storyboardName="ListingImages" referencedIdentifier="ListingPreferredContactTypeViewController" id="FsM-eJ-tZ5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9lO-CZ-GCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3845" y="862"/>
+        </scene>
+        <!--ListingVerificationViewController-->
+        <scene sceneID="S34-CQ-IdT">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ListingVerificationViewController" storyboardName="ListingImages" referencedIdentifier="ListingVerificationViewController" id="E7o-m2-rBU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lfc-wE-b0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4484" y="861"/>
+        </scene>
+    </scenes>
+</document>

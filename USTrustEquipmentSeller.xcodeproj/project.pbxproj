@@ -64,17 +64,30 @@
 		FD557F381FBAB6EC00A52EA1 /* CompanyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD557F371FBAB6EC00A52EA1 /* CompanyProfile.storyboard */; };
 		FD557F3E1FBABB9B00A52EA1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD557F3D1FBABB9B00A52EA1 /* SignUpViewController.swift */; };
 		FD557F401FBABBB800A52EA1 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD557F3F1FBABBB800A52EA1 /* SignUp.storyboard */; };
+		FDADC6202098ED2A003CBF0B /* ListingZipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADC61F2098ED2A003CBF0B /* ListingZipViewController.swift */; };
+		FDADC6222098EDDB003CBF0B /* ListingZipCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDADC6212098EDDB003CBF0B /* ListingZipCode.storyboard */; };
+		FDADC6242098EE39003CBF0B /* ListingPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADC6232098EE39003CBF0B /* ListingPriceViewController.swift */; };
+		FDADC6262098EED2003CBF0B /* ListingDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADC6252098EED2003CBF0B /* ListingDescriptionViewController.swift */; };
+		FDADC6282098EFF1003CBF0B /* ListingCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADC6272098EFF1003CBF0B /* ListingCategoryViewController.swift */; };
+		FDADC62A2098F00A003CBF0B /* ListingCategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDADC6292098F00A003CBF0B /* ListingCategory.storyboard */; };
 		FDB20086207807D100B65B94 /* ListingPrefrenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB20085207807D100B65B94 /* ListingPrefrenceViewController.swift */; };
 		FDB200892078088D00B65B94 /* ListingPreferenceButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB200882078088D00B65B94 /* ListingPreferenceButtonsViewController.swift */; };
 		FDB2008B20780C9B00B65B94 /* CreateListingNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB2008A20780C9B00B65B94 /* CreateListingNameViewController.swift */; };
 		FDB2008D20780DCC00B65B94 /* ListingPrefrenceButtons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB2008C20780DCC00B65B94 /* ListingPrefrenceButtons.storyboard */; };
 		FDB2008F20780E6E00B65B94 /* CreateListingFull.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB2008E20780E6E00B65B94 /* CreateListingFull.storyboard */; };
 		FDB2009120780E8B00B65B94 /* CreateListingName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB2009020780E8B00B65B94 /* CreateListingName.storyboard */; };
-		FDB2009320780EB100B65B94 /* CreateListingZipCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB2009220780EB100B65B94 /* CreateListingZipCode.storyboard */; };
+		FDB2009320780EB100B65B94 /* ListingPrice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB2009220780EB100B65B94 /* ListingPrice.storyboard */; };
 		FDC207DD1FD0C29400860A0B /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC207DC1FD0C29400860A0B /* UsernameViewController.swift */; };
 		FDC207DF1FD0D3E000860A0B /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC207DE1FD0D3E000860A0B /* UserController.swift */; };
 		FDCD1D7A1FD60B940037FBFA /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD1D791FD60B940037FBFA /* FirebaseAuthentication.swift */; };
 		FDCD1D7C1FD6232E0037FBFA /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD1D7B1FD6232E0037FBFA /* ImageController.swift */; };
+		FDD78B1120ABB1F400384B00 /* ListingImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD78B1020ABB1F400384B00 /* ListingImagesViewController.swift */; };
+		FDD78B1320ABB22500384B00 /* ListingPreferredContactTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD78B1220ABB22500384B00 /* ListingPreferredContactTypeViewController.swift */; };
+		FDD78B1520ABB25C00384B00 /* ListingVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD78B1420ABB25C00384B00 /* ListingVerificationViewController.swift */; };
+		FDD78B1720ABB27D00384B00 /* ListingDescription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD78B1620ABB27D00384B00 /* ListingDescription.storyboard */; };
+		FDD78B1920ABB29100384B00 /* ListingImages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD78B1820ABB29100384B00 /* ListingImages.storyboard */; };
+		FDD78B1B20ABB2AE00384B00 /* ListingPreferredContact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD78B1A20ABB2AE00384B00 /* ListingPreferredContact.storyboard */; };
+		FDD78B1D20ABB2BF00384B00 /* ListingVerification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD78B1C20ABB2BF00384B00 /* ListingVerification.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,17 +177,30 @@
 		FD557F371FBAB6EC00A52EA1 /* CompanyProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CompanyProfile.storyboard; sourceTree = "<group>"; };
 		FD557F3D1FBABB9B00A52EA1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FD557F3F1FBABBB800A52EA1 /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		FDADC61F2098ED2A003CBF0B /* ListingZipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingZipViewController.swift; sourceTree = "<group>"; };
+		FDADC6212098EDDB003CBF0B /* ListingZipCode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListingZipCode.storyboard; sourceTree = "<group>"; };
+		FDADC6232098EE39003CBF0B /* ListingPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPriceViewController.swift; sourceTree = "<group>"; };
+		FDADC6252098EED2003CBF0B /* ListingDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDescriptionViewController.swift; sourceTree = "<group>"; };
+		FDADC6272098EFF1003CBF0B /* ListingCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingCategoryViewController.swift; sourceTree = "<group>"; };
+		FDADC6292098F00A003CBF0B /* ListingCategory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListingCategory.storyboard; sourceTree = "<group>"; };
 		FDB20085207807D100B65B94 /* ListingPrefrenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPrefrenceViewController.swift; sourceTree = "<group>"; };
 		FDB200882078088D00B65B94 /* ListingPreferenceButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPreferenceButtonsViewController.swift; sourceTree = "<group>"; };
 		FDB2008A20780C9B00B65B94 /* CreateListingNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListingNameViewController.swift; sourceTree = "<group>"; };
 		FDB2008C20780DCC00B65B94 /* ListingPrefrenceButtons.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListingPrefrenceButtons.storyboard; sourceTree = "<group>"; };
 		FDB2008E20780E6E00B65B94 /* CreateListingFull.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateListingFull.storyboard; sourceTree = "<group>"; };
 		FDB2009020780E8B00B65B94 /* CreateListingName.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateListingName.storyboard; sourceTree = "<group>"; };
-		FDB2009220780EB100B65B94 /* CreateListingZipCode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateListingZipCode.storyboard; sourceTree = "<group>"; };
+		FDB2009220780EB100B65B94 /* ListingPrice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListingPrice.storyboard; sourceTree = "<group>"; };
 		FDC207DC1FD0C29400860A0B /* UsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameViewController.swift; sourceTree = "<group>"; };
 		FDC207DE1FD0D3E000860A0B /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		FDCD1D791FD60B940037FBFA /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
 		FDCD1D7B1FD6232E0037FBFA /* ImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
+		FDD78B1020ABB1F400384B00 /* ListingImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingImagesViewController.swift; sourceTree = "<group>"; };
+		FDD78B1220ABB22500384B00 /* ListingPreferredContactTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPreferredContactTypeViewController.swift; sourceTree = "<group>"; };
+		FDD78B1420ABB25C00384B00 /* ListingVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingVerificationViewController.swift; sourceTree = "<group>"; };
+		FDD78B1620ABB27D00384B00 /* ListingDescription.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListingDescription.storyboard; sourceTree = "<group>"; };
+		FDD78B1820ABB29100384B00 /* ListingImages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListingImages.storyboard; sourceTree = "<group>"; };
+		FDD78B1A20ABB2AE00384B00 /* ListingPreferredContact.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListingPreferredContact.storyboard; sourceTree = "<group>"; };
+		FDD78B1C20ABB2BF00384B00 /* ListingVerification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListingVerification.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +282,7 @@
 		FD2D7A751FEB53A70044F2BD /* Listing */ = {
 			isa = PBXGroup;
 			children = (
+				FDADC61E2098ED07003CBF0B /* Listing Guided */,
 				FDB200872078085F00B65B94 /* ListingPreferenceView */,
 				FD10F5F21FDCB2FF00698CFA /* WatchListViewController.swift */,
 				FD557F2D1FBAB5BC00A52EA1 /* ListingDetailViewController.swift */,
@@ -263,7 +290,6 @@
 				FD557F291FBAB56B00A52EA1 /* CreateListingViewController.swift */,
 				5DE07CF41FBF8A22003146C5 /* ListingTableViewCell.swift */,
 				5DE07CFA1FBF8B9F003146C5 /* SearchFilterViewController.swift */,
-				FDB2008A20780C9B00B65B94 /* CreateListingNameViewController.swift */,
 			);
 			path = Listing;
 			sourceTree = "<group>";
@@ -301,13 +327,10 @@
 		FD2D7A791FEB54100044F2BD /* Listing */ = {
 			isa = PBXGroup;
 			children = (
-				FD10F5F41FDCB30F00698CFA /* WatchList.storyboard */,
-				5DE07CF01FBF83D7003146C5 /* ListingDetail.storyboard */,
-				5DE07CF21FBF8422003146C5 /* BrowseListings.storyboard */,
+				FDB2009620780FE700B65B94 /* Browse + Search */,
+				FDB2009520780FA800B65B94 /* Non Guided */,
+				FDB2009420780F9900B65B94 /* Guided Walkthrough */,
 				5DE07CF61FBF8B19003146C5 /* CreateListing.storyboard */,
-				FDB2009020780E8B00B65B94 /* CreateListingName.storyboard */,
-				FDB2009220780EB100B65B94 /* CreateListingZipCode.storyboard */,
-				FDB2008E20780E6E00B65B94 /* CreateListingFull.storyboard */,
 				FDB2008C20780DCC00B65B94 /* ListingPrefrenceButtons.storyboard */,
 			);
 			path = Listing;
@@ -465,6 +488,21 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		FDADC61E2098ED07003CBF0B /* Listing Guided */ = {
+			isa = PBXGroup;
+			children = (
+				FDB2008A20780C9B00B65B94 /* CreateListingNameViewController.swift */,
+				FDADC61F2098ED2A003CBF0B /* ListingZipViewController.swift */,
+				FDADC6232098EE39003CBF0B /* ListingPriceViewController.swift */,
+				FDADC6252098EED2003CBF0B /* ListingDescriptionViewController.swift */,
+				FDADC6272098EFF1003CBF0B /* ListingCategoryViewController.swift */,
+				FDD78B1020ABB1F400384B00 /* ListingImagesViewController.swift */,
+				FDD78B1220ABB22500384B00 /* ListingPreferredContactTypeViewController.swift */,
+				FDD78B1420ABB25C00384B00 /* ListingVerificationViewController.swift */,
+			);
+			path = "Listing Guided";
+			sourceTree = "<group>";
+		};
 		FDB200872078085F00B65B94 /* ListingPreferenceView */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,6 +510,39 @@
 				FDB200882078088D00B65B94 /* ListingPreferenceButtonsViewController.swift */,
 			);
 			path = ListingPreferenceView;
+			sourceTree = "<group>";
+		};
+		FDB2009420780F9900B65B94 /* Guided Walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				FDB2009020780E8B00B65B94 /* CreateListingName.storyboard */,
+				FDADC6292098F00A003CBF0B /* ListingCategory.storyboard */,
+				FDB2009220780EB100B65B94 /* ListingPrice.storyboard */,
+				FDD78B1620ABB27D00384B00 /* ListingDescription.storyboard */,
+				FDD78B1820ABB29100384B00 /* ListingImages.storyboard */,
+				FDD78B1A20ABB2AE00384B00 /* ListingPreferredContact.storyboard */,
+				FDD78B1C20ABB2BF00384B00 /* ListingVerification.storyboard */,
+				FDADC6212098EDDB003CBF0B /* ListingZipCode.storyboard */,
+			);
+			path = "Guided Walkthrough";
+			sourceTree = "<group>";
+		};
+		FDB2009520780FA800B65B94 /* Non Guided */ = {
+			isa = PBXGroup;
+			children = (
+				FDB2008E20780E6E00B65B94 /* CreateListingFull.storyboard */,
+			);
+			path = "Non Guided";
+			sourceTree = "<group>";
+		};
+		FDB2009620780FE700B65B94 /* Browse + Search */ = {
+			isa = PBXGroup;
+			children = (
+				5DE07CF21FBF8422003146C5 /* BrowseListings.storyboard */,
+				5DE07CF01FBF83D7003146C5 /* ListingDetail.storyboard */,
+				FD10F5F41FDCB30F00698CFA /* WatchList.storyboard */,
+			);
+			path = "Browse + Search";
 			sourceTree = "<group>";
 		};
 		FDC207DB1FD0C26300860A0B /* Sign Up */ = {
@@ -608,16 +679,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD3133E61FB504E7002BCA23 /* LaunchScreen.storyboard in Resources */,
+				FDD78B1B20ABB2AE00384B00 /* ListingPreferredContact.storyboard in Resources */,
 				FD557F381FBAB6EC00A52EA1 /* CompanyProfile.storyboard in Resources */,
 				FD10F5F51FDCB30F00698CFA /* WatchList.storyboard in Resources */,
 				5DE07CF91FBF8B39003146C5 /* StoreProfile.storyboard in Resources */,
 				5DE07CF31FBF8422003146C5 /* BrowseListings.storyboard in Resources */,
+				FDADC62A2098F00A003CBF0B /* ListingCategory.storyboard in Resources */,
 				FDB2009120780E8B00B65B94 /* CreateListingName.storyboard in Resources */,
+				FDD78B1920ABB29100384B00 /* ListingImages.storyboard in Resources */,
 				FD3134111FB51644002BCA23 /* GoogleService-Info.plist in Resources */,
+				FDD78B1720ABB27D00384B00 /* ListingDescription.storyboard in Resources */,
 				FDB2008F20780E6E00B65B94 /* CreateListingFull.storyboard in Resources */,
 				FDB2008D20780DCC00B65B94 /* ListingPrefrenceButtons.storyboard in Resources */,
 				FD3133E31FB504E7002BCA23 /* Assets.xcassets in Resources */,
-				FDB2009320780EB100B65B94 /* CreateListingZipCode.storyboard in Resources */,
+				FDADC6222098EDDB003CBF0B /* ListingZipCode.storyboard in Resources */,
+				FDB2009320780EB100B65B94 /* ListingPrice.storyboard in Resources */,
 				5DE07CF11FBF83D7003146C5 /* ListingDetail.storyboard in Resources */,
 				FD557F331FBAB6B000A52EA1 /* UserProfile.storyboard in Resources */,
 				FD10F5EA1FDCA91B00698CFA /* TabBar.storyboard in Resources */,
@@ -626,6 +702,7 @@
 				FD557F301FBAB66700A52EA1 /* Login.storyboard in Resources */,
 				FD557F401FBABBB800A52EA1 /* SignUp.storyboard in Resources */,
 				FD10F5ED1FDCAA1600698CFA /* Profile.storyboard in Resources */,
+				FDD78B1D20ABB2BF00384B00 /* ListingVerification.storyboard in Resources */,
 				FD3133E11FB504E7002BCA23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -813,11 +890,14 @@
 				FD557F241FBAB54C00A52EA1 /* UserProfileViewController.swift in Sources */,
 				5DE07CEF1FBCE34D003146C5 /* Store.swift in Sources */,
 				5DC911C91FE22FA6002CE612 /* CompanyController.swift in Sources */,
+				FDADC6262098EED2003CBF0B /* ListingDescriptionViewController.swift in Sources */,
 				5DE07CFB1FBF8B9F003146C5 /* SearchFilterViewController.swift in Sources */,
+				FDD78B1320ABB22500384B00 /* ListingPreferredContactTypeViewController.swift in Sources */,
 				FD557F261FBAB55500A52EA1 /* CompanyProfileViewController.swift in Sources */,
 				FD557F2A1FBAB56B00A52EA1 /* CreateListingViewController.swift in Sources */,
 				FD2D7A741FEB3B780044F2BD /* CompanyCompletionViewController.swift in Sources */,
 				FD557F1A1FB8B8F600A52EA1 /* FirebaseController.swift in Sources */,
+				FDADC6202098ED2A003CBF0B /* ListingZipViewController.swift in Sources */,
 				FD3133DC1FB504E7002BCA23 /* AppDelegate.swift in Sources */,
 				FD10F5F11FDCB0AD00698CFA /* TabBarViewController.swift in Sources */,
 				FD42E6A21FFB4AF60035E021 /* UITextField+UES.swift in Sources */,
@@ -830,11 +910,14 @@
 				FD557F2E1FBAB5BC00A52EA1 /* ListingDetailViewController.swift in Sources */,
 				FD557F3E1FBABB9B00A52EA1 /* SignUpViewController.swift in Sources */,
 				FDB200892078088D00B65B94 /* ListingPreferenceButtonsViewController.swift in Sources */,
+				FDD78B1520ABB25C00384B00 /* ListingVerificationViewController.swift in Sources */,
 				FD557F2C1FBAB5B500A52EA1 /* BrowseListingsViewController.swift in Sources */,
 				5D7D81F61FBA5C6500998B67 /* Constants.swift in Sources */,
+				FDADC6242098EE39003CBF0B /* ListingPriceViewController.swift in Sources */,
 				FD2D7A6C1FEB3B540044F2BD /* CompanyAddressViewController.swift in Sources */,
 				5D7D81F41FBA522E00998B67 /* String+UES.swift in Sources */,
 				FD42E69E1FF8340A0035E021 /* UIButton+UES.swift in Sources */,
+				FDD78B1120ABB1F400384B00 /* ListingImagesViewController.swift in Sources */,
 				FDB20086207807D100B65B94 /* ListingPrefrenceViewController.swift in Sources */,
 				5D7D81EE1FBA4F3900998B67 /* Company.swift in Sources */,
 				FDCD1D7A1FD60B940037FBFA /* FirebaseAuthentication.swift in Sources */,
@@ -845,6 +928,7 @@
 				FD557F201FBAB51600A52EA1 /* InitialViewController.swift in Sources */,
 				FD2D7A701FEB3B670044F2BD /* CompanyEINViewController.swift in Sources */,
 				FDB2008B20780C9B00B65B94 /* CreateListingNameViewController.swift in Sources */,
+				FDADC6282098EFF1003CBF0B /* ListingCategoryViewController.swift in Sources */,
 				FD10F5F31FDCB2FF00698CFA /* WatchListViewController.swift in Sources */,
 				FD2D7A681FEB3B3F0044F2BD /* CompanyCreateButtonViewController.swift in Sources */,
 				FDCD1D7C1FD6232E0037FBFA /* ImageController.swift in Sources */,

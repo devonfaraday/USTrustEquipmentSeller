@@ -14,7 +14,6 @@ class ProfileViewController: UIViewController {
     // MARK: - Properties
     @IBOutlet var containerView: UIView!
     @IBOutlet var companyProfileButton: UIButton!
-    @IBOutlet var nameLabel: UILabel!
     @IBOutlet var userProfileButton: UIButton!
     
     var company: Company?
@@ -39,23 +38,18 @@ class ProfileViewController: UIViewController {
         addDidCompleteSettingUpCompanyObserver()
         displayUserProfileView()
         setCurrentUser()
-        setUserInfo()
     }
 
     
     // MARK: - UI Actions
     @IBAction func userProfileButtonTapped(_ sender: Any) {
         displayUserProfileView()
-        setUserInfo()
     }
     
     @IBAction func companyProfileButtonTapped(_ sender: Any) {
-        if company != nil {
-            displayCompanyProfileView()
-            setCurrentCompanyInfo()
-        } else {
+        company != nil ?
+            displayCompanyProfileView() :
             displayCreateCompanyView()
-        }
     }
     
     // MARK: - Container View Functions
@@ -95,14 +89,6 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    func setUserInfo() {
-        nameLabel.text = user?.fullName
-    }
-    
-    func setCurrentCompanyInfo() {
-        nameLabel.text = company?.companyName
-    }
-    
     // MARK: - Observers
     func addDidCompleteSettingUpCompanyObserver() {
         if company == nil {
@@ -128,8 +114,7 @@ class ProfileViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
     }
     
     

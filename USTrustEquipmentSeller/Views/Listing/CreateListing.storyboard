@@ -105,7 +105,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="CreateListingViewController" storyboardName="CreateListingFull" referencedIdentifier="CreateListingViewController" id="pdt-Kb-nlZ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ppC-g9-7SK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2075" y="-34"/>
+            <point key="canvasLocation" x="2074" y="-40"/>
         </scene>
         <!--CreateListingNameViewController-->
         <scene sceneID="q2g-z7-vhZ">

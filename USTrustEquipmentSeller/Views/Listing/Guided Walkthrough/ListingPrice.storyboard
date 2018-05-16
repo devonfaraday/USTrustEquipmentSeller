@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zE3-N2-YUs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Listing Price View Controller-->
+        <scene sceneID="SZY-d3-x5T">
+            <objects>
+                <viewController storyboardIdentifier="ListingPriceViewController" id="zE3-N2-YUs" customClass="ListingPriceViewController" customModule="USTrustEquipmentSeller" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kqm-9a-K1J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u13-II-hEy">
+                                <rect key="frame" x="8" y="88" width="359" height="81.5"/>
+                                <string key="text">We will need a price for your item, so buyers with see your post in between a price range they select or so they can see how good of a deal your product is.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0EC-k8-Yzh">
+                                <rect key="frame" x="8" y="215.5" width="359" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4DI-HT-YvF">
+                                <rect key="frame" x="111" y="575" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Previous"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDL-vR-JfN">
+                                <rect key="frame" x="231" y="575" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0EC-k8-Yzh" firstAttribute="leading" secondItem="dE7-9x-wB0" secondAttribute="leading" constant="8" id="0Al-1t-8CJ"/>
+                            <constraint firstItem="u13-II-hEy" firstAttribute="top" secondItem="dE7-9x-wB0" secondAttribute="top" constant="68" id="2b3-xe-hCV"/>
+                            <constraint firstItem="0EC-k8-Yzh" firstAttribute="top" secondItem="u13-II-hEy" secondAttribute="bottom" constant="46" id="VQd-Ka-0sg"/>
+                            <constraint firstItem="dE7-9x-wB0" firstAttribute="trailing" secondItem="u13-II-hEy" secondAttribute="trailing" constant="8" id="k1K-If-Zgm"/>
+                            <constraint firstItem="u13-II-hEy" firstAttribute="leading" secondItem="dE7-9x-wB0" secondAttribute="leading" constant="8" id="r3F-Av-4xY"/>
+                            <constraint firstItem="dE7-9x-wB0" firstAttribute="trailing" secondItem="0EC-k8-Yzh" secondAttribute="trailing" constant="8" id="u6p-X0-LU3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dE7-9x-wB0"/>
+                    </view>
+                    <connections>
+                        <segue destination="FCB-Hp-TJ6" kind="show" identifier="toListingDescription" id="asH-4I-d6y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BhU-gS-Bmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3471" y="42"/>
+        </scene>
+        <!--ListingDescriptionViewController-->
+        <scene sceneID="ajZ-aN-OPt">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ListingDescriptionViewController" storyboardName="ListingDescription" referencedIdentifier="ListingDescriptionViewController" id="FCB-Hp-TJ6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xj2-qC-ALB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2762" y="862"/>
+        </scene>
+        <!--ListingImagesViewController-->
+        <scene sceneID="YaD-tB-KNd">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ListingImagesViewController" storyboardName="ListingDescription" referencedIdentifier="ListingImagesViewController" id="H8P-uT-evO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ACY-cB-uk6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3291" y="862"/>
+        </scene>
+        <!--ListingPreferredContactTypeViewController-->
+        <scene sceneID="TMV-EZ-Cvg">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ListingPreferredContactTypeViewController" storyboardName="ListingDescription" referencedIdentifier="ListingPreferredContactTypeViewController" id="QlC-u1-bUk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Owg-dx-6oc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3845" y="862"/>
+        </scene>
+        <!--ListingVerificationViewController-->
+        <scene sceneID="ofa-H8-abF">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ListingVerificationViewController" storyboardName="ListingDescription" referencedIdentifier="ListingVerificationViewController" id="dLt-d3-J1W" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rMh-uN-Exb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4484" y="861"/>
+        </scene>
+    </scenes>
+</document>

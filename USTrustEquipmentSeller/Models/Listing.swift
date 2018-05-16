@@ -11,19 +11,19 @@ import UIKit
 
 class Listing: FirebaseType, Decodable {
 
-    let itemName: String
-    let catagoryIdentifier: String
-    let description: String
-    let price: Double
-    let location: String
+    var itemName: String
+    var catagoryIdentifier: String
+    var description: String
+    var price: Double
+    var location: String
     var imageURLReferences: [String]? = nil
     var images: [UIImage] = []
-    let companyIdentifier: String
+    var companyIdentifier: String
     var endpoint: String = .listingsEndpoint
     var identifier: String?
     let created: Date
     var updated: Date
-    let quantity: Int
+    var quantity: Int
     
     var dictionaryCopy: JSONDictionary {
         return [.itemNameKey: itemName,
@@ -38,7 +38,7 @@ class Listing: FirebaseType, Decodable {
         ]
     }
     
-    init(itemName: String, quantity: Int = 1, catagoryIdentifer: String, description: String, price: Double, location: String, images: [UIImage], companyIdentifer: String, identifier: String, created: Date = Date(), updated: Date = Date()) {
+    init(itemName: String = "", quantity: Int = 1, catagoryIdentifer: String = "", description: String = "", price: Double = 0.0, location: String = "", images: [UIImage] = [], companyIdentifer: String = "", identifier: String = "", created: Date = Date(), updated: Date = Date()) {
         
         self.itemName = itemName
         self.quantity = quantity

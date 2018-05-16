@@ -1,14 +1,14 @@
 //
-//  CreateListingNameViewController.swift
+//  ListingPriceViewController.swift
 //  USTrustEquipmentSeller
 //
-//  Created by Christian McMullin on 4/6/18.
+//  Created by Christian McMullin on 5/1/18.
 //  Copyright © 2018 Christian McMullin. All rights reserved.
 //
 
 import UIKit
 
-class CreateListingNameViewController: UIViewController {
+class ListingPriceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
