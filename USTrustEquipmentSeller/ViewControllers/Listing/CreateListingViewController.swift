@@ -43,11 +43,11 @@ class CreateListingViewController: UIViewController, UIImagePickerControllerDele
     
     // MARK: - Create Functions
     func createListing() {
-//        guard let itemName = itemNameTextField.text,
-//            let price = priceTextField.text,
-//            let zipCode = zipCodeTextField.text,
-//            let description = descriptionTextView.text else { return }
-//        let listing = Listing(itemName: itemName, quantity: <#T##Int#>, catagoryIdentifer: <#T##String#>, description: description, price: price, location: <#T##String#>, images: <#T##[UIImage]#>, companyIdentifer: <#T##String#>, identifier: UUID().uuidString, created: <#T##Date#>, updated: <#T##Date#>)
+        guard let itemName = itemNameTextField.text,
+            let price = priceTextField.text,
+            let zipCode = zipCodeTextField.text,
+            let description = descriptionTextView.text else { return }
+        
     }
     
     func postListing() {
