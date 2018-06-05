@@ -303,7 +303,7 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		FD2D7A771FEB53E20044F2BD /* Profile */ = {
+		FD2D7A771FEB53E20044F2BD /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
 				5DE07CF81FBF8B39003146C5 /* StoreProfile.storyboard */,
@@ -312,7 +312,7 @@
 				FD2D7A641FEB343D0044F2BD /* CreateCompany.storyboard */,
 				FD557F371FBAB6EC00A52EA1 /* CompanyProfile.storyboard */,
 			);
-			path = Profile;
+			path = UserProfile;
 			sourceTree = "<group>";
 		};
 		FD2D7A781FEB54040044F2BD /* Authentication */ = {
@@ -428,7 +428,7 @@
 				FD2D7A7A1FEB54320044F2BD /* Navigation */,
 				FD2D7A781FEB54040044F2BD /* Authentication */,
 				FD2D7A791FEB54100044F2BD /* Listing */,
-				FD2D7A771FEB53E20044F2BD /* Profile */,
+				FD2D7A771FEB53E20044F2BD /* UserProfile */,
 			);
 			path = Views;
 			sourceTree = "<group>";

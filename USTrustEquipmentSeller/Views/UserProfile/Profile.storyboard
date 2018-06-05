@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="9N2-QR-Dbj">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="fok-xj-Uvx" customClass="ProfileViewController" customModule="USTrustEquipmentSeller" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zBo-gW-ero">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k61-pK-9fF">
+                                <rect key="frame" x="0.0" y="60" width="375" height="558"/>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z9d-wN-Mhw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="40"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="VXj-u2-6gG">
+                                        <rect key="frame" x="92" y="0.0" width="191" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whz-s1-yFc">
+                                                <rect key="frame" x="0.0" y="0.0" width="66" height="40"/>
+                                                <state key="normal" title="User"/>
+                                                <connections>
+                                                    <action selector="userProfileButtonTapped:" destination="fok-xj-Uvx" eventType="touchUpInside" id="NSC-HR-Dof"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3oz-dD-6vl">
+                                                <rect key="frame" x="125" y="0.0" width="66" height="40"/>
+                                                <state key="normal" title="Company"/>
+                                                <connections>
+                                                    <action selector="companyProfileButtonTapped:" destination="fok-xj-Uvx" eventType="touchUpInside" id="VTY-Yp-gld"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="whz-s1-yFc" firstAttribute="leading" secondItem="VXj-u2-6gG" secondAttribute="leading" id="2zK-Ky-IJ0"/>
+                                            <constraint firstAttribute="bottom" secondItem="3oz-dD-6vl" secondAttribute="bottom" id="ZjC-KV-Pep"/>
+                                            <constraint firstAttribute="trailing" secondItem="3oz-dD-6vl" secondAttribute="trailing" id="aEu-S3-qcy"/>
+                                            <constraint firstItem="3oz-dD-6vl" firstAttribute="top" secondItem="VXj-u2-6gG" secondAttribute="top" id="e7M-zl-HJ8"/>
+                                            <constraint firstAttribute="bottom" secondItem="whz-s1-yFc" secondAttribute="bottom" id="rUN-Fa-Czl"/>
+                                            <constraint firstItem="whz-s1-yFc" firstAttribute="top" secondItem="VXj-u2-6gG" secondAttribute="top" id="xLu-bK-L1O"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97636479139328003" green="0.97653168439865112" blue="0.97635418176651001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="VXj-u2-6gG" firstAttribute="centerY" secondItem="Z9d-wN-Mhw" secondAttribute="centerY" id="ebT-Wa-gaf"/>
+                                    <constraint firstItem="VXj-u2-6gG" firstAttribute="height" secondItem="Z9d-wN-Mhw" secondAttribute="height" id="giF-iW-46l"/>
+                                    <constraint firstItem="VXj-u2-6gG" firstAttribute="top" secondItem="Z9d-wN-Mhw" secondAttribute="top" id="hNQ-9H-2Ji"/>
+                                    <constraint firstItem="VXj-u2-6gG" firstAttribute="centerX" secondItem="Z9d-wN-Mhw" secondAttribute="centerX" id="iqg-vb-n99"/>
+                                    <constraint firstAttribute="height" constant="40" id="mkx-3g-V6c"/>
+                                    <constraint firstAttribute="bottom" secondItem="VXj-u2-6gG" secondAttribute="bottom" id="w07-fi-uga"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z9d-wN-Mhw" firstAttribute="leading" secondItem="5wH-Sb-9pW" secondAttribute="leading" id="191-ab-iWX"/>
+                            <constraint firstItem="Z9d-wN-Mhw" firstAttribute="top" secondItem="5wH-Sb-9pW" secondAttribute="top" id="6m9-t9-Tai"/>
+                            <constraint firstItem="k61-pK-9fF" firstAttribute="trailing" secondItem="5wH-Sb-9pW" secondAttribute="trailing" id="JVg-Br-Dif"/>
+                            <constraint firstItem="k61-pK-9fF" firstAttribute="bottom" secondItem="5wH-Sb-9pW" secondAttribute="bottom" id="KEm-Ik-7hK"/>
+                            <constraint firstItem="k61-pK-9fF" firstAttribute="top" secondItem="Z9d-wN-Mhw" secondAttribute="bottom" id="lzN-TQ-b43"/>
+                            <constraint firstItem="k61-pK-9fF" firstAttribute="leading" secondItem="5wH-Sb-9pW" secondAttribute="leading" id="sSg-aq-DNn"/>
+                            <constraint firstItem="Z9d-wN-Mhw" firstAttribute="trailing" secondItem="5wH-Sb-9pW" secondAttribute="trailing" id="w2q-xm-FF1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5wH-Sb-9pW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DeT-rb-GPJ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="companyProfileButton" destination="3oz-dD-6vl" id="LiN-L2-hHg"/>
+                        <outlet property="containerView" destination="k61-pK-9fF" id="Fb8-rW-Wc4"/>
+                        <outlet property="userProfileButton" destination="whz-s1-yFc" id="sD7-P8-jp0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sTB-yV-wFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416.80000000000001" y="53.523238380809602"/>
+        </scene>
+        <!--UserProfileViewController-->
+        <scene sceneID="Uae-gt-2ek">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="UserProfileViewController" storyboardName="UserProfile" referencedIdentifier="UserProfileViewController" id="enk-d5-4iS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y5p-Uz-85h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1011" y="-70"/>
+        </scene>
+        <!--CompanyProfileViewController-->
+        <scene sceneID="OLg-3h-bWP">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CompanyProfileViewController" storyboardName="CompanyProfile" referencedIdentifier="CompanyProfileViewController" id="SMW-oq-4Sg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kw5-7M-j7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1034" y="4"/>
+        </scene>
+        <!--CompanyCreationNavigationController-->
+        <scene sceneID="KLX-90-fIn">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CompanyCreationNavigationController" storyboardName="CreateCompany" referencedIdentifier="CompanyCreationNavigationController" id="gq9-DJ-XrO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="spP-9D-Oux" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1073" y="83"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="by7-tN-jSe">
+            <objects>
+                <navigationController storyboardIdentifier="ProfileNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="8In-3f-2b6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" id="OKD-AA-Aai"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gMC-TO-S3U">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fok-xj-Uvx" kind="relationship" relationship="rootViewController" id="OXX-Ng-aHf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zEt-ei-mH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-346" y="54"/>
+        </scene>
+    </scenes>
+</document>
