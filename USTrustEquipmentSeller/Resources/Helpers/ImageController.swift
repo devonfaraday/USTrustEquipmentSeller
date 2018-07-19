@@ -41,11 +41,11 @@ class ImageController {
             if let error = error {
                 print(error.localizedDescription)
             } else if let metaData = metaData {
-                guard let downloadURL = metaData.downloadURL() else { return }
-                print(metaData.description)
-                var modifiedCompany = company
-                modifiedCompany.logoURL = downloadURL
-                modifiedCompany.save()
+//                guard let downloadURL = metaData.downloadURL() else { return }
+//                print(metaData.description)
+//                var modifiedCompany = company
+//                modifiedCompany.logoURL = downloadURL
+//                modifiedCompany.save()
             }
         }
         uploadTask.resume()

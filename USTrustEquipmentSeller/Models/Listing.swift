@@ -11,19 +11,22 @@ import UIKit
 
 class Listing: FirebaseType, Decodable {
 
-    var itemName: String
     var catagoryIdentifier: String
+    var companyIdentifier: String
+    let created: Date
     var description: String
-    var price: Double
-    var location: String
+    var endpoint: String = .listingsEndpoint
+    var experationDate: Date? {
+        return Calendar.current.date(byAdding: .month, value: 1, to: updated)
+    }
+    var identifier: String?
     var imageURLReferences: [String]? = nil
     var images: [UIImage] = []
-    var companyIdentifier: String
-    var endpoint: String = .listingsEndpoint
-    var identifier: String?
-    let created: Date
-    var updated: Date
+    var itemName: String
+    var location: String
+    var price: Double
     var quantity: Int
+    var updated: Date
     
     var dictionaryCopy: JSONDictionary {
         return [.itemNameKey: itemName,

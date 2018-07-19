@@ -23,7 +23,7 @@ class CreateListingNameViewController: UIViewController, UITextFieldDelegate {
         listing.itemName = listingName
     }
     
-    func segueTo
+    
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

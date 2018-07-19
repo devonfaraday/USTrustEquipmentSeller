@@ -21,11 +21,11 @@ class ListingPrefrenceViewController: UIViewController {
     }
     
     func segueToCreateListingViewController(withSegue segue: UIStoryboardSegue) {
-        guard let destinationController = segue.destination as? CreateListingViewController else { return }
+//        guard let destinationController = segue.destination as? CreateListingViewController else { return }
     }
     
     func segueToCreateListingName(withSegue segue: UIStoryboardSegue) {
-        guard let destinationController = segue.destination as? CreateListingNameViewController else { return }
+//        guard let destinationController = segue.destination as? CreateListingNameViewController else { return }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

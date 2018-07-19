@@ -12,7 +12,6 @@ import Firebase
 
 struct User: FirebaseType {
     
-    
     var firstName: String
     var lastName: String
     var streetAddress: String
@@ -93,6 +92,3 @@ extension User: Decodable {
         listingWatchList = try values.decodeIfPresent([String].self, forKey: .listingWatchList)
     }
 }
-
-
-

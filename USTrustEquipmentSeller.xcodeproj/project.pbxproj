@@ -88,6 +88,7 @@
 		FDD78B1920ABB29100384B00 /* ListingImages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD78B1820ABB29100384B00 /* ListingImages.storyboard */; };
 		FDD78B1B20ABB2AE00384B00 /* ListingPreferredContact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD78B1A20ABB2AE00384B00 /* ListingPreferredContact.storyboard */; };
 		FDD78B1D20ABB2BF00384B00 /* ListingVerification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD78B1C20ABB2BF00384B00 /* ListingVerification.storyboard */; };
+		FDF819DD20F97C2F00972E9F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF819DC20F97C2F00972E9F /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +202,7 @@
 		FDD78B1820ABB29100384B00 /* ListingImages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListingImages.storyboard; sourceTree = "<group>"; };
 		FDD78B1A20ABB2AE00384B00 /* ListingPreferredContact.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListingPreferredContact.storyboard; sourceTree = "<group>"; };
 		FDD78B1C20ABB2BF00384B00 /* ListingVerification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListingVerification.storyboard; sourceTree = "<group>"; };
+		FDF819DC20F97C2F00972E9F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D65346530E477CC9C59B622A /* Pods_USTrustEquipmentSeller.framework in Frameworks */,
+				FDF819DD20F97C2F00972E9F /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +237,7 @@
 		0999D893C7BE4C64B823248B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FDF819DC20F97C2F00972E9F /* StoreKit.framework */,
 				7DC235CFFC26022142FB369D /* Pods_USTrustEquipmentSeller.framework */,
 				DAFD8B9A30AC24FA8C74C66B /* Pods_USTrustEquipmentSellerTests.framework */,
 				CE00F46DBF7E7FD4CB0B83A8 /* Pods_USTrustEquipmentSellerUITests.framework */,
@@ -574,7 +578,6 @@
 				FD3133D51FB504E7002BCA23 /* Frameworks */,
 				FD3133D61FB504E7002BCA23 /* Resources */,
 				43896E1F6FEFBCE659C71C99 /* [CP] Embed Pods Frameworks */,
-				4EBE47FAE3136ADD49E0A6BF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -593,8 +596,6 @@
 				FD3133E81FB504E7002BCA23 /* Sources */,
 				FD3133E91FB504E7002BCA23 /* Frameworks */,
 				FD3133EA1FB504E7002BCA23 /* Resources */,
-				650EF509CB9E7EDF5233E302 /* [CP] Embed Pods Frameworks */,
-				815BF01140C03F02B8541649 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -614,8 +615,6 @@
 				FD3133F31FB504E7002BCA23 /* Sources */,
 				FD3133F41FB504E7002BCA23 /* Frameworks */,
 				FD3133F51FB504E7002BCA23 /* Resources */,
-				7C7884E5454FAC6C9729262A /* [CP] Embed Pods Frameworks */,
-				337E34DB8001E20F1C20BD86 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -640,6 +639,11 @@
 					FD3133D71FB504E7002BCA23 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					FD3133EB1FB504E7002BCA23 = {
 						CreatedOnToolsVersion = 9.1;
@@ -724,21 +728,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		337E34DB8001E20F1C20BD86 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-USTrustEquipmentSellerUITests/Pods-USTrustEquipmentSellerUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		43896E1F6FEFBCE659C71C99 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -746,49 +735,33 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-USTrustEquipmentSeller/Pods-USTrustEquipmentSeller-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-USTrustEquipmentSeller/Pods-USTrustEquipmentSeller-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4EBE47FAE3136ADD49E0A6BF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-USTrustEquipmentSeller/Pods-USTrustEquipmentSeller-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		650EF509CB9E7EDF5233E302 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-USTrustEquipmentSellerTests/Pods-USTrustEquipmentSellerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		77684E54334578F645328D6D /* [CP] Check Pods Manifest.lock */ = {
@@ -807,36 +780,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7C7884E5454FAC6C9729262A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-USTrustEquipmentSellerUITests/Pods-USTrustEquipmentSellerUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		815BF01140C03F02B8541649 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-USTrustEquipmentSellerTests/Pods-USTrustEquipmentSellerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8C52549708AF6274D57AD142 /* [CP] Check Pods Manifest.lock */ = {
