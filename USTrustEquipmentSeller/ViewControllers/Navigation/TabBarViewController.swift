@@ -18,14 +18,14 @@ class TabBarViewController: UITabBarController {
     }
 
     func passUserToProfile() {
-        if let tabBarController = self.tabBarController {
-            if let tabBarViewControllers = tabBarController.viewControllers {
-                for vc in tabBarViewControllers {
-                    if let profile = vc as? UserProfileViewController {
-                        profile.currentUser = currentUser
-                    }
-                }
-            }
-        }
+//        if let tabBarController = self.tabBarController {
+//            if let tabBarViewControllers = tabBarController.viewControllers {
+//                for vc in tabBarViewControllers {
+//                    if let profile = vc as? UserProfileViewController {
+//                        profile.currentUser = currentUser
+//                    }
+//                }
+//            }
+//        }
     }
 }

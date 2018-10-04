@@ -14,7 +14,14 @@ class FirebaseController {
     static let shared = FirebaseController()
     static let databaseRef = Database.database().reference()
     static let storageRef = Storage.storage().reference()
-    static let db = Firestore.firestore()
+    let db = Firestore.firestore()
+    
+    init() {
+        let settings = db.settings
+        settings.areTimestampsInSnapshotsEnabled = true
+        db.settings = settings
+    }
+    
 }
 
 protocol FirebaseType {
@@ -30,8 +37,9 @@ protocol FirebaseType {
 extension FirebaseType {
     
     func save() {
+        let firebaseController = FirebaseController()
         guard let uid = identifier else { return }
-        FirebaseController.db.collection(endpoint).document(uid).setData(dictionaryCopy) { (error) in
+        firebaseController.db.collection(endpoint).document(uid).setData(dictionaryCopy) { (error) in
             if let error = error {
                 print("Error adding document: \(error)")
             } else {

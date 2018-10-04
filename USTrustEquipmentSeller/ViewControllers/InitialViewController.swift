@@ -15,7 +15,7 @@ class InitialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        try? Auth.auth().signOut()
+
         checkAuthentication()
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
@@ -45,7 +45,8 @@ class InitialViewController: UIViewController {
     func fetchCurrentUser(completion: @escaping(_ success: Bool) -> Void) {
         guard let currentUser = Auth.auth().currentUser else { completion(false); return }
         let uid = currentUser.uid
-        UserController().fetchUser(withIdentifier: uid) { (user) in
+        let userController: UserController = UserController()
+        userController.fetchUser(withIdentifier: uid) { (user) in
             print("User Fetched in profile")
             if user != nil {
                 self.currentUser = user

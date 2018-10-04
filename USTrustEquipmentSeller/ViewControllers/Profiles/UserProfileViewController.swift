@@ -65,7 +65,9 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     func setCurrentUser() {
         let userController = UserController()
         userController.fetchCurrentUser { (user) in
-            self.currentUser = user
+            if self.currentUser == nil {
+                self.currentUser = user
+            }
         }
     }
     
