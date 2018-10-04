@@ -27,7 +27,8 @@ class UserController {
     
     // MARK: - Read
     func fetchCurrentUser(completion: @escaping(User?) -> Void) {
-        guard let currentUser = Auth.auth().currentUser else { completion(nil); return }
+        guard let currentUser = Auth.auth().currentUser
+            else { completion(nil); return }
         let uid = currentUser.uid
         UserController().fetchUser(withIdentifier: uid) { (user) in
             print("User Fetched in profile")
@@ -36,20 +37,34 @@ class UserController {
     }
     
     func fetchUser(withIdentifier identifier: String, completion: @escaping (User?) -> Void) {
-        let userRef = FirebaseController.databaseRef.child(.usersEndpoint).child(identifier)
-        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let value = snapshot.value as? JSONDictionary else { return }
-            do {
-                let jsonData = try JSONSerialization.data(withJSONObject: value, options: [])
-                var user = try JSONDecoder().decode(User.self, from: jsonData)
-                user.identifier = identifier
-                UserController.shared.user = user
+        let docRef = FirebaseController.db.collection(String.usersEndpoint).document(identifier)
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists,
+                let dataDictionary = document.data(),
+                let userData: Data = try? JSONSerialization.data(withJSONObject: dataDictionary) {
+                let user: User? = try? JSONDecoder().decode(User.self, from: userData)
                 completion(user)
-            } catch {
-                completion(nil)
+            } else {
+                print("Document does not exist")
             }
-        })
+        }
     }
+    
+//    func fetchUser(withIdentifier identifier: String, completion: @escaping (User?) -> Void) {
+//        let userRef = FirebaseController.databaseRef.child(.usersEndpoint).child(identifier)
+//        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+//            guard let value = snapshot.value as? JSONDictionary else { return }
+//            do {
+//                let jsonData = try JSONSerialization.data(withJSONObject: value, options: [])
+//                var user = try JSONDecoder().decode(User.self, from: jsonData)
+//                user.identifier = identifier
+//                UserController.shared.user = user
+//                completion(user)
+//            } catch {
+//                completion(nil)
+//            }
+//        })
+//    }
     
     func fetchUsers() {
         

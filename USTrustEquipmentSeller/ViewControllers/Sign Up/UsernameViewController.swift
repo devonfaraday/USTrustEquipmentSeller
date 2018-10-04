@@ -55,11 +55,11 @@ class UsernameViewController: UIViewController, UITextFieldDelegate {
             let password = passwordTextField.text,
             let verify = verifyPasswordTextField.text else { return }
         if password == verify {
-            firebaseAuthentication.createUser(withEmail: email, password: password, completion: { (error) in
+            firebaseAuthentication.createUser(withEmail: email, password: password, completion: { (success, error) in
                 if let error = error {
                     print(error.localizedDescription)
                     self.showAlert(withMessage: error.localizedDescription)
-                } else {
+                } else if success {
                     let userController = UserController()
                     guard let user = self.user else { return }
                     userController.createUser(withUser: user)
@@ -100,7 +100,7 @@ class UsernameViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == String.toUserProfileSegueKey {
-            guard let destinationController = segue.destination as? UserProfileViewController else { return }
+            guard let destinationController = segue.destination as? TabBarViewController else { return }
             destinationController.currentUser = user
         }
     }

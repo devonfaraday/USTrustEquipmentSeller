@@ -14,19 +14,18 @@ class TabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        passUserToProfile()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func passUserToProfile() {
+        if let tabBarController = self.tabBarController {
+            if let tabBarViewControllers = tabBarController.viewControllers {
+                for vc in tabBarViewControllers {
+                    if let profile = vc as? UserProfileViewController {
+                        profile.currentUser = currentUser
+                    }
+                }
+            }
+        }
     }
-    */
-
 }
