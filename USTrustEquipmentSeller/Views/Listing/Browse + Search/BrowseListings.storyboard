@@ -101,10 +101,9 @@
                             <constraint firstItem="ece-ct-CTf" firstAttribute="height" secondItem="3IA-Yp-fQ4" secondAttribute="height" id="Anv-Ex-e2D"/>
                             <constraint firstItem="7u9-mX-kc1" firstAttribute="leading" secondItem="IyQ-Ir-lb7" secondAttribute="leading" id="Esa-Sn-014"/>
                             <constraint firstItem="ece-ct-CTf" firstAttribute="leading" secondItem="3IA-Yp-fQ4" secondAttribute="trailing" id="GdB-x4-sfc"/>
-                            <constraint firstItem="3IA-Yp-fQ4" firstAttribute="leading" secondItem="QCV-w1-hUs" secondAttribute="leading" id="JGk-mQ-WN5"/>
-                            <constraint firstItem="ece-ct-CTf" firstAttribute="leading" secondItem="3IA-Yp-fQ4" secondAttribute="trailing" id="Nro-9U-EeP"/>
+                            <constraint firstItem="3IA-Yp-fQ4" firstAttribute="leading" secondItem="IyQ-Ir-lb7" secondAttribute="leading" id="JGk-mQ-WN5"/>
                             <constraint firstItem="QCV-w1-hUs" firstAttribute="bottom" secondItem="7u9-mX-kc1" secondAttribute="bottom" id="RsP-Hw-JKP"/>
-                            <constraint firstItem="ece-ct-CTf" firstAttribute="trailing" secondItem="QCV-w1-hUs" secondAttribute="trailing" id="iMz-Qg-fRy"/>
+                            <constraint firstItem="ece-ct-CTf" firstAttribute="trailing" secondItem="IyQ-Ir-lb7" secondAttribute="trailing" id="iMz-Qg-fRy"/>
                             <constraint firstItem="7u9-mX-kc1" firstAttribute="trailing" secondItem="IyQ-Ir-lb7" secondAttribute="trailing" id="kfu-rz-Yf4"/>
                             <constraint firstItem="3IA-Yp-fQ4" firstAttribute="top" secondItem="QCV-w1-hUs" secondAttribute="top" id="kxA-ON-hVN"/>
                             <constraint firstItem="7u9-mX-kc1" firstAttribute="top" secondItem="3IA-Yp-fQ4" secondAttribute="bottom" id="u8u-bp-EfN"/>
