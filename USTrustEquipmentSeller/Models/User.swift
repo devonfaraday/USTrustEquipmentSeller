@@ -72,23 +72,46 @@ struct User: FirebaseType {
         self.email = email
         self.phoneNumber = phoneNumber
      }
-}
-
-// MARK: - Decoder
-extension User: Decodable {
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        firstName = try values.decode(String.self, forKey: .firstName)
-        lastName = try values.decode(String.self, forKey: .lastName)
-        streetAddress = try values.decode(String.self, forKey: .streetAddress)
-        companyReference = try values.decodeIfPresent(String.self, forKey: .companyReference)
-        companyWatchList = try values.decodeIfPresent([String].self, forKey: .companyWatchList)
-        city = try values.decode(String.self, forKey: .city)
-        state = try values.decode(String.self, forKey: .state)
-        zipCode = try values.decode(String.self, forKey: .zipCode)
-        isBanned = try values.decode(Bool.self, forKey: .isBanned)
-        email = try values.decode(String.self, forKey: .email)
-        phoneNumber = try values.decode(String.self, forKey: .phoneNumber)
-        listingWatchList = try values.decodeIfPresent([String].self, forKey: .listingWatchList)
+    
+    init?(dictionaryRepresentation: JSONDictionary, uid: String) {
+        guard let firstName: String = dictionaryRepresentation[String.firstNameKey] as? String,
+            let lastName: String = dictionaryRepresentation[String.lastNameKey] as? String,
+            let streetAddress: String = dictionaryRepresentation[String.streetAddressKey] as? String,
+            let city: String = dictionaryRepresentation[String.cityKey] as? String,
+            let state: String = dictionaryRepresentation[String.stateKey] as? String,
+            let zipCode: String = dictionaryRepresentation[String.zipCodeKey] as? String,
+            let email: String = dictionaryRepresentation[String.emailKey] as? String,
+            let phoneNumber: String = dictionaryRepresentation[String.phoneKey] as? String
+            else { return nil }
+        self.firstName = firstName
+        self.lastName = lastName
+        self.streetAddress = streetAddress
+        self.city = city
+        self.state = state
+        self.zipCode = zipCode
+        self.email = email
+        self.phoneNumber = phoneNumber
+        self.identifier = uid
     }
 }
+
+// the compiler doesn't like the way firebase dictionaries are converted to data and then decoded into the object.
+// MARK: - Decoder
+//extension User: Decodable {
+//
+//    init(from decoder: Decoder) throws {
+//        let values = try decoder.container(keyedBy: CodingKeys.self)
+//        firstName = try values.decode(String.self, forKey: .firstName)
+//        lastName = try values.decode(String.self, forKey: .lastName)
+//        streetAddress = try values.decode(String.self, forKey: .streetAddress)
+//        companyReference = try values.decodeIfPresent(String.self, forKey: .companyReference)
+//        companyWatchList = try values.decodeIfPresent([String].self, forKey: .companyWatchList)
+//        city = try values.decode(String.self, forKey: .city)
+//        state = try values.decode(String.self, forKey: .state)
+//        zipCode = try values.decode(String.self, forKey: .zipCode)
+//        isBanned = try values.decode(Bool.self, forKey: .isBanned)
+//        email = try values.decode(String.self, forKey: .email)
+//        phoneNumber = try values.decode(String.self, forKey: .phoneNumber)
+//        listingWatchList = try values.decodeIfPresent([String].self, forKey: .listingWatchList)
+//    }
+//}
