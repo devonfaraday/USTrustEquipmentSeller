@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,48 +19,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First thing we need to do is give your posting a name.  What are you selling?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXE-dA-Rob">
-                                <rect key="frame" x="8" y="71" width="359" height="41"/>
+                                <rect key="frame" x="8" y="70" width="359" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yDi-hD-5Rj">
-                                <rect key="frame" x="8" y="134" width="351" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2c-VV-JK2">
+                                <rect key="frame" x="0.0" y="133" width="375" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="J3M-i1-10h"/>
+                                </constraints>
                                 <connections>
-                                    <outlet property="delegate" destination="Ljo-JU-XDQ" id="4ex-qv-uQU"/>
+                                    <segue destination="IdA-gG-Kxf" kind="embed" identifier="embedListingInputView" id="VVK-rT-LAI"/>
                                 </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xf-p4-0Bt">
-                                <rect key="frame" x="95" y="582" width="59" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Previous"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1b7-PH-EhF">
-                                <rect key="frame" x="215" y="582" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
-                            </button>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="J2c-VV-JK2" firstAttribute="leading" secondItem="Kc4-eR-tLC" secondAttribute="leading" id="5qg-PN-eQ0"/>
                             <constraint firstItem="xBH-Lz-Nfq" firstAttribute="trailing" secondItem="UXE-dA-Rob" secondAttribute="trailing" constant="8" id="CGh-ti-1X7"/>
+                            <constraint firstItem="J2c-VV-JK2" firstAttribute="top" secondItem="UXE-dA-Rob" secondAttribute="bottom" constant="22" id="VGc-T7-mcZ"/>
+                            <constraint firstItem="xBH-Lz-Nfq" firstAttribute="trailing" secondItem="J2c-VV-JK2" secondAttribute="trailing" id="fIe-1m-3Wm"/>
                             <constraint firstItem="UXE-dA-Rob" firstAttribute="leading" secondItem="xBH-Lz-Nfq" secondAttribute="leading" constant="8" id="h11-ts-swq"/>
-                            <constraint firstItem="UXE-dA-Rob" firstAttribute="top" secondItem="xBH-Lz-Nfq" secondAttribute="top" constant="51" id="wDs-Ly-ndf"/>
+                            <constraint firstItem="UXE-dA-Rob" firstAttribute="top" secondItem="xBH-Lz-Nfq" secondAttribute="top" constant="50" id="wDs-Ly-ndf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xBH-Lz-Nfq"/>
                     </view>
                     <connections>
-                        <outlet property="listingNameTextField" destination="yDi-hD-5Rj" id="WKu-fN-crE"/>
                         <segue destination="yqE-K4-Wpj" kind="show" identifier="createListingStepTwo" id="qoF-ys-g0B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xO-32-3Ch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1658" y="34"/>
+            <point key="canvasLocation" x="1656.8" y="33.733133433283363"/>
         </scene>
         <!--ListingZipViewController-->
         <scene sceneID="EOJ-Zr-W39">
@@ -85,6 +76,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Vj-TI-U0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2248" y="862"/>
+        </scene>
+        <!--CreateListingInputViewController-->
+        <scene sceneID="Ibw-Ff-igS">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CreateListingInputViewController" storyboardName="CreateListingInput" referencedIdentifier="CreateListingInputViewController" id="IdA-gG-Kxf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9zg-h6-EZq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2438" y="-77"/>
         </scene>
     </scenes>
 </document>

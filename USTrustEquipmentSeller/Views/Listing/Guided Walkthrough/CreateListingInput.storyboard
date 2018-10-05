@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Listing Input View Controller-->
+        <scene sceneID="vUP-LG-kDW">
+            <objects>
+                <viewController storyboardIdentifier="CreateListingInputViewController" id="AOj-WM-nr7" customClass="CreateListingInputViewController" customModule="USTrustEquipmentSeller" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B1t-ch-t77">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ipV-Zb-ehb">
+                                <rect key="frame" x="119" y="74" width="158" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xf-p4-0Bt">
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
+                                        <state key="normal" title="Previous"/>
+                                        <connections>
+                                            <action selector="previousButtonTapped:" destination="AOj-WM-nr7" eventType="touchUpInside" id="bCE-Bn-49g"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1b7-PH-EhF">
+                                        <rect key="frame" x="99" y="0.0" width="59" height="30"/>
+                                        <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="AOj-WM-nr7" eventType="touchUpInside" id="Bd2-uh-Bl1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yDi-hD-5Rj">
+                                <rect key="frame" x="20" y="22" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jzb-d4-0BQ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yDi-hD-5Rj" firstAttribute="leading" secondItem="B1t-ch-t77" secondAttribute="leading" constant="20" id="2DS-dB-UhH"/>
+                            <constraint firstItem="ipV-Zb-ehb" firstAttribute="centerX" secondItem="B1t-ch-t77" secondAttribute="centerX" constant="10.5" id="8Yg-6V-Ibv"/>
+                            <constraint firstAttribute="trailing" secondItem="yDi-hD-5Rj" secondAttribute="trailing" constant="20" id="sJH-jw-f6d"/>
+                            <constraint firstItem="yDi-hD-5Rj" firstAttribute="top" secondItem="B1t-ch-t77" secondAttribute="top" constant="22" id="uh4-zA-YUK"/>
+                            <constraint firstItem="ipV-Zb-ehb" firstAttribute="top" secondItem="yDi-hD-5Rj" secondAttribute="bottom" constant="22" id="wZg-gu-Hu0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iYi-1s-xwB"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="yDi-hD-5Rj" id="dvI-E1-5HG"/>
+                        <outlet property="nextButton" destination="1b7-PH-EhF" id="Zzu-xS-iLO"/>
+                        <outlet property="previousButton" destination="3Xf-p4-0Bt" id="Dfw-nU-7Me"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coO-0Z-rUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2438" y="-77"/>
+        </scene>
+    </scenes>
+</document>

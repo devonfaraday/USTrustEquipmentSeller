@@ -77,6 +77,9 @@
 		FDB2008F20780E6E00B65B94 /* CreateListingFull.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB2008E20780E6E00B65B94 /* CreateListingFull.storyboard */; };
 		FDB2009120780E8B00B65B94 /* CreateListingName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB2009020780E8B00B65B94 /* CreateListingName.storyboard */; };
 		FDB2009320780EB100B65B94 /* ListingPrice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB2009220780EB100B65B94 /* ListingPrice.storyboard */; };
+		FDB902632166E70A00C0DE41 /* CreateListingInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB902622166E70A00C0DE41 /* CreateListingInputViewController.swift */; };
+		FDB902652166E77700C0DE41 /* CreateListingInput.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB902642166E77700C0DE41 /* CreateListingInput.storyboard */; };
+		FDB902682166E7FD00C0DE41 /* CreateListingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB902672166E7FD00C0DE41 /* CreateListingDelegate.swift */; };
 		FDC207DD1FD0C29400860A0B /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC207DC1FD0C29400860A0B /* UsernameViewController.swift */; };
 		FDC207DF1FD0D3E000860A0B /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC207DE1FD0D3E000860A0B /* UserController.swift */; };
 		FDCD1D7A1FD60B940037FBFA /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD1D791FD60B940037FBFA /* FirebaseAuthentication.swift */; };
@@ -191,6 +194,9 @@
 		FDB2008E20780E6E00B65B94 /* CreateListingFull.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateListingFull.storyboard; sourceTree = "<group>"; };
 		FDB2009020780E8B00B65B94 /* CreateListingName.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateListingName.storyboard; sourceTree = "<group>"; };
 		FDB2009220780EB100B65B94 /* ListingPrice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListingPrice.storyboard; sourceTree = "<group>"; };
+		FDB902622166E70A00C0DE41 /* CreateListingInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListingInputViewController.swift; sourceTree = "<group>"; };
+		FDB902642166E77700C0DE41 /* CreateListingInput.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateListingInput.storyboard; sourceTree = "<group>"; };
+		FDB902672166E7FD00C0DE41 /* CreateListingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListingDelegate.swift; sourceTree = "<group>"; };
 		FDC207DC1FD0C29400860A0B /* UsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameViewController.swift; sourceTree = "<group>"; };
 		FDC207DE1FD0D3E000860A0B /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		FDCD1D791FD60B940037FBFA /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
@@ -382,6 +388,7 @@
 		FD3133DA1FB504E7002BCA23 /* USTrustEquipmentSeller */ = {
 			isa = PBXGroup;
 			children = (
+				FDB902662166E7E100C0DE41 /* Protocols */,
 				FD3133DB1FB504E7002BCA23 /* AppDelegate.swift */,
 				FD3134101FB51644002BCA23 /* GoogleService-Info.plist */,
 				FD3133E71FB504E7002BCA23 /* Info.plist */,
@@ -503,6 +510,7 @@
 				FDD78B1020ABB1F400384B00 /* ListingImagesViewController.swift */,
 				FDD78B1220ABB22500384B00 /* ListingPreferredContactTypeViewController.swift */,
 				FDD78B1420ABB25C00384B00 /* ListingVerificationViewController.swift */,
+				FDB902622166E70A00C0DE41 /* CreateListingInputViewController.swift */,
 			);
 			path = "Listing Guided";
 			sourceTree = "<group>";
@@ -520,6 +528,7 @@
 			isa = PBXGroup;
 			children = (
 				FDB2009020780E8B00B65B94 /* CreateListingName.storyboard */,
+				FDB902642166E77700C0DE41 /* CreateListingInput.storyboard */,
 				FDADC6292098F00A003CBF0B /* ListingCategory.storyboard */,
 				FDB2009220780EB100B65B94 /* ListingPrice.storyboard */,
 				FDD78B1620ABB27D00384B00 /* ListingDescription.storyboard */,
@@ -547,6 +556,14 @@
 				FD10F5F41FDCB30F00698CFA /* WatchList.storyboard */,
 			);
 			path = "Browse + Search";
+			sourceTree = "<group>";
+		};
+		FDB902662166E7E100C0DE41 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FDB902672166E7FD00C0DE41 /* CreateListingDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		FDC207DB1FD0C26300860A0B /* Sign Up */ = {
@@ -694,6 +711,7 @@
 				FD3134111FB51644002BCA23 /* GoogleService-Info.plist in Resources */,
 				FDD78B1720ABB27D00384B00 /* ListingDescription.storyboard in Resources */,
 				FDB2008F20780E6E00B65B94 /* CreateListingFull.storyboard in Resources */,
+				FDB902652166E77700C0DE41 /* CreateListingInput.storyboard in Resources */,
 				FDB2008D20780DCC00B65B94 /* ListingPrefrenceButtons.storyboard in Resources */,
 				FD3133E31FB504E7002BCA23 /* Assets.xcassets in Resources */,
 				FDADC6222098EDDB003CBF0B /* ListingZipCode.storyboard in Resources */,
@@ -844,6 +862,7 @@
 				FD3133DC1FB504E7002BCA23 /* AppDelegate.swift in Sources */,
 				FD10F5F11FDCB0AD00698CFA /* TabBarViewController.swift in Sources */,
 				FD42E6A21FFB4AF60035E021 /* UITextField+UES.swift in Sources */,
+				FDB902632166E70A00C0DE41 /* CreateListingInputViewController.swift in Sources */,
 				5D9E973C1FC4C06E00A7A34C /* ImageHandler.swift in Sources */,
 				5D7D81F01FBA4FC900998B67 /* Listing.swift in Sources */,
 				5D917ECB1FBA4AA0004BD9AC /* User.swift in Sources */,
@@ -875,6 +894,7 @@
 				FD10F5F31FDCB2FF00698CFA /* WatchListViewController.swift in Sources */,
 				FD2D7A681FEB3B3F0044F2BD /* CompanyCreateButtonViewController.swift in Sources */,
 				FDCD1D7C1FD6232E0037FBFA /* ImageController.swift in Sources */,
+				FDB902682166E7FD00C0DE41 /* CreateListingDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

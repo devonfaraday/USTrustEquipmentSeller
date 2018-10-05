@@ -93,6 +93,7 @@ extension String {
     static var companyCreationDidFinishNotificationNameKey: String { get { return "companyCreationDidFinish" } }
     
     /* Segues */
+    static var embedListingInputViewSegueKey: String { get { return "embedListingInputView" } }
     static var listingPreferenceButtonsEmbededSegueKey: String { get { return "preferenceButtons" } }
     static var toCreateListingFullSegueKey: String { get { return "createListingFull" } }
     static var toCreateListingNameSegueKey: String { get { return "createListingName" } }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BEE-aB-aaE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BEE-aB-aaE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,7 +41,7 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's start creating your post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQi-51-4P0">
-                                <rect key="frame" x="77" y="50" width="220" height="20.5"/>
+                                <rect key="frame" x="77.5" y="50" width="220" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,8 +53,6 @@
                             <constraint firstItem="CSA-zI-sQP" firstAttribute="top" secondItem="N2z-bX-jec" secondAttribute="bottom" constant="58" id="Hn2-pM-THc"/>
                             <constraint firstItem="bQi-51-4P0" firstAttribute="top" secondItem="pQG-2k-AyH" secondAttribute="top" constant="30" id="Lie-Sw-d0m"/>
                             <constraint firstItem="N2z-bX-jec" firstAttribute="leading" secondItem="l18-WD-gM1" secondAttribute="leading" constant="40" id="OWg-u2-hH9"/>
-                            <constraint firstItem="CSA-zI-sQP" firstAttribute="centerX" secondItem="l18-WD-gM1" secondAttribute="centerX" id="RYE-Eb-ROc"/>
-                            <constraint firstItem="N2z-bX-jec" firstAttribute="centerX" secondItem="l18-WD-gM1" secondAttribute="centerX" id="W18-hl-9HS"/>
                             <constraint firstItem="CSA-zI-sQP" firstAttribute="leading" secondItem="pQG-2k-AyH" secondAttribute="leading" constant="67" id="WN7-jv-NvY"/>
                             <constraint firstItem="N2z-bX-jec" firstAttribute="top" secondItem="bQi-51-4P0" secondAttribute="bottom" constant="50.5" id="c0A-fu-Nmi"/>
                             <constraint firstItem="bQi-51-4P0" firstAttribute="centerX" secondItem="l18-WD-gM1" secondAttribute="centerX" id="cf2-Jh-Mrx"/>
