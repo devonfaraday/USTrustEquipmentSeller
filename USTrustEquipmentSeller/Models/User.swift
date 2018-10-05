@@ -91,6 +91,7 @@ struct User: FirebaseType {
         self.zipCode = zipCode
         self.email = email
         self.phoneNumber = phoneNumber
+        self.identifier = uid
     }
 }
 
